@@ -12,7 +12,7 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - [Optmimal Transport for Structured Data](https://arxiv.org/abs/1805.09114) : recent paper available on ArXiV.
 
 ### Talks 
-- Juin 2018 : *"Fused Gromov Wasserstein Distance"* at [CAp Conference](http://cap2018.litislab.fr/) [pdf](/materials/fused_gw_distance.pdf)
+- Juin 2018 : *"Fused Gromov Wasserstein Distance"* at [CAp Conference](http://cap2018.litislab.fr/) see [pdf](/materials/fused_gw_distance.pdf)
 
 
 ## Contacts
