@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/tvayer/research/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Bio
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
 
-### Markdown
+I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structure information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem and to use this new formulation to classify structured data.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Publications & Talks
 
-```markdown
-Syntax highlighted code block
+### Preprints
+- [Optmimal Transport for Structured Data](https://arxiv.org/abs/1805.09114) : recent paper available on ArXiV.
 
-# Header 1
-## Header 2
-### Header 3
+### Talks 
+- Juin 2018 : *Fused Gromov Wasserstein Distance* at [CAp Conference](http://cap2018.litislab.fr/)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Contacts
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tvayer/research/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+E-mail: titouan.vayer@irisa.fr
+Phone: +33 (0)6 82 32 55 70
+Office: Somewhere in Vannes
