@@ -1,6 +1,4 @@
 
-![Alt Text](/materials/mouette.gif)
-
 
 ## Bio
 
@@ -22,3 +20,5 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - E-mail: titouan.vayer@irisa.fr
 - Phone: +33 (0)6 82 32 55 70
 - Office: Somewhere in Vannes, somewhere in France
+
+![Alt Text](/materials/mouette.gif)
