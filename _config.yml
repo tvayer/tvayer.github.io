@@ -2,4 +2,4 @@ theme: jekyll-theme-minimal
 name: Titouan Vayer
 markdown: kramdown
 title: Degemer mat !
-avatar: "/materials/me.png"
+avatar: /materials/me.png
