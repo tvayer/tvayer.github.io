@@ -11,7 +11,8 @@ Train GAN
 #%%
 import os,sys
 #path='/home/vayer/wgw/gwtest-master/code_deep_ecn'
-path='/Users/vayer/Documents/cours/deep_ecn_2018/code_deep_ecn/lib'
+path='./code_deep_ecn/lib'
+#path='/Users/vayer/Documents/cours/deep_ecn_2018/code_deep_ecn/lib'
 module_path = os.path.abspath(os.path.join(path))
 sys.path.append(module_path)
 from gan import GAN
@@ -25,9 +26,9 @@ gan = GAN()
 #%%
 
 timer = ElapsedTimer()
-gan.train(epochs=3000, batch_size=32, sample_interval=50)
+gan.train(epochs=20, batch_size=32, sample_interval=50)
 timer.elapsed_time()
-
+gan.save_models(path)
 #%%
 
 sample_images(generator=gan.generator,noise= np.random.normal(0, 1, (5 * 5, 100)))

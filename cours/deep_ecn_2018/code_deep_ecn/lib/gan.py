@@ -7,12 +7,13 @@ from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Sequential, Model
 from keras.optimizers import Adam
-
+import utils
 import matplotlib.pyplot as plt
 
 import sys
 
 import numpy as np
+import pickle
 
 class GAN():
     def __init__(self):
@@ -156,6 +157,11 @@ class GAN():
         fig.savefig("images/%d.png" % epoch)
         plt.close()
 
+    def save_models(self,path):
+        utils.make_keras_picklable()
+        with open(path+'/generatorgan.pickle', 'wb') as handle:
+            pickle.dump(self.generator, handle, protocol=pickle.HIGHEST_PROTOCOL)
+ 
 
 if __name__ == '__main__':
     gan = GAN()
