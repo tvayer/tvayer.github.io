@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.6)  4 OCT 2018 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.6)  14 OCT 2018 12:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1715,132 +1715,148 @@ Package pdftex.def Info: fig/dcgan_generator.png used on input line 715.
 ] [36
 
 ]
-[37
+<fig/mode_collapse.png, id=388, 695.59875pt x 209.78375pt>
+File: fig/mode_collapse.png Graphic file (type png)
 
-] [38
+<use fig/mode_collapse.png>
+Package pdftex.def Info: fig/mode_collapse.png used on input line 761.
+(pdftex.def)             Requested size: 276.559pt x 83.40623pt.
+ [37
 
-] [39
+ <./fig/mode_collapse.png>]
+<fig/diversity.png, id=396, 302.12875pt x 290.08376pt>
+File: fig/diversity.png Graphic file (type png)
+ <use fig/diversity.png>
+Package pdftex.def Info: fig/diversity.png used on input line 773.
+(pdftex.def)             Requested size: 215.10196pt x 206.52747pt.
 
-] <fig/evaluation_gan.png, id=406, 823.075pt x 662.475pt>
+[38
+
+ <./fig/diversity.png>] [39
+
+] [40
+
+]
+<fig/evaluation_gan.png, id=415, 823.075pt x 662.475pt>
 File: fig/evaluation_gan.png Graphic file (type png)
 
 <use fig/evaluation_gan.png>
-Package pdftex.def Info: fig/evaluation_gan.png used on input line 790.
+Package pdftex.def Info: fig/evaluation_gan.png used on input line 812.
 (pdftex.def)             Requested size: 291.92444pt x 234.96294pt.
 
-Overfull \vbox (20.67235pt too high) detected at line 790
+Overfull \vbox (20.67235pt too high) detected at line 812
  []
 
-[40
+[41
 
- <./fig/evaluation_gan.png>] [41
+ <./fig/evaluation_gan.png>] [42
 
 ]
-<fig/memoire_monge.png, id=419, 782.925pt x 311.1625pt>
+<fig/memoire_monge.png, id=430, 782.925pt x 311.1625pt>
 File: fig/memoire_monge.png Graphic file (type png)
 
 <use fig/memoire_monge.png>
-Package pdftex.def Info: fig/memoire_monge.png used on input line 818.
+Package pdftex.def Info: fig/memoire_monge.png used on input line 840.
 (pdftex.def)             Requested size: 215.10196pt x 85.48686pt.
- <fig/monge.jpg, id=420, 676.02562pt x 728.7225pt>
+ <fig/monge.jpg, id=431, 676.02562pt x 728.7225pt>
 File: fig/monge.jpg Graphic file (type jpg)
 
 <use fig/monge.jpg>
-Package pdftex.def Info: fig/monge.jpg used on input line 818.
+Package pdftex.def Info: fig/monge.jpg used on input line 840.
 (pdftex.def)             Requested size: 76.82246pt x 82.80614pt.
- [42
+ [43
 
  <./fig/memoire_monge.png> <./fig/monge.jpg>]
-<fig/deblais_monge.pdf, id=427, 469.55424pt x 145.99731pt>
+<fig/deblais_monge.pdf, id=438, 469.55424pt x 145.99731pt>
 File: fig/deblais_monge.pdf Graphic file (type pdf)
 
 <use fig/deblais_monge.pdf>
-Package pdftex.def Info: fig/deblais_monge.pdf used on input line 818.
+Package pdftex.def Info: fig/deblais_monge.pdf used on input line 840.
 (pdftex.def)             Requested size: 276.559pt x 85.99286pt.
- [43
+ [44
 
  <./fig/deblais_monge.pdf>]
-<./fig/dist_monge.pdf, id=463, 587.63449pt x 173.27109pt>
+<./fig/dist_monge.pdf, id=472, 587.63449pt x 173.27109pt>
 File: ./fig/dist_monge.pdf Graphic file (type pdf)
 
 <use ./fig/dist_monge.pdf>
-Package pdftex.def Info: ./fig/dist_monge.pdf used on input line 846.
+Package pdftex.def Info: ./fig/dist_monge.pdf used on input line 868.
 (pdftex.def)             Requested size: 259.90923pt x 76.63608pt.
- [44
+ [45
 
  <./fig/dist_monge.pdf>]
-<fig/T.pdf, id=511, 453.695pt x 172.14313pt>
+<fig/T.pdf, id=520, 453.695pt x 172.14313pt>
 File: fig/T.pdf Graphic file (type pdf)
  <use fig/T.pdf>
-Package pdftex.def Info: fig/T.pdf used on input line 866.
+Package pdftex.def Info: fig/T.pdf used on input line 888.
 (pdftex.def)             Requested size: 215.10196pt x 81.61385pt.
 
-Overfull \vbox (8.32358pt too high) detected at line 866
+Overfull \vbox (8.32358pt too high) detected at line 888
  []
 
-[45
+[46
 
- <./fig/T.pdf>] <fig/exist.png, id=589, 935.495pt x 158.5925pt>
+ <./fig/T.pdf>] <fig/exist.png, id=598, 935.495pt x 158.5925pt>
 File: fig/exist.png Graphic file (type png)
 
 <use fig/exist.png>
-Package pdftex.def Info: fig/exist.png used on input line 882.
+Package pdftex.def Info: fig/exist.png used on input line 904.
 (pdftex.def)             Requested size: 276.559pt x 46.88359pt.
- [46
-
- <./fig/exist.png>]
-<fig/kanto.jpg, id=596, 361.35pt x 465.74pt>
-File: fig/kanto.jpg Graphic file (type jpg)
- <use fig/kanto.jpg>
-Package pdftex.def Info: fig/kanto.jpg used on input line 894.
-(pdftex.def)             Requested size: 92.1879pt x 118.81543pt.
-
-<fig/alloc.png, id=597, 460.72125pt x 263.98625pt>
-File: fig/alloc.png Graphic file (type png)
- <use fig/alloc.png>
-Package pdftex.def Info: fig/alloc.png used on input line 894.
-(pdftex.def)             Requested size: 184.3758pt x 105.64096pt.
  [47
 
+ <./fig/exist.png>]
+<fig/kanto.jpg, id=605, 361.35pt x 465.74pt>
+File: fig/kanto.jpg Graphic file (type jpg)
+ <use fig/kanto.jpg>
+Package pdftex.def Info: fig/kanto.jpg used on input line 916.
+(pdftex.def)             Requested size: 92.1879pt x 118.81543pt.
+
+<fig/alloc.png, id=606, 460.72125pt x 263.98625pt>
+File: fig/alloc.png Graphic file (type png)
+ <use fig/alloc.png>
+Package pdftex.def Info: fig/alloc.png used on input line 916.
+(pdftex.def)             Requested size: 184.3758pt x 105.64096pt.
+ [48
+
  <./fig/kanto.jpg> <./fig/alloc.png>]
-<fig/dist_kanto.pdf, id=604, 861.98036pt x 208.33192pt>
+<fig/dist_kanto.pdf, id=613, 861.98036pt x 208.33192pt>
 File: fig/dist_kanto.pdf Graphic file (type pdf)
 
 <use fig/dist_kanto.pdf>
-Package pdftex.def Info: fig/dist_kanto.pdf used on input line 920.
+Package pdftex.def Info: fig/dist_kanto.pdf used on input line 942.
 (pdftex.def)             Requested size: 276.559pt x 66.83923pt.
- [48
-
- <./fig/dist_kanto.pdf>]
-<fig/3ways.pdf, id=655, 529.32735pt x 267.54073pt>
-File: fig/3ways.pdf Graphic file (type pdf)
- <use fig/3ways.pdf>
-Package pdftex.def Info: fig/3ways.pdf used on input line 933.
-(pdftex.def)             Requested size: 276.559pt x 139.78331pt.
  [49
 
+ <./fig/dist_kanto.pdf>]
+<fig/3ways.pdf, id=665, 529.32735pt x 267.54073pt>
+File: fig/3ways.pdf Graphic file (type pdf)
+ <use fig/3ways.pdf>
+Package pdftex.def Info: fig/3ways.pdf used on input line 955.
+(pdftex.def)             Requested size: 276.559pt x 139.78331pt.
+ [50
+
  <./fig/3ways.pdf>]
-Overfull \vbox (11.47621pt too high) detected at line 957
+Overfull \vbox (11.47621pt too high) detected at line 979
  []
 
-[50
+[51
 
-] <fig/transp1D.pdf, id=669, 605.26125pt x 63.23625pt>
+] <fig/transp1D.pdf, id=678, 605.26125pt x 63.23625pt>
 File: fig/transp1D.pdf Graphic file (type pdf)
 
 <use fig/transp1D.pdf>
-Package pdftex.def Info: fig/transp1D.pdf used on input line 972.
+Package pdftex.def Info: fig/transp1D.pdf used on input line 994.
 (pdftex.def)             Requested size: 276.559pt x 28.8941pt.
- [51
+ [52
 
- <./fig/transp1D.pdf>] [52
-
-] [53
+ <./fig/transp1D.pdf>] [53
 
 ] [54
 
+] [55
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
 [] []\T1/cmss/m/n/9 Update the gen-er-a-tor by as-cend-ing its stochas-tic gra-
 di-ent
  []
@@ -1849,56 +1865,54 @@ pdfTeX warning (ext4): destination with the same identifier (name{gan}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1054 \end{frame}
+l.1076 \end{frame}
                   
-Overfull \vbox (23.42288pt too high) detected at line 1054
- []
-
-[55
-
-]
-
-LaTeX Warning: Citation `arjovsky2017wasserstein' on page 56 undefined on input
- line 1087.
-
-
-Overfull \vbox (3.80565pt too high) detected at line 1087
+Overfull \vbox (23.42288pt too high) detected at line 1076
  []
 
 [56
 
-] [57
+]
+
+LaTeX Warning: Citation `arjovsky2017wasserstein' on page 57 undefined on input
+ line 1109.
+
+
+Overfull \vbox (3.80565pt too high) detected at line 1109
+ []
+
+[57
 
 ] [58
 
-] <fig/autoencoder.pdf, id=731, 221.19228pt x 117.09915pt>
+] [59
+
+] <fig/autoencoder.pdf, id=740, 221.19228pt x 117.09915pt>
 File: fig/autoencoder.pdf Graphic file (type pdf)
 
 <use fig/autoencoder.pdf>
-Package pdftex.def Info: fig/autoencoder.pdf used on input line 1141.
+Package pdftex.def Info: fig/autoencoder.pdf used on input line 1163.
 (pdftex.def)             Requested size: 153.64493pt x 81.33987pt.
 
-Overfull \vbox (16.60397pt too high) detected at line 1141
- []
-
-[59
-
- <./fig/autoencoder.pdf>]
-<fig/learning_manifolds.png, id=747, 524.96124pt x 353.32pt>
-File: fig/learning_manifolds.png Graphic file (type png)
-
-<use fig/learning_manifolds.png>
-Package pdftex.def Info: fig/learning_manifolds.png used on input line 1155.
-(pdftex.def)             Requested size: 245.83282pt x 165.4566pt.
-
-Overfull \vbox (6.56578pt too high) detected at line 1155
+Overfull \vbox (16.60397pt too high) detected at line 1163
  []
 
 [60
 
- <./fig/learning_manifolds.png>] [61
+ <./fig/autoencoder.pdf>]
+<fig/learning_manifolds.png, id=756, 524.96124pt x 353.32pt>
+File: fig/learning_manifolds.png Graphic file (type png)
 
-] [62
+<use fig/learning_manifolds.png>
+Package pdftex.def Info: fig/learning_manifolds.png used on input line 1177.
+(pdftex.def)             Requested size: 245.83282pt x 165.4566pt.
+
+Overfull \vbox (6.56578pt too high) detected at line 1177
+ []
+
+[61
+
+ <./fig/learning_manifolds.png>] [62
 
 ] [63
 
@@ -1906,35 +1920,37 @@ Overfull \vbox (6.56578pt too high) detected at line 1155
 
 ] [65
 
+] [66
+
 ]
-<fig/vae.pdf, id=785, 329.69107pt x 206.37482pt>
+<fig/vae.pdf, id=794, 329.69107pt x 206.37482pt>
 File: fig/vae.pdf Graphic file (type pdf)
  <use fig/vae.pdf>
-Package pdftex.def Info: fig/vae.pdf used on input line 1266.
+Package pdftex.def Info: fig/vae.pdf used on input line 1288.
 (pdftex.def)             Requested size: 215.10196pt x 134.64587pt.
 
-Overfull \vbox (30.54974pt too high) detected at line 1266
+Overfull \vbox (30.54974pt too high) detected at line 1288
  []
 
-[66
+[67
 
- <./fig/vae.pdf>] [67
+ <./fig/vae.pdf>] [68
 
 ] (./cours.bbl
 Overfull \hbox (86.31285pt too wide) in paragraph at lines 88--92
 |   []\T1/cmss/m/n/9 , 
  []
 
-) [68
+) [69
 
  </usr/local/texlive/2015/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
->] [69
-
-
-] [70
+>] [70
 
 
 ] [71
+
+
+] [72
 
 
 ]
@@ -1947,11 +1963,11 @@ Overfull \hbox (86.31285pt too wide) in paragraph at lines 88--92
 \tf@snm=\write8
 \openout8 = `cours.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1292.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1292.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1314.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1314.
  (./cours.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1292.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1292.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1314.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1314.
 
 
 
@@ -1960,8 +1976,8 @@ Package rerunfilecheck Warning: File `cours.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `cours.out':
-(rerunfilecheck)             Before: CE33DD11C59081C3B4C8542100642A38;461
-(rerunfilecheck)             After:  0681589D63439FE7B519DB624CE79619;461.
+(rerunfilecheck)             Before: C28E99ADA29AFB1684AAAC3E83145D1D;461
+(rerunfilecheck)             After:  E686B3EFB71FAD2CD73DBD394F7903AC;461.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1975,20 +1991,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1292.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1314.
  ) 
 Here is how much of TeX's memory you used:
- 23484 strings out of 493089
- 458155 string characters out of 6134843
+ 23500 strings out of 493089
+ 458430 string characters out of 6134843
  525957 words of memory out of 5000000
- 26175 multiletter control sequences out of 15000+600000
+ 26187 multiletter control sequences out of 15000+600000
  27534 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,98p,1716b,763s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.3.2.53} has been referenced but does not
+pdfTeX warning (dest): name{Outline0.3.2.56} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Outline0.3.1.41} has been referenced but does not e
+pdfTeX warning (dest): name{Outline0.3.1.44} has been referenced but does not e
 xist, replaced by a fixed one
 
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
@@ -2029,10 +2045,10 @@ t/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/public/cm-super/sftt0900.pfb>
-Output written on cours.pdf (71 pages, 7936852 bytes).
+Output written on cours.pdf (72 pages, 8642588 bytes).
 PDF statistics:
- 989 PDF objects out of 1000 (max. 8388607)
- 700 compressed objects within 7 object streams
- 181 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 999 PDF objects out of 1000 (max. 8388607)
+ 704 compressed objects within 8 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 272 words of extra memory for PDF output out of 10000 (max. 10000000)
 

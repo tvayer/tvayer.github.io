@@ -730,13 +730,13 @@ One rule : don't be a hero. There exist a lot of GAN architectures : GAN, AC-GAN
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Downside}
+\frametitle{Downside of traditional GAN's}
 
 GAN training is theoretically guaranteed to converge if we can modify the density functions directly, but:
 
 \begin{itemize}
 \item Instead, we modify G and D  : have they enough capacity to represent the distributions ?
-\item We represent G and D as highly non-convex parametric functions
+\item  G and D are highly non-convex parametric functions
 \item “Oscillation”: can train for a very long time, generating very many different categories of samples, without clearly generating better samples
 \end{itemize}
 
@@ -746,17 +746,39 @@ GAN training is theoretically guaranteed to converge if we can modify the densit
 
 
 \begin{frame}
-\frametitle{Downside}
-Multimodal
-low dimensionnal manifold undifined
+\frametitle{Mode collapse : most severe form of non convergence}
+GAN's fail to learn the entire distribution but just modes of the distribution.
 
+\begin{itemize}
+\item When training D : convergence to the correct "best" distribution
+\item When training G in the inner loop : place all mass on most likely points
+\end{itemize}
+ \begin{figure}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{fig/mode_collapse}
+  \end{center}
+\end{figure}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 
 
 \begin{frame}
-\frametitle{Some enlightening response \cite{arjovsky_towards_2017}}
+\frametitle{Mode collapse causes low output diversity}
+ \begin{figure}
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{fig/diversity}
+  \end{center}
+\end{figure}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Why ? Some enlightening response \cite{arjovsky_towards_2017}}
 \end{frame}
 
 \begin{frame}
