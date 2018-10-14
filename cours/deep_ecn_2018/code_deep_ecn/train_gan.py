@@ -25,11 +25,9 @@ gan = GAN()
 
 #%%
 
+make_keras_picklable()
+
 timer = ElapsedTimer()
 gan.train(epochs=20, batch_size=32, sample_interval=50)
 timer.elapsed_time()
 gan.save_models(path)
-#%%
-
-sample_images(generator=gan.generator,noise= np.random.normal(0, 1, (5 * 5, 100)))
-
