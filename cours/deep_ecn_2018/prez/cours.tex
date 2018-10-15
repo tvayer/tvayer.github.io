@@ -387,7 +387,7 @@ $D: \mathcal{P}(\Omega) \times  \mathcal{P}(\Omega) \rightarrow \mathbb{R}$ is a
 \end{itemize}
 
 \pause 
-Divergences are ways to define a similarity between distributions. They are not a distances (may not be symetric and no triangular inequality)
+Divergences are ways to define a similarity between distributions. They are not distances (may not be symmetric and no triangule inequality)
 
 \end{frame}
 %----------------------------------------------------------------------------------------
@@ -402,7 +402,13 @@ If we have two distributions $P(x)$, $Q(x)$ over the same random variable $x$ we
 \text{KL}(P||Q)=\underset{x \sim P}{\mathbb{E}}\big[\log(\frac{P(x)}{Q(x)})\big]=\int_{\Omega} \log(\frac{P(x)}{Q(x)}) P(x) dx
 \end{equation}
 
-Information theory : KL it is the extra amount of information needed to send a message containing symbols drawn from $P$, when we use a code that was designed to minimize the length of messages drawn from $Q$.
+KL it is the extra amount of information needed :
+
+\begin{itemize}
+\item To send a message containing symbols drawn from $P$,
+\item When we use a code that was designed to minimize the length of messages drawn from $Q$.
+\end{itemize}
+  
 
 \end{frame}
 %----------------------------------------------------------------------------------------
@@ -454,7 +460,7 @@ Now that we now how to compare distributions how do we learn them ?
 \begin{frame}
 \frametitle{Classical Log likehood approach}
 
-Usually to learn a distribution $\mathbb{P}_{r}$ we use a parametric family of densities $(P_{\theta})_{\theta \in \Theta}$ and try to maximize the following log-likehood  :
+Usually to learn a distribution $\mathbb{P}_{r}$ we use a parametric family of densities $(\mathbb{P}_{\theta})_{\theta \in \Theta}$ and try to maximize the following log-likehood  :
 
 \begin{equation}
 \label{loglike}
@@ -475,7 +481,7 @@ Example : gaussian mixture, logistic regression where we want to learn the distr
 
 \begin{block}{Asymptotic behavior}
 If $\mathbb{P}_{r}$ has a density, and $\mathbb{P}_{\theta^{*}}$ is the density maximizing \eqref{loglike} then asymptotically $\mathbb{P}_{\theta^{*}}$ is such that : 
-$$\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{\theta^{*}})= \underset{\theta \in \Theta}{\text{min}} \ \text{KL}(\mathbb{P}_{r}||P_{\theta})$$
+$$\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{\theta^{*}})= \underset{\theta \in \Theta}{\text{min}} \ \text{KL}(\mathbb{P}_{r}||\mathbb{P}_{\theta})$$
 
 Solving \eqref{loglike} is equivalent to find the "closest" distribution amoung the given parametric family which fits the target distribution (\textit{w.r.t} the KL-divergence)
 \end{block}
@@ -510,6 +516,7 @@ We want to construct a distribution $\mathbb{P}_{g}$, called a generative distri
 Neural networks that perform at human level accuracy have a nearly 100\% error rate on examples that are intentionally constructed to fool the network. 
 
 For \textit{e.g} by searching an input $x'$ near a data point $x$ such that the model output is very different at $x'$ : it is \emph{adversarial examples} \cite{2014arXiv1412.6572G} 
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.7\textwidth]{fig/gibon.png}
@@ -526,12 +533,15 @@ For \textit{e.g} by searching an input $x'$ near a data point $x$ such that the 
 In this approach, a generative model (the \emph{generator}) is trained to learn $\mathbb{P}_{g}$ by fooling a feedforward classifier (the \emph{discriminator}):
 \begin{itemize}
 \item The discriminator attempts to recognize all samples from the generative model as being fake, and all samples from the training set as being real.
+\pause
 \item Based on a game theoretic scenario in which the generator network must compete against the discriminator (\url{https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film)}) :
 
 \pause 
 
-A function $L(g ,d)$ determines the payoff of the discriminator. The generator receives $-L(g ,d)$ as its own payoff. Each player attempts to maximize its own payoff.
-$$\underset{d}{\text{max}} \ \underset{g}{\text{min}} \ L(g ,d)$$
+A function $L(G ,D)$ determines the payoff of the discriminator. The generator receives $-L(G ,D)$ as its own payoff. Each player attempts to maximize its own payoff :
+
+$$\underset{D}{\text{max}} \ \underset{G}{\text{min}} \ L(G ,D)$$
+
 \end{itemize}
 
 What is $L$ ?
@@ -569,11 +579,14 @@ This raise two questions : how do we model "$G \ \text{produces} \  \mathbb{P}_{
 \frametitle{How to model the generator G : latent variable }
 
 \begin{itemize}
-\item When training a generative model, the more complicated the dependencies between the dimensions, the more difficult the models are to train. 
+\item The more complicated the dependencies between the dimensions, the more difficult the models are to train. 
+\pause
 \item For \textit{e.g} if we care about modeling the digits $0-9$. If the left half of the character contains the left half of a $5$, then the right half cannot contain the left half of a $0$.
+\pause
 \item This a priori helps if the model first decides which character to generate before it assigns a value to any specific pixel
 \end{itemize}
 
+\pause
 This kind of decision is called a \emph{latent variable} : before our model draws anything, it first randomly samples a digit value.
 
 \begin{figure}
@@ -630,7 +643,7 @@ $\forall x \in K_{d}, \ | F(x) - f(x) | \leq \epsilon$
 
 \frametitle{Putting everything together}
 
-We use a parametric function (neural network) $g_{\theta}$ and a noise $p(z)$ such that $x'=g_{\theta}(z), z \sim p(z)$ :
+We use a neural network $G=g_{\theta}$ and a noise $p(z)$ such that $x'=g_{\theta}(z), z \sim p(z)$ :
 
 \begin{equation}
 \label{ganeeq}
@@ -658,7 +671,11 @@ To solve this problem we use alternate updates of $D$ and $G$ by iterating the t
 \end{itemize}
 
 One can show that the first step (with generator fixed)  leads to an optimal discriminator : $$D^{*}(x)= \frac{\mathbb{P}_{r}(x)}{\mathbb{P}_{r}(x)+\mathbb{P}_{g}(x)}$$ 
-The second step is equivalent at finding the generator which minimizes : $$2 \text{JSD}(\mathbb{P}_{r},\mathbb{P}_{g})-2\log 2 $$
+The second step is equivalent at finding the generator which minimizes : 
+\begin{equation}
+\label{jsdeq}
+2 \text{JSD}(\mathbb{P}_{r},\mathbb{P}_{g})-2\log 2 
+\end{equation}
  so that we have :
  \begin{block}{Solution to \eqref{ganeeq}}
 The global minimum of \eqref{ganeeq} is achieved if and only if $\mathbb{P}_{r}=\mathbb{P}_{g}$ and at that point  $L(D^{*},G^{*})=-2\log 2$
@@ -719,7 +736,7 @@ One rule : don't be a hero. There exist a lot of GAN architectures : GAN, AC-GAN
 \frametitle{DCGAN}
 
 \begin{itemize}
-\item Replace any pooling layers with strided convolutions (discriminator) and fractional-strided convolutions (generator). In other words, when the generator needs to increase the spatial dimension of the representation.
+\item Replace any pooling layers with strided convolutions : the generator needs to increase the spatial dimension of the representation.
 \item Use Batch Normalization in both the generator (except at the output layer) and the discriminator (except at the input layer)
 \item Remove fully connected hidden layers for deeper architectures
 \item Use ReLU activation in generator for all layers except for the output
@@ -746,7 +763,7 @@ GAN training is theoretically guaranteed to converge if we can modify the densit
 
 
 \begin{frame}
-\frametitle{Mode collapse : most severe form of non convergence}
+\frametitle{Mode collapse or mode dropping : most severe form of non convergence}
 GAN's fail to learn the entire distribution but just modes of the distribution.
 
 \begin{itemize}
@@ -759,6 +776,27 @@ GAN's fail to learn the entire distribution but just modes of the distribution.
   \end{center}
 \end{figure}
 \end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{What is the core of mode dropping ?}
+
+Getting back to the $\text{KL}$ divergence :
+
+$$\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{g})= \int_{\mathcal{X}} P_{r}(x) \log \frac{ P_{r}(x)}{ P_{g}(x)} dx$$
+
+\begin{itemize}
+\item If $P_{r}(x) > P_{g}(x)$, then $x$ is a point with higher probability of coming from the data than being a generated sample.
+\item Mode dropping is when there are large regions with high values of $P_{r}$, but small or zero values in $P_{g}$.
+\item The integrand inside the KL grows quickly to infinity :  the $\text{KL}$ cost assigns an extremely high cost to a generator’s distribution not covering parts of the data.
+\end{itemize}
+
+In practice the $\text{KL}$ divergence occurs in training GAN's so that this situation happens.
+
+
+\end{frame}
+
 
 %----------------------------------------------------------------------------------------
 
@@ -775,11 +813,87 @@ GAN's fail to learn the entire distribution but just modes of the distribution.
 
 
 %----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Why ? Some enlightening responses \cite{arjovsky_towards_2017}}
+
+First reason : the distributions $\mathbb{P}_{r}$ and $\mathbb{P}_{g}$ lie on small dimensional subsets that don't intersect so that $\text{KL}$ divergences are undefined.
+
+\pause
+
+In theory : the trained discriminator have cost at most $2 \log 2 - 2 \text{JSD}(\mathbb{P}_{r}||\mathbb{P}_{g})$.
+\begin{itemize}
+\item  In practice, if we just train D till convergence, its error will go to 0
+\item The only way this can happen is if the distributions are not continuous, or they have disjoint supports.
+\end{itemize}
+
+
+\end{frame}
+
 
 
 \begin{frame}
-\frametitle{Why ? Some enlightening response \cite{arjovsky_towards_2017}}
+\frametitle{Why ? Some enlightening responses \cite{arjovsky_towards_2017}}
+
+
+
+\begin{block}{Theorem}
+
+Let $\mathbb{P}_{r}$ and $\mathbb{P}_{g}$ be two distributions whose support lies in two manifolds that don’t have full dimension and don’t perfectly align. Then :
+\begin{itemize}
+\item $\text{JSD}(\mathbb{P}_{r}||\mathbb{P}_{g})=\log 2$
+\item $\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{g})=\infty$
+\item $\text{KL}(\mathbb{P}_{g}||\mathbb{P}_{r})=\infty$
+\end{itemize}
+\end{block}
+
+\pause
+
+Use this divergences to test similarities between the distributions is a terrible : these divergencies are always maxed out -> minimizing them by gradient descent isn’t really possible. 
+
+Yet \eqref{jsdeq} shows that the generator step is minimizing a $\text{JSD}$
+
 \end{frame}
+
+\begin{frame}
+\frametitle{Why ? Some enlightening responses \cite{arjovsky_towards_2017}}
+
+Second reason : vanishing gradients
+
+\begin{block}{Theorem}
+Let $g_{\theta} : \mathcal{Z} \rightarrow \mathcal{X}$ be be a differentiable function that induces a distribution $\mathbb{P}_{g}$. Let $\mathbb{P}_{r}$ be the real data distribution. Suppose that the supports lies in two manifolds that don’t have full dimension and don’t perfectly align. Let $D$ be a differentiable discriminator. Then :
+
+$$\underset{\|D-D^{*}\| \rightarrow 0}{\lim} \nabla_{\theta} \underset{z\sim p(z)}{\mathbb{E}}[\log(1-D(g_{\theta}(z))]=0  $$ 
+
+\end{block}
+
+\pause
+
+\begin{itemize}
+\item As our discriminator gets better, the gradient of the generator vanishes.
+\item This makes it difficult to train using this cost function : decide the precise amount of training dedicated to the discriminator before the vanishing effect.
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The $-\log D$ alternative}
+Instead of considering $ \underset{z \sim p(z)}{\mathbb{E}}[\log(1-D(g_{\theta}(z)))]$ we rather consider :
+
+\begin{equation}
+\label{ganeeqstab}
+\underset{D}{\text{max}} \ \underset{g_{\theta}}{\text{min}} \  L(D,g_{\theta}) = \underset{x \sim \mathbb{P}_{r}}{\mathbb{E}}[\log(D(x))]+ \underset{z \sim p(z)}{\mathbb{E}}[-\log(D(g_{\theta}(z)))]
+\end{equation}
+
+\begin{itemize}
+\item Doesn’t necessarily suffer from vanishing gradients : more stable cost function
+\item Still suffers from mode dropping
+\end{itemize}
+
+
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Evaluation of GAN's}
@@ -787,11 +901,15 @@ GAN's fail to learn the entire distribution but just modes of the distribution.
 
 There is not a good way to quantify how good samples are : about 24 quantitative and 5 qualitative measures.
 
+\pause
+
 Most widely adopted : Inception Score. 
 \begin{itemize}
 \item It uses a pre-trained neural network (Inception Net) to capture the desirable properties of generated samples by running a classification on them 
 \item We desire \emph{highly classifiable} and \emph{diversity} of the samples : expected to have low entropy for easily classifiable samples and high entropy on the classes.
 \end{itemize}
+
+\pause
 
 $$\text{IS}=\exp(H(y)-\mathbb{E}_{x}[H(y|x)])$$
 
@@ -967,6 +1085,8 @@ Can be solved by linear programing
   \end{itemize}
   \end{block}
   
+  \pause
+  
   The first point is one of the most interesting since "classical" distances (or divergences) are not even defined between discrete distributions. 
   
   \begin{itemize}
@@ -999,13 +1119,13 @@ This gives very simple algorithm to compute the transport in $O(N\log N)$, by so
 \begin{frame}
   \frametitle{In the case $\Omega=\mathbb{R}^{d}$, $d(x,y)=\|x-y\|$ and $p=1$}
 
-The optimal transport problem then aim to find $\phi \in \text{Lip}^1$ (set of 1-Lipschitz functions) as
+The optimal transport problem then aim to find $f \in \text{Lip}^1$ (set of 1-Lipschitz functions) as
 \begin{equation}
-\text{sup}_{\phi \in \text{Lip}^1} \int \phi d(\red {\mu_{s}} - \blue{\mu_{t}}) = \text{sup}_{\phi \in \text{Lip}^1} \mathbb{E}_{\x\sim\red {\mu_{s}} } [\phi(x)] - \mathbb{E}_{\y\sim\blue{\mu_{t}} } [\phi(y)]
+\text{sup}_{f \in \text{Lip}^1} \int f d(\red {\mu_{s}} - \blue{\mu_{t}}) = \text{sup}_{f \in \text{Lip}^1} \mathbb{E}_{\x\sim\red {\mu_{s}} } [f(x)] - \mathbb{E}_{\y\sim\blue{\mu_{t}} } [f(y)]
 \end{equation}
 \begin{itemize}
 \item known as {\bf Kantorovich-Rubinstein duality}
-\item $\phi$ can be learnt as a neural network constrained to the set $\text{Lip}^1$, see next section on GAN
+\item $\phi$ can be learnt as a neural network constrained to the set $\text{Lip}^1$.
 \end{itemize}
 
 \end{frame}
@@ -1037,14 +1157,69 @@ Numerous applications for the Wasserstein distance :
 
 \begin{frame}
 \frametitle{Problem Setting \cite{arjovsky_wgan_2017}}
+We consider a parametric family $(\mathbb{P}_{\theta})_{\theta \in \Theta}$ and a real data distribution $\mathbb{P}_{r}$. We want to solve :
 
-$$\underset{\theta \in \Theta}{\text{min}} \  \mathcal{W}_{1}(\mathbb{P}_{r},\mathbb{P}_{\theta}) $$
+\begin{equation}
+\label{wassganeq}
+\underset{\theta \in \Theta}{\text{min}} \  \mathcal{W}_{1}(\mathbb{P}_{r},\mathbb{P}_{\theta})
+\end{equation}
 
-idea : $\mathbb{P}_{\theta}=g_{\theta}(z), z \sim Z$, $g_{\theta}$ is a neural network.
+Solving \eqref{wassganeq} is equivalent to find the closest distribution (\textit{w.r.t} the Wasserstein distance) amoung the given parametric family which fits the target distribution.
 
-$$ \iff \underset{w \in \mathcal{W}}{\text{max}} \ \underset{\theta \in \Theta}{\text{min}} \  \underset{x \sim P_{r}}{\mathbb{E}}[f_{w}(x)]- \underset{z \sim P_{Z}}{\mathbb{E}}[f_{w}(g_{\theta}(z))]$$
-$f_{w}=D,g_{\theta}=G$
 \end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Problem Setting \cite{arjovsky_wgan_2017}}
+
+The minimum of \eqref{wassganeq} is highly untractable but the Kantorovich-Rubinstein duality tells :
+
+$$\mathcal{W}_{1}(\mathbb{P}_{r},\mathbb{P}_{\theta})= \underset{f \in \text{Lip}^1}\sup  \mathbb{E}_{\x\sim  \mathbb{P}_{r}} [f(x)] - \mathbb{E}_{y \sim \mathbb{P}_{\theta} } [f(y)]$$
+
+If we rather consider $f \in \text{Lip}^K$ we end up with $K.\mathcal{W}_{1}(\mathbb{P}_{r},\mathbb{P}_{\theta})$
+
+So, idea :
+
+\begin{itemize}
+\item $\mathbb{P}_{\theta}$ is coming from a neural network $g_{\theta}$ in the same way as traditional GAN's.
+\item We consider another neural network $f_{w}$ called the \emph{critic} (alike a discriminator)
+\end{itemize}
+
+And we solve \eqref{wassganeq} \textit{via} :
+
+\begin{equation}
+\label{wassgan}
+\underset{w}{\text{max}} \ \underset{\theta}{\text{min}} \  \underset{x \sim P_{r}}{\mathbb{E}}[f_{w}(x)]-\underset{z \sim p(z)}{\mathbb{E}}[f_{w}(g_{\theta}(z))]
+\end{equation}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{How do we find the function $f^{*}$ that solves the maximization problem ?}
+
+How do we force $f_{w}$ to be K-Lip ??
+
+\begin{itemize}
+\item $f_{w}$ is parameterized by a neural network with weights $w$ lying in a compact space $\mathcal{W}$ imply that $f_{w}$ is K-Lip.
+\item K only depend on $\mathcal{W}$
+\item To force $f_{w}$ to be K-Lip we can clamp the weights to a fixed box (\textit{e.g} $\mathcal{W} = [-0.01,0.01]^{d}$ ) after each gradient update
+\end{itemize}
+
+\pause 
+
+But :
+
+\begin{itemize}
+\item Weight clipping is a clearly terrible way to enforce a Lipschitz constraint
+\item If the clipping parameter is large : long time for any weights to reach their limit, making it harder to train the critic till optimality
+\item If the clipping is small : this can easily lead to vanishing gradients
+\end{itemize}
+
+\end{frame}
+
 
 %----------------------------------------------------------------------------------------
 
@@ -1084,14 +1259,8 @@ $f_{w}=D,g_{\theta}=G$
 \begin{block}{Neural network belonging to  $\text{Lip}^1$ ?}
 
   \begin{itemize}
-    \item Not really! \cite{arjovsky2017wasserstein} proposes to do weight clipping that force an upper bound on the Lipschitz constant.
+    \item Not really! 
     \item It is actually the supremum over K-Lipschitz functions that is approximated by a neural network 
-
-  {  $$
-      \max_{f \in \text{NN class}}
-         \quad L_{WGAN}(f,G)
-      \le \sup_{\|\phi\|_L \le K}
-          \quad L_{WGAN}(\phi,G)\quad=\quad K \cdot W_1^1(G(\z),\mu_d)$$}
   \item Actually  {\bf not} equivalent to solve the optimal transport, but gradients are aligned.
 
   \end{itemize}
@@ -1101,7 +1270,7 @@ $f_{w}=D,g_{\theta}=G$
 
 \begin{block}{Improved WGAN \cite{DBLP:journals/corr/GulrajaniAADC17}\vspace{-2mm}}
   $$
-  \min_G\sup_{f \in \text{NN class}}\quad \mathbb{E}_{\x\sim\blue{\mu_d}}[ f(\x)] - \mathbb{E}_{\z\sim\mathcal{N}(0,\mathbf{I})} [f(G(\z))] + \lambda \mathbb{E}_{\x\sim\blue{\mu_d}}[ (||\nabla f(\x)||_2  - 1)^2 ]
+  \min_{\theta}\sup_{f \in \text{NN class}}\quad \mathbb{E}_{\x\sim \mathbb{P}_{r}}[ f(\x)] - \mathbb{E}_{\z\sim\mathcal{N}(0,\mathbf{I})} [f(g_{\theta}(\z))] + \lambda \mathbb{E}_{\x\sim \mathbb{P}_{r}}[ (||\nabla f(\x)||_2  - 1)^2 ]
   $$
   Relaxation of the constraint (for $W_1$ the gradient of the potential is $1$ almost everywhere).
 \end{block}
