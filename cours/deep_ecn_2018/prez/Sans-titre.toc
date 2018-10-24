@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Introduction : learning a probability distribution}{3}{0}{1}
-\beamer@sectionintoc {2}{Original GAN \cite {googfellow2014}}{6}{0}{2}
-\beamer@sectionintoc {3}{Wasserstein GAN's}{12}{0}{3}
-\beamer@subsectionintoc {3}{1}{Optimal transport and Wasserstein distance}{13}{0}{3}
-\beamer@subsectionintoc {3}{2}{Wasserstein GAN}{23}{0}{3}
-\beamer@sectionintoc {4}{Autoencoder}{26}{0}{4}
-\beamer@sectionintoc {5}{Variationnal autoencoder}{27}{0}{5}
