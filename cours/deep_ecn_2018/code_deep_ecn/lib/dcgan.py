@@ -4,7 +4,7 @@ from keras.datasets import mnist
 from keras.layers import Input, Dense, Reshape, Flatten, Dropout
 from keras.layers import BatchNormalization, Activation, ZeroPadding2D
 from keras.layers.advanced_activations import LeakyReLU
-from keras.layers.convolutional import UpSampling2D, Conv2D
+from keras.layers.convolutional import UpSampling2D, Conv2D,Conv2DTranspose
 from keras.models import Sequential, Model
 from keras.optimizers import Adam
 
@@ -17,11 +17,11 @@ import utils
 import pickle
 
 class DCGAN():
-    def __init__(self):
+    def __init__(self,channels=1):
         # Input shape
-        self.img_rows = 28
-        self.img_cols = 28
-        self.channels = 1
+        self.img_rows = 32
+        self.img_cols = 32
+        self.channels = channels
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
         self.latent_dim = 100
 
@@ -55,8 +55,8 @@ class DCGAN():
 
         model = Sequential()
 
-        model.add(Dense(128 * 7 * 7, activation="relu", input_dim=self.latent_dim))
-        model.add(Reshape((7, 7, 128)))
+        model.add(Dense(128 * 8 * 8, activation="relu", input_dim=self.latent_dim))
+        model.add(Reshape((8, 8, 128)))
         model.add(UpSampling2D())
         model.add(Conv2D(128, kernel_size=3, padding="same"))
         model.add(BatchNormalization(momentum=0.8))

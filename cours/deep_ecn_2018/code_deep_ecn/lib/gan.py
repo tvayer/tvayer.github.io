@@ -16,10 +16,10 @@ import numpy as np
 import pickle
 
 class GAN():
-    def __init__(self):
-        self.img_rows = 28
-        self.img_cols = 28
-        self.channels = 1
+    def __init__(self,channels=1):
+        self.img_rows = 32
+        self.img_cols = 32
+        self.channels = channels
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
         self.latent_dim = 100
 
