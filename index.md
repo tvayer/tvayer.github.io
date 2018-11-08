@@ -25,4 +25,4 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - Phone: +33 (0)6 82 32 55 70
 - Office: Somewhere in Vannes, somewhere in France
 
-![Alt Text](/images/mouette.gif)
+![Alt Text](/img/mouette.gif)
