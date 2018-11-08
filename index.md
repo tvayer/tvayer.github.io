@@ -16,7 +16,7 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - Juin 2018 : *"Fused Gromov Wasserstein Distance"* at [CAp Conference](http://cap2018.litislab.fr/)
 
 ## Teaching :
-- Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available on my GitHub at https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2018 
+- Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available on my [GitHub](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2018) 
 
 
 ## Contacts
