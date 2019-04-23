@@ -16,6 +16,7 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - [Optimal Transport for structured data with application on graphs](https://arxiv.org/abs/1805.09114) : available on ArXiV.
 
 ### Talks 
+- March 2019 : I was invited at [Qarma](https://qarma.lis-lab.fr/) in Aix-Marseille University to talked about "Optimal Transport for Structured data". [Slides](/_data/Titouan_Marseille_2019.pdf)
 - Juin 2018 : *"Fused Gromov Wasserstein Distance"* at [CAp Conference](http://cap2018.litislab.fr/)
 
 ## Teaching :
