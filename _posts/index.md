@@ -6,11 +6,14 @@ I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.iris
 
 I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem and to use this new formulation for the classification of structured data.
 
-## Publications & Talks
+### News
+
+- (2019) Our paper [Optimal Transport for structured data with application on graphs](https://arxiv.org/abs/1805.09114) was accepted at ICML 2019 !
 
 ### Preprints
 - [Fused Gromov-Wasserstein distance for structured objects: theoretical foundations and mathematical properties](https://arxiv.org/abs/1811.02834) : recent paper available on ArXiV
-- [Optmimal Transport for Structured Data](https://arxiv.org/abs/1805.09114) : available on ArXiV.
+
+- [Optimal Transport for structured data with application on graphs](https://arxiv.org/abs/1805.09114) : available on ArXiV.
 
 ### Talks 
 - Juin 2018 : *"Fused Gromov Wasserstein Distance"* at [CAp Conference](http://cap2018.litislab.fr/)
