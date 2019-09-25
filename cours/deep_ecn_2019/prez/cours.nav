@@ -1,0 +1,184 @@
+\beamer@endinputifotherversion {3.36pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Introduction : learning a probability distribution}{3}{Introduction : learning a probability distribution}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{0}{3}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{0}{4}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{0}{5}{7/7}{}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {1}{0}{6}{8/8}{}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{0}{7}{9/11}{}{0}}
+\headcommand {\beamer@framepages {9}{11}}
+\headcommand {\slideentry {1}{0}{8}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {1}{0}{9}{13/13}{}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {1}{0}{10}{14/16}{}{0}}
+\headcommand {\beamer@framepages {14}{16}}
+\headcommand {\slideentry {1}{0}{11}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {1}{0}{12}{18/18}{}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\sectionentry {2}{Original GAN \cite {googfellow2014}}{19}{Original GAN \cite {googfellow2014}}{0}}
+\headcommand {\beamer@sectionpages {3}{18}}
+\headcommand {\beamer@subsectionpages {3}{18}}
+\headcommand {\slideentry {2}{0}{1}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {2}{0}{2}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {2}{0}{3}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{0}{4}{22/24}{}{0}}
+\headcommand {\beamer@framepages {22}{24}}
+\headcommand {\slideentry {2}{0}{5}{25/28}{}{0}}
+\headcommand {\beamer@framepages {25}{28}}
+\headcommand {\slideentry {2}{0}{6}{29/32}{}{0}}
+\headcommand {\beamer@framepages {29}{32}}
+\headcommand {\slideentry {2}{0}{7}{33/34}{}{0}}
+\headcommand {\beamer@framepages {33}{34}}
+\headcommand {\slideentry {2}{0}{8}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {2}{0}{9}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {2}{0}{10}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {2}{0}{11}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {2}{0}{12}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {2}{0}{13}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {2}{0}{14}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {2}{0}{15}{42/42}{}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {2}{0}{16}{43/43}{}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {2}{0}{17}{44/44}{}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {2}{0}{18}{45/46}{}{0}}
+\headcommand {\beamer@framepages {45}{46}}
+\headcommand {\slideentry {2}{0}{19}{47/48}{}{0}}
+\headcommand {\beamer@framepages {47}{48}}
+\headcommand {\slideentry {2}{0}{20}{49/50}{}{0}}
+\headcommand {\beamer@framepages {49}{50}}
+\headcommand {\slideentry {2}{0}{21}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {2}{0}{22}{52/54}{}{0}}
+\headcommand {\beamer@framepages {52}{54}}
+\headcommand {\slideentry {2}{0}{23}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\sectionentry {3}{Wasserstein GAN's}{56}{Wasserstein GAN's}{0}}
+\headcommand {\beamer@sectionpages {19}{55}}
+\headcommand {\beamer@subsectionpages {19}{55}}
+\headcommand {\slideentry {3}{0}{1}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{57}{Optimal transport and Wasserstein distance}}\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\slideentry {3}{1}{1}{57/58}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {57}{58}}
+\headcommand {\slideentry {3}{1}{2}{59/59}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\slideentry {3}{1}{3}{60/60}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {3}{1}{4}{61/61}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {3}{1}{5}{62/62}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {3}{1}{6}{63/63}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {3}{1}{7}{64/64}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {3}{1}{8}{65/66}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {65}{66}}
+\headcommand {\slideentry {3}{1}{9}{67/67}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {3}{1}{10}{68/68}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\slideentry {3}{1}{11}{69/69}{Optimal transport and Wasserstein distance}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{70}{Wasserstein GAN}}\headcommand {\beamer@subsectionpages {57}{69}}
+\headcommand {\slideentry {3}{2}{1}{70/70}{Wasserstein GAN}{0}}
+\headcommand {\beamer@framepages {70}{70}}
+\headcommand {\slideentry {3}{2}{2}{71/71}{Wasserstein GAN}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\slideentry {3}{2}{3}{72/73}{Wasserstein GAN}{0}}
+\headcommand {\beamer@framepages {72}{73}}
+\headcommand {\slideentry {3}{2}{4}{74/74}{Wasserstein GAN}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\slideentry {3}{2}{5}{75/75}{Wasserstein GAN}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\sectionentry {4}{Autoencoder}{76}{Autoencoder}{0}}
+\headcommand {\beamer@sectionpages {56}{75}}
+\headcommand {\beamer@subsectionpages {70}{75}}
+\headcommand {\slideentry {4}{0}{1}{76/76}{}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {4}{0}{2}{77/77}{}{0}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\slideentry {4}{0}{3}{78/78}{}{0}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\slideentry {4}{0}{4}{79/79}{}{0}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\slideentry {4}{0}{5}{80/80}{}{0}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\slideentry {4}{0}{6}{81/81}{}{0}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\slideentry {4}{0}{7}{82/82}{}{0}}
+\headcommand {\beamer@framepages {82}{82}}
+\headcommand {\sectionentry {5}{Variationnal autoencoder}{83}{Variationnal autoencoder}{0}}
+\headcommand {\beamer@sectionpages {76}{82}}
+\headcommand {\beamer@subsectionpages {76}{82}}
+\headcommand {\slideentry {5}{0}{1}{83/83}{}{0}}
+\headcommand {\beamer@framepages {83}{83}}
+\headcommand {\slideentry {5}{0}{2}{84/84}{}{0}}
+\headcommand {\beamer@framepages {84}{84}}
+\headcommand {\slideentry {5}{0}{3}{85/85}{}{0}}
+\headcommand {\beamer@framepages {85}{85}}
+\headcommand {\slideentry {5}{0}{4}{86/86}{}{0}}
+\headcommand {\beamer@framepages {86}{86}}
+\headcommand {\sectionentry {6}{Fine-Tuning}{87}{Fine-Tuning}{0}}
+\headcommand {\beamer@sectionpages {83}{86}}
+\headcommand {\beamer@subsectionpages {83}{86}}
+\headcommand {\slideentry {6}{0}{1}{87/87}{}{0}}
+\headcommand {\beamer@framepages {87}{87}}
+\headcommand {\slideentry {6}{0}{2}{88/88}{}{0}}
+\headcommand {\beamer@framepages {88}{88}}
+\headcommand {\slideentry {6}{0}{3}{89/89}{}{0}}
+\headcommand {\beamer@framepages {89}{89}}
+\headcommand {\slideentry {6}{0}{4}{90/90}{}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\slideentry {6}{0}{5}{91/91}{}{0}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\slideentry {6}{0}{6}{92/92}{}{0}}
+\headcommand {\beamer@framepages {92}{92}}
+\headcommand {\slideentry {6}{0}{7}{93/93}{}{0}}
+\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\slideentry {6}{0}{8}{94/94}{}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\slideentry {6}{0}{8}{94/95}{}{0}}
+\headcommand {\beamer@framepages {94}{95}}
+\headcommand {\slideentry {6}{0}{8}{94/96}{}{0}}
+\headcommand {\beamer@framepages {94}{96}}
+\headcommand {\slideentry {6}{0}{8}{94/97}{}{0}}
+\headcommand {\beamer@framepages {94}{97}}
+\headcommand {\slideentry {6}{0}{8}{94/98}{}{0}}
+\headcommand {\beamer@framepages {94}{98}}
+\headcommand {\slideentry {6}{0}{8}{94/99}{}{0}}
+\headcommand {\beamer@framepages {94}{99}}
+\headcommand {\slideentry {6}{0}{8}{94/100}{}{0}}
+\headcommand {\beamer@framepages {94}{100}}
+\headcommand {\beamer@partpages {1}{100}}
+\headcommand {\beamer@subsectionpages {87}{100}}
+\headcommand {\beamer@sectionpages {87}{100}}
+\headcommand {\beamer@documentpages {100}}
+\headcommand {\def \inserttotalframenumber {73}}
