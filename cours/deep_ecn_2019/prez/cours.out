@@ -1,8 +1,8 @@
-\BOOKMARK [2][]{Outline0.1}{Introduction : learning a probability distribution}{}% 1
-\BOOKMARK [2][]{Outline0.2}{Original GAN googfellow2014}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Wasserstein GAN's}{}% 3
-\BOOKMARK [3][]{Outline0.3.1.57}{Optimal transport and Wasserstein distance}{Outline0.3}% 4
-\BOOKMARK [3][]{Outline0.3.2.70}{Wasserstein GAN}{Outline0.3}% 5
-\BOOKMARK [2][]{Outline0.4}{Autoencoder}{}% 6
-\BOOKMARK [2][]{Outline0.5}{Variationnal autoencoder}{}% 7
-\BOOKMARK [2][]{Outline0.6}{Fine-Tuning}{}% 8
+\BOOKMARK [2][]{Outline0.1}{Generative models}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.4}{Introduction : learning a probability distribution}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.19}{Original GAN googfellow2014}{Outline0.1}% 3
+\BOOKMARK [3][]{Outline0.1.3.55}{Wasserstein GAN's}{Outline0.1}% 4
+\BOOKMARK [2][]{Outline0.2}{Autoencoder \046 Variational autoencoders}{}% 5
+\BOOKMARK [3][]{Outline0.2.1.75}{Autoencoder}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.2.81}{Variational autoencoder}{Outline0.2}% 7
+\BOOKMARK [2][]{Outline0.3}{Deep Learning in practice: Fine-Tuning}{}% 8

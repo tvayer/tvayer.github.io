@@ -239,7 +239,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[GAN's]{Going further with Deep Learning} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[GAN's]{Towards more Deep Learning} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Titouan Vayer} % Your name
 
@@ -258,10 +258,16 @@
 \frametitle{Overview} % Table of contents slide, comment this block out to remove it
   \tableofcontents
 \end{frame}
+
+
+
+
+
 %----------------------------------------------------------------------------------------
 
-\section{Introduction : learning a probability distribution}
+\section{Generative models}
 
+\subsection{Introduction : learning a probability distribution}
 
 \begin{frame}
 \frametitle{Learning a probability measure}
@@ -500,7 +506,7 @@ Solving \eqref{loglike} is equivalent to find the "closest" distribution amoung 
 \end{frame}
 %----------------------------------------------------------------------------------------
 
-\section{Original GAN \cite{googfellow2014}}
+\subsection{Original GAN \cite{googfellow2014}}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
@@ -943,9 +949,9 @@ $$\text{IS}=\exp(H(y)-\mathbb{E}_{x}[H(y|x)])$$
 
 %----------------------------------------------------------------------------------------
 
-\section{Wasserstein GAN's}
+\subsection{Wasserstein GAN's}
 
-\subsection{Optimal transport and Wasserstein distance}
+\subsubsection{Optimal transport and Wasserstein distance}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
@@ -1162,7 +1168,7 @@ Numerous applications for the Wasserstein distance :
 
 
 
-\subsection{Wasserstein GAN}
+\subsubsection{Wasserstein GAN}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
@@ -1288,7 +1294,9 @@ But :
   \end{frame}
 
 
-\section{Autoencoder}
+\section{Autoencoder \& Variational autoencoders}
+
+\subsection{Autoencoder}
 
 
 %----------------------------------------------------------------------------------------
@@ -1418,7 +1426,7 @@ The most classical autoencoders are \emph{undercomplete autoencoders} : the late
 %----------------------------------------------------------------------------------------
 
 
-\section{Variationnal autoencoder}
+\subsection{Variational autoencoder}
 
 %----------------------------------------------------------------------------------------
 
@@ -1480,15 +1488,16 @@ for  $x \sim \mathbb{P}_{r}$
 We usually choose $p(z)=\mathcal{N}(0,I)$. Once the network is trained it is easy to generate samples : pick a $z\sim \mathcal{N}(0,I)$ (easy) a feed the learned generator $p_{\theta_{d}}(x|z)$ with it.
 
 \end{frame}
+
 %----------------------------------------------------------------------------------------
 
-\section{Fine-Tuning}
+\section{Deep Learning in practice: Fine-Tuning}
 
 
 \begin{frame}
 \frametitle{Problem setting}
 
-Which architecture to use ?
+In most of the Deep learning problems the first question is: which architecture to use ?
 
 \begin{figure}
   \begin{center}
@@ -1505,7 +1514,7 @@ Which architecture to use ?
 \begin{frame}
 \frametitle{Some widely known architectures}
 
-Maybe the first architecture for images (60k parameters) \cite{LeCun1989} 
+Maybe the first architecture for images LeNet (60k parameters) \cite{LeCun1989} 
 
 \begin{figure}
   \begin{center}
@@ -1569,8 +1578,21 @@ Resnet (avoids vanishing gradients) \cite{resnet,wide_resnet}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{How to use the models for your own application ?}
+\frametitle{How to use the models for your own application ? Fine-tuning}
 
+Very often "famous" models are trained on ImageNet and your image classification problem will not match ImageNet classes. Typical strategy consists is fine-tuning.
+
+\pause 
+
+\begin{itemize}
+\item Truncate the last layer of the pre-trained network and replace it with your new softmax layer relevant to your problem.
+\item Use a smaller learning rate ($\sim$ 10 times smaller): pre-trained weights should not be distorted a lot.
+\item Freeze the weights of the first few layers: first few layers capture "universal features" that we want to keep. And it is expensive to retrain all the model!
+\end{itemize}
+
+\pause
+
+All Deep Learning framework (Keras/Pytorch) has pretrained popular models that can be loaded.
 
 
 \end{frame}

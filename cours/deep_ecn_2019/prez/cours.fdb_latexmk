@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex cours"] 1569417646 "cours.aux" "cours.bbl" "cours" 1569417652
+["bibtex cours"] 1569423752 "cours.aux" "cours.bbl" "cours" 1569423759
   "./biblio.bib" 1569416926 15136 7928ae17783f2a4d190061f4e0d010dc ""
   "/usr/local/texlive/2015/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "cours.aux" 1569417652 20200 af55cb21f8d7c59bc08f66948f545456 ""
+  "cours.aux" 1569423758 21200 b689bafa69d1f45e9ad68ad2c4076711 ""
   "cours.bcf" 0 -1 0 ""
   (generated)
   "cours.bbl"
   "cours.blg"
-["pdflatex"] 1569417646 "cours.tex" "cours.pdf" "cours" 1569417652
-  "./cours.out" 1569417652 507 3d1b9e55833dde1156d179c929f47b5b ""
+["pdflatex"] 1569423752 "cours.tex" "cours.pdf" "cours" 1569423759
+  "./cours.out" 1569423758 578 5bafb6f50281684b516e344bc4306f7c ""
   "./fig/3ways.pdf" 1538667845 25005 5697ad3df91c67598a009a28042b5b14 ""
   "./fig/T.pdf" 1510222707 182756 4b473c8d4252329dd21e739b12731a88 ""
   "./fig/alexnet.png" 1569415905 119984 f236af1ffd8415f315de13ab4a65077e ""
@@ -321,12 +321,12 @@
   "beamerinnerthememetropolis.sty" 1536768198 9093 b3363c49bd2ed0be1fd18f75a61056fe ""
   "beamerouterthememetropolis.sty" 1536768198 4645 f04b2e6f7e77adc819d7639fed40b2e8 ""
   "beamerthememetropolis.sty" 1536768198 3461 5c69ffdf5501aa7e38eb53d6f51b5efa ""
-  "cours.aux" 1569417652 20200 af55cb21f8d7c59bc08f66948f545456 ""
-  "cours.bbl" 1569417646 5541 d6891a0253c8b0dd073172fdef5c0965 "bibtex cours"
-  "cours.nav" 1569417652 9433 b70ba2b16b7c7af3c53e447acef6c35d ""
-  "cours.out" 1569417652 507 3d1b9e55833dde1156d179c929f47b5b ""
-  "cours.tex" 1569417639 58566 3cf5081242bc4f174bd450b6cfdcb737 ""
-  "cours.toc" 1569417652 552 9efed52f906ea951af0652e857d73357 ""
+  "cours.aux" 1569423758 21200 b689bafa69d1f45e9ad68ad2c4076711 ""
+  "cours.bbl" 1569423752 5541 d6891a0253c8b0dd073172fdef5c0965 "bibtex cours"
+  "cours.nav" 1569423758 10386 b5f0192075c6cb0e9c8d0ed71a20c368 ""
+  "cours.out" 1569423758 578 5bafb6f50281684b516e344bc4306f7c ""
+  "cours.tex" 1569423745 59480 7bb41de84561232f5deda4e66c5a0037 ""
+  "cours.toc" 1569423758 749 3a85a0da126ed6cd50f0edab5afbed5e ""
   "fig/3ways.pdf" 1538667845 25005 5697ad3df91c67598a009a28042b5b14 ""
   "fig/T.pdf" 1510222707 182756 4b473c8d4252329dd21e739b12731a88 ""
   "fig/alexnet.png" 1569415905 119984 f236af1ffd8415f315de13ab4a65077e ""
@@ -366,10 +366,10 @@
   "fig/vae.pdf" 1538664474 31625 8c862545d0e96bfd765e6196ae990774 ""
   "fig/vgg_16.png" 1569416838 155594 1f3c51235a875e38955e56befcd88c04 ""
   (generated)
-  "cours.pdf"
-  "cours.toc"
-  "cours.log"
-  "cours.out"
   "cours.nav"
-  "cours.snm"
   "cours.aux"
+  "cours.pdf"
+  "cours.snm"
+  "cours.out"
+  "cours.log"
+  "cours.toc"

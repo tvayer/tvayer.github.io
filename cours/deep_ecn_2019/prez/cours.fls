@@ -370,6 +370,7 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecss0800.tfm
 INPUT /usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT cours.toc
 INPUT cours.toc
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecss0700.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecss1000.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecsx1000.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
@@ -465,7 +466,6 @@ INPUT ./fig/latent.pdf
 INPUT fig/gan.pdf
 INPUT ./fig/gan.pdf
 INPUT ./fig/gan.pdf
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecss0700.tfm
 INPUT fig/dcgan_generator.png
 INPUT ./fig/dcgan_generator.png
 INPUT ./fig/dcgan_generator.png
