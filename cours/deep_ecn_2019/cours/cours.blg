@@ -6,45 +6,45 @@ Database file #1: ./biblio.bib
 A bad cross reference---entry "googfellow2014"
 refers to entry "DBLP:conf/nips/2014", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/nips/2014"
-You've used 23 entries,
+You've used 25 entries,
             1935 wiz_defined-function locations,
-            609 strings with 7922 characters,
-and the built_in function-call counts, 9697 in all, are:
-= -- 920
-> -- 520
-< -- 8
-+ -- 180
-- -- 178
-* -- 836
-:= -- 1733
-add.period$ -- 71
-call.type$ -- 23
-change.case$ -- 201
-chr.to.int$ -- 23
-cite$ -- 23
-duplicate$ -- 352
-empty$ -- 594
-format.name$ -- 207
-if$ -- 1861
+            619 strings with 8333 characters,
+and the built_in function-call counts, 10749 in all, are:
+= -- 1020
+> -- 578
+< -- 9
++ -- 199
+- -- 197
+* -- 922
+:= -- 1910
+add.period$ -- 78
+call.type$ -- 25
+change.case$ -- 218
+chr.to.int$ -- 25
+cite$ -- 25
+duplicate$ -- 394
+empty$ -- 662
+format.name$ -- 228
+if$ -- 2077
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 118
-num.names$ -- 73
-pop$ -- 180
+missing$ -- 26
+newline$ -- 128
+num.names$ -- 81
+pop$ -- 198
 preamble$ -- 1
-purify$ -- 201
+purify$ -- 218
 quote$ -- 0
-skip$ -- 282
+skip$ -- 317
 stack$ -- 0
-substring$ -- 524
-swap$ -- 56
-text.length$ -- 4
+substring$ -- 588
+swap$ -- 69
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
+type$ -- 148
 warning$ -- 0
-while$ -- 67
+while$ -- 75
 width$ -- 0
-write$ -- 300
+write$ -- 327
 (There was 1 error message)

@@ -261,6 +261,35 @@
 
 
 
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{}
+
+\begin{itemize}
+\item GAN/VAE \cite{biggan}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{fig/biggan.png}
+  \end{center}
+\end{figure}
+
+\item Autoencoders
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{fig/learning_manifolds.png}
+  \end{center}
+\end{figure}
+
+\item Fine-Tuning \cite{fine_tuning}
+
+\end{itemize}
+
+
+\end{frame}
+
+
 
 
 %----------------------------------------------------------------------------------------
@@ -301,7 +330,7 @@ Some applications of generative models :
 \begin{frame}
 \frametitle{Probability measures and histograms}
 
-Let $\Omega$ be a measurable space.
+Let $\Omega \subset \mathbb{R}^{d}$ be a measurable space.
 \begin{itemize}
 \item A probability measure is a measure $\mu$ on $\Omega$ such that $\int_{\Omega} d\mu=1$.
 \item We note $\mathcal{P}(\Omega)$ the space of all probability measures on $\Omega$.
@@ -325,7 +354,7 @@ $$\mu=\sum_{i=1}^{n} \mu_{i} \delta_{x_{i}} $$
 \frametitle{Probability measures and histograms}
 
 \begin{itemize}
-\item Bernoulli law : toss a coin $\Omega=\{\text{pile},\text{face}\}$ and $\mu_{i=1,2} \in \{0.5,0.5\}$
+\item Bernoulli law : toss a coin $\Omega=\{\text{pile},\text{face}\}=\{-1,1\}$ and $\mu_{i=1,2} \in \{0.5,0.5\}$
 \item Color histograms in image : pixels as empirical distribution
 \begin{figure}
   \begin{center}
@@ -380,7 +409,9 @@ $\left\{(\mu_i)_i\geq 0; \sum_i \mu_i=1\right\}$
 
 \begin{frame}
 \frametitle{Prerequisite: Expectation and machine learning}
-For a \emph{real} random variable $x$ following the probability measure $\mu \in \mathcal{P}(\mathbb{R})$  we define its \emph{expectation} as:
+How to describe a probability measure? 
+
+For a \emph{real} random variable $x$ following the probability measure $\mu \in \mathcal{P}(\mathbb{R})$  we define its \emph{expectation} (or \emph{moment}) as:
 
 \begin{equation}
     \underset{x \sim \mu}{\mathbb{E}}[x]=\int_{x \in \Omega} x d\mu(x)
@@ -480,12 +511,7 @@ If we have two distributions $P(x)$, $Q(x)$ over the same random variable $x$ we
 \text{KL}(P||Q)=\underset{x \sim P}{\mathbb{E}}\big[\log(\frac{P(x)}{Q(x)})\big]=\int_{\Omega} \log(\frac{P(x)}{Q(x)}) P(x) dx
 \end{equation}
 
-KL it is the extra amount of information needed :
-
-\begin{itemize}
-\item To send a message containing symbols drawn from $P$,
-\item When we use a code that was designed to minimize the length of messages drawn from $Q$.
-\end{itemize}
+Useful in information theory since  $$I(X;Y)=\text{KL}(P(X,Y)||P(X)P(Y))$$ where $I(X;Y)$ is the mutual information (how the two random variable $X$ and $Y$ are dependant)
   
 
 \end{frame}
@@ -519,7 +545,7 @@ For discrete histograms with same number of bins $P=(p_{i})_{i}$,$Q=(q_{i})_{i}$
 \begin{itemize}
 \item Minkowski distance or $\ell_{p}$ distances : $d_{L_{r}}(P,Q)= \big(\sum_{i} |p_{i}-q_{i}|^{r}\big)^{\frac{1}{r}}$
 \item Histogram intersection : $d_{h}(P,Q)= 1-\frac{\sum_{i} \text{min}(p_{i},q_{i})}{\sum_{i}q_{i}}$
-\item$\chi^{2}$ statistic : $d_{\chi^{2}}(P,Q)= \sum_{i} \frac{(p_{i}-q_{i})^{2}}{h_{i}}$, where $m_{i}=\frac{p_{i}+q_{i}}{2}$
+\item$\chi^{2}$ statistic : $d_{\chi^{2}}(P,Q)= \sum_{i} \frac{(p_{i}-q_{i})^{2}}{m_{i}}$, where $m_{i}=\frac{p_{i}+q_{i}}{2}$
 \item Quadratic form distance : $d_{A}(P,Q)=\sqrt{(P-Q)^{T} A (P-Q)}$ with $A=(a_{ij})$ the "cross-bin" information.
 \item Kolmogorov-Smirnov distance, match distance ...
 \end{itemize}
@@ -564,6 +590,7 @@ $$\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{\theta^{*}})= \underset{\theta \in \Thet
 Solving \eqref{loglike} is equivalent to find the "closest" distribution among the given parametric family which fits the target distribution (\textit{w.r.t} the KL-divergence)
 \end{block}
 
+In practice hard to minimize (closed form in particular cases, EM algorithm, autodiff...)
 
 \end{frame}
 %----------------------------------------------------------------------------------------

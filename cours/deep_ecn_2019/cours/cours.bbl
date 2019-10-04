@@ -21,6 +21,11 @@ Borji, A. (2018).
 \newblock Pros and cons of {GAN} evaluation measures.
 \newblock {\em CoRR}, abs/1802.03446.
 
+\bibitem[Brock et~al., 2018]{biggan}
+Brock, A., Donahue, J., and Simonyan, K. (2018).
+\newblock Large scale {GAN} training for high fidelity natural image synthesis.
+\newblock {\em CoRR}, abs/1809.11096.
+
 \bibitem[{Chan} et~al., 2018]{2018arXiv180807371C}
 {Chan}, C., {Ginosar}, S., {Zhou}, T., and {Efros}, A.~A. (2018).
 \newblock {Everybody Dance Now}.
@@ -124,6 +129,13 @@ Rubner, Y., Tomasi, C., and Guibas, L.~J. (2000).
 Simonyan, K. and Zisserman, A. (2014).
 \newblock Very deep convolutional networks for large-scale image recognition.
 \newblock {\em CoRR}, abs/1409.1556.
+
+\bibitem[Yosinski et~al., 2014]{fine_tuning}
+Yosinski, J., Clune, J., Bengio, Y., and Lipson, H. (2014).
+\newblock How transferable are features in deep neural networks?
+\newblock In Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N.~D., and
+  Weinberger, K.~Q., editors, {\em Advances in Neural Information Processing
+  Systems 27}, pages 3320--3328. Curran Associates, Inc.
 
 \bibitem[Zagoruyko and Komodakis, 2016]{wide_resnet}
 Zagoruyko, S. and Komodakis, N. (2016).

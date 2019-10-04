@@ -1,11 +1,11 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Generative models}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Introduction : learning a probability distribution}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Original GAN \cite {googfellow2014}}{25}{0}{1}
-\beamer@subsectionintoc {1}{3}{Wasserstein GAN's}{61}{0}{1}
-\beamer@subsubsectionintoc {1}{3}{1}{Optimal transport and Wasserstein distance}{61}{0}{1}
-\beamer@subsubsectionintoc {1}{3}{2}{Wasserstein GAN}{74}{0}{1}
-\beamer@sectionintoc {2}{Autoencoder \& Variational autoencoders}{80}{0}{2}
-\beamer@subsectionintoc {2}{1}{Autoencoder}{81}{0}{2}
-\beamer@subsectionintoc {2}{2}{Variational autoencoder}{87}{0}{2}
-\beamer@sectionintoc {3}{Deep Learning in practice: Fine-Tuning}{91}{0}{3}
+\beamer@sectionintoc {1}{Generative models}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Introduction : learning a probability distribution}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Original GAN \cite {googfellow2014}}{26}{0}{1}
+\beamer@subsectionintoc {1}{3}{Wasserstein GAN's}{62}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{1}{Optimal transport and Wasserstein distance}{62}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{2}{Wasserstein GAN}{75}{0}{1}
+\beamer@sectionintoc {2}{Autoencoder \& Variational autoencoders}{81}{0}{2}
+\beamer@subsectionintoc {2}{1}{Autoencoder}{82}{0}{2}
+\beamer@subsectionintoc {2}{2}{Variational autoencoder}{88}{0}{2}
+\beamer@sectionintoc {3}{Deep Learning in practice: Fine-Tuning}{92}{0}{3}
