@@ -71,6 +71,10 @@ Goodfellow, I.~J., Pouget{-}Abadie, J., Mirza, M., Xu, B., Warde{-}Farley, D.,
 \newblock {DRAW: A Recurrent Neural Network For Image Generation}.
 \newblock {\em ArXiv e-prints}.
 
+\bibitem[Griewank, 2012]{Griewank2012WhoIT}
+Griewank, A. (2012).
+\newblock Who invented the reverse mode of differentiation.
+
 \bibitem[Gulrajani et~al., 2017]{DBLP:journals/corr/GulrajaniAADC17}
 Gulrajani, I., Ahmed, F., Arjovsky, M., Dumoulin, V., and Courville, A.~C.
   (2017).
@@ -99,6 +103,11 @@ LeCun, Y., Boser, B., Denker, J.~S., Henderson, D., Howard, R.~E., Hubbard, W.,
   and Jackel, L.~D. (1989).
 \newblock Backpropagation applied to handwritten zip code recognition.
 \newblock {\em Neural Comput.}, 1(4):541--551.
+
+\bibitem[Linnainmaa, 1976]{Linnainmaa1976}
+Linnainmaa, S. (1976).
+\newblock Taylor expansion of the accumulated rounding error.
+\newblock {\em BIT Numerical Mathematics}, 16(2):146--160.
 
 \bibitem[{Radford} et~al., 2015]{2015arXiv151106434R}
 {Radford}, A., {Metz}, L., and {Chintala}, S. (2015).

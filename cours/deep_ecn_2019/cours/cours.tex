@@ -590,9 +590,48 @@ $$\text{KL}(\mathbb{P}_{r}||\mathbb{P}_{\theta^{*}})= \underset{\theta \in \Thet
 Solving \eqref{loglike} is equivalent to find the "closest" distribution among the given parametric family which fits the target distribution (\textit{w.r.t} the KL-divergence)
 \end{block}
 
-In practice hard to minimize (closed form in particular cases, EM algorithm, autodiff...)
+In practice hard to minimize (closed form in particular cases, EM algorithm, autodiff and gradient descent...)
 
 \end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Parenthesis: Gradient Descent}
+
+Suppose that we have a differentiable function $f$ depending on $x$ and we want to find $x^{*}=\underset{x}{\text{argmin}} f(x)$. The usual way to do it: Gradient descent !
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{fig/gradient_descent.jpeg}
+  \end{center}
+  \caption{Stochastic gradient descent \tiny{Image from Gabriel Peyre}}
+\end{figure}
+
+
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Parenthesis: Automatic differentiation}
+The gradient of a function can be computed with the same complexity as the function itself! \cite{Griewank2012WhoIT,Linnainmaa1976}
+
+\begin{theorem}
+Let $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ computable in $K$ operation. Then there exists an algorithm to compute $\nabla f$ in $O(K)$ operations (independant of the dimension!)
+\end{theorem}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{fig/forward_backward.jpeg}
+  \end{center}
+  \caption{\tiny{Image from Gabriel Peyre}}
+\end{figure}
+
+\end{frame}
+
+
 %----------------------------------------------------------------------------------------
 
 \subsection{Original GAN \cite{googfellow2014}}

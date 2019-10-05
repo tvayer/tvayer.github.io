@@ -443,6 +443,12 @@ INPUT ./fig/fitting.mov
 INPUT fig/fitting0.png
 INPUT ./fig/fitting0.png
 INPUT ./fig/fitting0.png
+INPUT fig/gradient_descent.jpeg
+INPUT ./fig/gradient_descent.jpeg
+INPUT ./fig/gradient_descent.jpeg
+INPUT fig/forward_backward.jpeg
+INPUT ./fig/forward_backward.jpeg
+INPUT ./fig/forward_backward.jpeg
 INPUT fig/lsun_bedrooms_real.png
 INPUT ./fig/lsun_bedrooms_real.png
 INPUT ./fig/lsun_bedrooms_real.png
