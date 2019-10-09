@@ -15,9 +15,9 @@ import utils
 import pickle
 
 class WGAN():
-    def __init__(self,channels=1):
-        self.img_rows = 32
-        self.img_cols = 32
+    def __init__(self,channels=1,img_rows=32,img_cols=32):
+        self.img_rows = img_rows
+        self.img_cols = img_cols
         self.channels = channels
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
         self.latent_dim = 100
@@ -72,8 +72,6 @@ class WGAN():
         model.add(Conv2D(self.channels, kernel_size=4, padding="same"))
         model.add(Activation("tanh"))
 
-        model.summary()
-
         noise = Input(shape=(self.latent_dim,))
         img = model(noise)
 
@@ -102,21 +100,16 @@ class WGAN():
         model.add(Flatten())
         model.add(Dense(1))
 
-        model.summary()
-
         img = Input(shape=self.img_shape)
         validity = model(img)
 
         return Model(img, validity)
 
-    def train(self, epochs, batch_size=128, sample_interval=50):
+    def train(self,X_train, epochs, batch_size=128, sample_interval=50):
 
-        # Load the dataset
-        (X_train, _), (_, _) = mnist.load_data()
 
         # Rescale -1 to 1
-        X_train = (X_train.astype(np.float32) - 127.5) / 127.5
-        X_train = np.expand_dims(X_train, axis=3)
+        X_train = X_train / 127.5 - 1.
 
         # Adversarial ground truths
         valid = -np.ones((batch_size, 1))

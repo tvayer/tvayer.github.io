@@ -16,9 +16,9 @@ import numpy as np
 import pickle
 
 class GAN():
-    def __init__(self,channels=1):
-        self.img_rows = 32
-        self.img_cols = 32
+    def __init__(self,channels=1,img_rows=32,img_cols=32):
+        self.img_rows = img_rows
+        self.img_cols = img_cols
         self.channels = channels
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
         self.latent_dim = 100
@@ -66,8 +66,6 @@ class GAN():
         model.add(Dense(np.prod(self.img_shape), activation='tanh'))
         model.add(Reshape(self.img_shape))
 
-        model.summary()
-
         noise = Input(shape=(self.latent_dim,))
         img = model(noise)
 
@@ -83,21 +81,16 @@ class GAN():
         model.add(Dense(256))
         model.add(LeakyReLU(alpha=0.2))
         model.add(Dense(1, activation='sigmoid'))
-        model.summary()
-
+        
         img = Input(shape=self.img_shape)
         validity = model(img)
 
         return Model(img, validity)
 
-    def train(self, epochs, batch_size=128, sample_interval=50):
-
-        # Load the dataset
-        (X_train, _), (_, _) = mnist.load_data()
+    def train(self,X_train, epochs, batch_size=128, sample_interval=50):
 
         # Rescale -1 to 1
         X_train = X_train / 127.5 - 1.
-        X_train = np.expand_dims(X_train, axis=3)
 
         # Adversarial ground truths
         valid = np.ones((batch_size, 1))
