@@ -15,12 +15,12 @@ import utils
 import pickle
 
 class WGAN():
-    def __init__(self,channels=1,img_rows=32,img_cols=32):
+    def __init__(self,channels=1,img_rows=32,img_cols=32,latent_dim=100):
         self.img_rows = img_rows
         self.img_cols = img_cols
         self.channels = channels
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
-        self.latent_dim = 100
+        self.latent_dim = latent_dim
 
         # Following parameter and optimizer set as recommended in paper
         self.n_critic = 5
