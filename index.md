@@ -9,8 +9,8 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - (2019) Our paper [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html) was accepted at ICML 2019 !
 
 ### Accepted Papers
+- [Sliced Gromov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein). NeurIPS 2019
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML 2019 
-- [Sliced Grmov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein). NeurIPS 2019
 
 ### Preprints
 - [Sliced Gromov-Wasserstein]((https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein))
