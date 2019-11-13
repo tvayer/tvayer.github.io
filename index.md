@@ -4,16 +4,11 @@ I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.iris
 
 I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem and to use this new formulation for the classification of structured data.
 
-### News
-- (2019) [Sliced Gromov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein) accepted at NeurIPS 2019 ! 
-- (2019) Our paper [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html) was accepted at ICML 2019 !
-
 ### Accepted Papers
 - [Sliced Gromov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein). NeurIPS 2019
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML 2019 
 
 ### Preprints
-- [Sliced Gromov-Wasserstein]((https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein))
 - [Fused Gromov-Wasserstein distance for structured objects: theoretical foundations and mathematical properties](https://arxiv.org/abs/1811.02834) : available on ArXiV
 
 ### Talks 
