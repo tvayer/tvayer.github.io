@@ -9,7 +9,8 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML 2019 
 
 ### Preprints
-- [Fused Gromov-Wasserstein distance for structured objects: theoretical foundations and mathematical properties](https://arxiv.org/abs/1811.02834) : available on ArXiV
+- [CO-Optimal Transport](https://arxiv.org/abs/2002.03731): available on ArXiV
+- [Fused Gromov-Wasserstein distance for structured objects: theoretical foundations and mathematical properties](https://arxiv.org/abs/1811.02834): available on ArXiV
 
 ### Talks 
 - March 2019 : I was invited at [Qarma](https://qarma.lis-lab.fr/) in Aix-Marseille University to talked about "Optimal Transport for Structured data". [Slides](/materials/Titouan_Marseille_2019.pdf)
