@@ -10,6 +10,7 @@ I graduated from École Centrale de Lille with major in data science and now wor
 
 ### Preprints
 - [CO-Optimal Transport](https://arxiv.org/abs/2002.03731): available on ArXiV
+- [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848): available on ArXiV
 - [Fused Gromov-Wasserstein distance for structured objects: theoretical foundations and mathematical properties](https://arxiv.org/abs/1811.02834): available on ArXiV
 
 ### Talks 
