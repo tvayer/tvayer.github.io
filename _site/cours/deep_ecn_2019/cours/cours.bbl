@@ -1,0 +1,154 @@
+\begin{thebibliography}{}
+
+\bibitem[{Antoniou} et~al., 2017]{2017arXiv171104340A}
+{Antoniou}, A., {Storkey}, A., and {Edwards}, H. (2017).
+\newblock {Data Augmentation Generative Adversarial Networks}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Arjovsky and Bottou, 2017]{arjovsky_towards_2017}
+Arjovsky, M. and Bottou, L. (2017).
+\newblock Towards principled methods for training generative adversarial
+  networks.
+\newblock {\em CoRR}, abs/1701.04862.
+
+\bibitem[Arjovsky et~al., 2017]{arjovsky_wgan_2017}
+Arjovsky, M., Chintala, S., and Bottou, L. (2017).
+\newblock Wasserstein {GAN}.
+\newblock {\em CoRR}, abs/1701.07875.
+
+\bibitem[Borji, 2018]{DBLP:journals/corr/abs-1802-03446}
+Borji, A. (2018).
+\newblock Pros and cons of {GAN} evaluation measures.
+\newblock {\em CoRR}, abs/1802.03446.
+
+\bibitem[Brock et~al., 2018]{biggan}
+Brock, A., Donahue, J., and Simonyan, K. (2018).
+\newblock Large scale {GAN} training for high fidelity natural image synthesis.
+\newblock {\em CoRR}, abs/1809.11096.
+
+\bibitem[{Chan} et~al., 2018]{2018arXiv180807371C}
+{Chan}, C., {Ginosar}, S., {Zhou}, T., and {Efros}, A.~A. (2018).
+\newblock {Everybody Dance Now}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Courty et~al., 2017]{courty2017optimal}
+Courty, N., Flamary, R., Tuia, D., and Rakotomamonjy, A. (2017).
+\newblock Optimal transport for domain adaptation.
+\newblock {\em IEEETPAMI}, 39(9):1853--1865.
+
+\bibitem[Ferradans et~al., 2014]{ferradans2014regularized}
+Ferradans, S., Papadakis, N., Peyr{\'e}, G., and Aujol, J.-F. (2014).
+\newblock Regularized discrete optimal transport.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(3):1853--1882.
+
+\bibitem[{Frogner} et~al., 2015]{2015arXiv150605439F}
+{Frogner}, C., {Zhang}, C., {Mobahi}, H., {Araya-Polo}, M., and {Poggio}, T.
+  (2015).
+\newblock {Learning with a Wasserstein Loss}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Gong et~al., 2000]{Gong:2000:DVI:572750}
+Gong, S., McKenna, S.~J., and Psarrou, A. (2000).
+\newblock {\em Dynamic Vision: From Images to Face Recognition}.
+\newblock Imperial College Press, London, UK, UK, 1st edition.
+
+\bibitem[Goodfellow et~al., 2014]{googfellow2014}
+Goodfellow, I.~J., Pouget{-}Abadie, J., Mirza, M., Xu, B., Warde{-}Farley, D.,
+  Ozair, S., Courville, A.~C., and Bengio, Y. (2014).
+\newblock Generative adversarial nets.
+\newblock In {\em Advances in Neural Information Processing Systems 27: Annual
+  Conference on Neural Information Processing Systems 2014, December 8-13 2014,
+  Montreal, Quebec, Canada}, pages 2672--2680.
+
+\bibitem[{Goodfellow} et~al., 2014]{2014arXiv1412.6572G}
+{Goodfellow}, I.~J., {Shlens}, J., and {Szegedy}, C. (2014).
+\newblock {Explaining and Harnessing Adversarial Examples}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[{Gregor} et~al., 2015]{2015arXiv150204623G}
+{Gregor}, K., {Danihelka}, I., {Graves}, A., {Jimenez Rezende}, D., and
+  {Wierstra}, D. (2015).
+\newblock {DRAW: A Recurrent Neural Network For Image Generation}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Griewank, 2012]{Griewank2012WhoIT}
+Griewank, A. (2012).
+\newblock Who invented the reverse mode of differentiation.
+
+\bibitem[Gulrajani et~al., 2017]{DBLP:journals/corr/GulrajaniAADC17}
+Gulrajani, I., Ahmed, F., Arjovsky, M., Dumoulin, V., and Courville, A.~C.
+  (2017).
+\newblock Improved training of wasserstein gans.
+\newblock {\em CoRR}, abs/1704.00028.
+
+\bibitem[He et~al., 2015]{resnet}
+He, K., Zhang, X., Ren, S., and Sun, J. (2015).
+\newblock Deep residual learning for image recognition.
+\newblock {\em CoRR}, abs/1512.03385.
+
+\bibitem[Krizhevsky et~al., 2012]{alexnet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In Pereira, F., Burges, C. J.~C., Bottou, L., and Weinberger, K.~Q.,
+  editors, {\em Advances in Neural Information Processing Systems 25}, pages
+  1097--1105. Curran Associates, Inc.
+
+\bibitem[LeCun et~al., 2015]{DBLP:journals/nature/LeCunBH15}
+LeCun, Y., Bengio, Y., and Hinton, G.~E. (2015).
+\newblock Deep learning.
+\newblock {\em Nature}, 521(7553):436--444.
+
+\bibitem[LeCun et~al., 1989]{LeCun1989}
+LeCun, Y., Boser, B., Denker, J.~S., Henderson, D., Howard, R.~E., Hubbard, W.,
+  and Jackel, L.~D. (1989).
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock {\em Neural Comput.}, 1(4):541--551.
+
+\bibitem[Linnainmaa, 1976]{Linnainmaa1976}
+Linnainmaa, S. (1976).
+\newblock Taylor expansion of the accumulated rounding error.
+\newblock {\em BIT Numerical Mathematics}, 16(2):146--160.
+
+\bibitem[{Radford} et~al., 2015]{2015arXiv151106434R}
+{Radford}, A., {Metz}, L., and {Chintala}, S. (2015).
+\newblock {Unsupervised Representation Learning with Deep Convolutional
+  Generative Adversarial Networks}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Reed et~al., 2016]{DBLP:journals/corr/ReedAYLSL16}
+Reed, S.~E., Akata, Z., Yan, X., Logeswaran, L., Schiele, B., and Lee, H.
+  (2016).
+\newblock Generative adversarial text to image synthesis.
+\newblock {\em CoRR}, abs/1605.05396.
+
+\bibitem[Rolet et~al., 2016]{pmlr-v51-rolet16}
+Rolet, A., Cuturi, M., and Peyré, G. (2016).
+\newblock Fast dictionary learning with a smoothed wasserstein loss.
+\newblock In Gretton, A. and Robert, C.~C., editors, {\em Proceedings of the
+  19th International Conference on Artificial Intelligence and Statistics},
+  volume~51 of {\em Proceedings of Machine Learning Research}, pages 630--638,
+  Cadiz, Spain. PMLR.
+
+\bibitem[Rubner et~al., 2000]{Rubner2000}
+Rubner, Y., Tomasi, C., and Guibas, L.~J. (2000).
+\newblock The earth mover's distance as a metric for image retrieval.
+\newblock {\em International Journal of Computer Vision}, 40(2):99--121.
+
+\bibitem[Simonyan and Zisserman, 2014]{vgg16}
+Simonyan, K. and Zisserman, A. (2014).
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em CoRR}, abs/1409.1556.
+
+\bibitem[Yosinski et~al., 2014]{fine_tuning}
+Yosinski, J., Clune, J., Bengio, Y., and Lipson, H. (2014).
+\newblock How transferable are features in deep neural networks?
+\newblock In Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N.~D., and
+  Weinberger, K.~Q., editors, {\em Advances in Neural Information Processing
+  Systems 27}, pages 3320--3328. Curran Associates, Inc.
+
+\bibitem[Zagoruyko and Komodakis, 2016]{wide_resnet}
+Zagoruyko, S. and Komodakis, N. (2016).
+\newblock Wide residual networks.
+\newblock {\em CoRR}, abs/1605.07146.
+
+\end{thebibliography}
