@@ -19,8 +19,8 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - Ecole Centrale de Nantes (ECN) October 2019 : Towards more Deep Learning (GAN's, Wasserstein GAN's, VAE, Fine-Tuning), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2019) 
 - Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2018) 
 
-## Blog posts:
-- [Fourier Analysis]()
+## Notes:
+- A quick post about [Fourier Analysis]({% post_url /_posts/2020-05-04-fourier %}) in French. (main properties of Fourier series, Fourier Transform)
 
 
 ## Contacts
