@@ -222,8 +222,9 @@ Soit $f: \mathbb{R} \rightarrow \mathbb{R}$ une function. On dit que $f$ a une p
 <p>En quelque sorte une fonction périodique est facile à étudier car il suffit de l’étudier sur un intervalle de longueur $T$. Dans ce chapitre on considère des fonctions périodiques de période $T$, on note $\omega=\frac{2\pi}{T}$ la pulsation associée.</p>
 
 <hr />
+
 <p align="center"> 
-<img src="/materials/four.png" />
+<img src="/materials/period.png" />
 </p>
 
 <p><strong>Definition (Série de Fourier d’une fonction)</strong>
@@ -332,7 +333,7 @@ On note $(e_n)$ la suite de fonctions $e_n(x)=e^{in \omega x}$. Pour $p\neq q$ o
 
 <script type="math/tex; mode=display">\lVert f\rVert_{2}^{2}=\lVert S_N(f)-f\rVert_{2}^{2}+\lVert S_N(f)\rVert_{2}^{2}</script>
 
-<p>En utilisant le théorème de convergence en moyenne quadratique on fait tendre $N$ à l’infini dans cette égalité ce qui nous donne $\lVert S(f)\rVert_{2}^{2}=\lVert f\rVert_{2}^{2}$.</p>
+<p>En utilisant le théorème de convergence en moyenne quadratique on fait tendre $N$ à l’infini, (je ne détaille pas mais $\lVert S_N(f)\rVert_{2}^{2}$ converge) dans cette égalité ce qui nous donne $\lVert S(f)\rVert_{2}^{2}=\lVert f\rVert_{2}^{2}$.</p>
 
 <p>Or comme $(e_n)$ est une base orthonormée on a:</p>
 
@@ -342,7 +343,7 @@ On note $(e_n)$ la suite de fonctions $e_n(x)=e^{in \omega x}$. Pour $p\neq q$ o
 
 <h4 id="un-résultat-négatif-le-théorème-de-banach-steinhaus-">Un résultat négatif: le théorème de Banach-Steinhaus <a name="whatelse"></a></h4>
 
-<p>D’après les paragraphes précédents on a l’impression que n’importe quelle fonction périodique un peu régulilère peut être vue comme étant égale à sa série de Fourier, ou en tout cas pas les deux sont proches. Je ne vais pas détailler ce résultat mais il dit en substance que dans l’ensemble des fonctions continues périodiques l’ensemble des fonctions dont la série de Fourier diverge est “grand”. Plus précisément il existe des fonctions continues périodiques qui sont différentes de leur série de Fourier. C’est d’autant plus remarquable qu’il est assez difficle de construire ces fonctions.</p>
+<p>D’après les paragraphes précédents on a l’impression que n’importe quelle fonction périodique un peu régulilère peut être vue comme étant égale à sa série de Fourier, ou en tout cas que les deux sont proches. Je ne vais pas détailler ce résultat mais il dit en substance que dans l’ensemble des fonctions continues périodiques l’ensemble des fonctions dont la série de Fourier diverge est “grand”. Plus précisément il existe des fonctions continues périodiques qui sont différentes de leur série de Fourier. C’est d’autant plus remarquable qu’il est assez difficle de construire ces fonctions.</p>
 
 <h4 id="quels-intérêts-">Quels intérêts ?</h4>
 
@@ -381,7 +382,7 @@ La méthodologie si on nous donne $f$:
 <p>Les notions précédentes étaient relatives aux fonctions périodiques. Que se passe t’il lorsqu’on veut définir des notions équivalentes pour des fonctions que ne sont pas périodiques ? Par exemple considérons les deux fonctions suivantes:</p>
 
 <p align="center"> 
-<img src="/materials/four2.png" />
+<img src="/materials/nonperiod.png" />
 </p>
 
 <p>La courbe en bleue représente la fonction périodique précédente à laquelle on a ajouté un bruit. Elle ne se répète plus exactement dans le temps, même si on devine bien un certain pattern sous jacent. La deuxième fonction est une fonction “créneau” ou “porte” qui est nulle avant 0.05 et vaut 1 ensuite.</p>
@@ -413,29 +414,33 @@ La transformée de Fourier de $f$ est la fonction complexe définie en une pulst
 
 <hr />
 
-<p>En appliquant cette transformée aux signaux précédents on obtient:</p>
+<p>La transformée de Fourier est une fonction complexe et donc contient deux informations liées à sa partie réelle et sa partie imaginaire. Plus précisément comme $\hat{f}(\omega)$ est un nombre complexe il peut s’écrire: $\hat{f}(\omega)=|\hat{f}(\omega)|e^{i\phi(\omega)}$. Une représentation fréquentielle de $f$ est donc une représentation de $|\hat{f}(\omega)|$ (le <em>module de la transformée de Fourier</em>) et de $\phi(\omega)$ (la <em>phase de la transformée de Fourier</em>).</p>
+
+<p>Pour son analyse de la trasnformée de Fourier on s’intéresse donc à deux courbes qu’on appelle <em>spectre d’amplitude</em> et <em>spectre de phase</em> qui représentent respectivement le module de notre fonction et sa phase, en fonction de la pulsation $\omega$ ou de la fréquence $f=\frac{2\pi}{\omega}$.</p>
+
+<p>En appliquant cette transformée au signal précédent on obtient ces différents spectres:</p>
 
 <p align="center"> 
 <img src="/materials/tf.png" />
 </p>
 
-<p>On appelle ces courbes les représentations fréquentielles de nos signaux ou encore les spectres des signaux. Elles sont une autre manière de représenter nos signaux, et, souvent permettent une meilleur analyse de ces signaux.</p>
+<p>Ces courbes représentations fréquentielles de nos signaux sont une autre manière de représenter les représenter, et, souvent permettent une meilleur analyse de ces signaux.</p>
 
 <h4 id="la-transformée-de-fourier-inverse-">La transformée de Fourier inverse <a name="invfour"></a></h4>
 
-<p>Comme pour les séries de Fourier on peut se demander si on peut retrouver la fonction $f$ au travers de sa transformée de Fourier afin d’avoir cette notion de “dualité” entre ces deux objets. Dans les séries de Fourier on avait souvent l’égalité entre la série de Fourier et la fonction. Ici la dualité va exister au travers de la notion de <em>transformée de Fourier inverse</em>. A l’aide d’une opération sur la transformée de Fourier on va pouvoir retrouver le signal original.</p>
+<p>Comme pour les séries de Fourier on peut se demander si on peut retrouver la fonction $f$ au travers de sa transformée de Fourier afin d’avoir cette notion de “dualité” entre ces deux objets. Dans les séries de Fourier on avait souvent l’égalité entre la série de Fourier et la fonction. Ici la dualité va exister au travers de la notion de <em>transformée de Fourier inverse</em>. A l’aide de cette opération sur la transformée de Fourier on va pouvoir retrouver le signal original.</p>
 
 <hr />
 <p><strong>Definition (Transformée de Fourier inverse)</strong>
 Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction intégrable sur $\mathbb{R}$.
-La transformée de Fourier inverse $f$ est la fonction à valeur complexe définie en un temps $t$ par: 
+La transformée de Fourier inverse $f$ est la fonction définie en un temps $t$ par: 
 \begin{equation}
 \mathcal{F}^{-1}(\hat{f})(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} \hat{f}(\omega)e^{i\omega t}d\omega
 \end{equation}</p>
 
 <hr />
 
-<p>On peut prouver le théorème suivant qui nous dit que la transformée de Fourier inverse est égal à notre signal d’origine.</p>
+<p>On peut alors prouver que la transformée de Fourier inverse est égal à notre signal d’origine.</p>
 
 <hr />
 <p><strong>Théorème (Reconstruction du signal)</strong>
@@ -513,9 +518,9 @@ Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction de carré intégrable su
 
 <p>Je n’ai fait qu’un rapide aperçu des propriétés de bases de ces opérations et n’ai que très rapidement balayé les intérêts pratiques de ces objets. Ils sont utilisés partout en analyse du signal grâce à cette notion de dualité qui permet de regarder autrement le signal, de manière souvent plus pertinente.</p>
 
-<p>On peut rapidement citer comme application les opérations de filtrage des signaux, pour les rendre plus audibles en enlevant le bruit par exemple, qui sont basés sur des convolutions et utilisent les transformée de Fourier.</p>
+<p>On peut rapidement citer comme application les opérations de filtrage des signaux, par exemple pour les rendre plus audibles en enlevant le bruit, qui sont basés sur des convolutions et utilisent les transformée de Fourier.</p>
 
-<p>On peut aussi citer la reconnaissance des signaux qui est souvent plus simple en utilisant le domaine fréquentiel, c’est la base de <a href="http://coding-geek.com/how-shazam-works/">Shazam</a> par exemple.</p>
+<p>On peut aussi citer la reconnaissance des signaux en utilisant le domaine fréquentiel, c’est la base de <a href="http://coding-geek.com/how-shazam-works/">Shazam</a>.</p>
 
 <p>Je n’ai pas abordé le calcul pratique de ces transformées de Fourier qui est basé sur le très bel algorithme de <a href="http://www.ferdinandpiette.com/blog/2011/05/la-transformee-de-fourier-discrete/"><em>Fast Fourier Transform</em></a> et qui a d’innombrables applications.</p>
 
