@@ -207,6 +207,7 @@ autoNumber: "AMS"
       <li><a href="#intui">Intuitions</a></li>
       <li><a href="#invfour">Transformée de Fourier inverse</a></li>
       <li><a href="#prop">Quelques propriétés</a></li>
+      <li><a href="#insuf">Insuffisances</a></li>
       <li><a href="#conclu">Conclusion</a></li>
     </ol>
   </li>
@@ -391,7 +392,7 @@ La méthodologie si on nous donne $f$:
 
 <p>Le principe de la transformée de Fourier est de définir la notion de fréquence pour des fonctions non périodiques.</p>
 
-<p>L’idée centrale de la transformée de Fourier est de considérer les signaux non périodique comme périodique mais de <em>période infinie</em>, autrement dit que le motif de la fonction se répète à partir de l’infini. On va donc regarder le comportement des notions précédentes lorsque $T \rightarrow \infty$.</p>
+<p>L’idée centrale est de considérer les signaux non périodique comme périodique mais de <em>période infinie</em>, autrement dit que le motif de la fonction se répète à partir de l’infini. On va donc regarder le comportement des notions précédentes lorsque $T \rightarrow \infty$.</p>
 
 <p><strong><em>Que deviennent les pulsations ?</em></strong> On remarque que lorsque $T \rightarrow \infty$ la pulsation $\omega=\frac{2\pi}{T}$ tend vers 0. Ainsi les $n\omega$ se rapprochent de plus en plus à mesure que $T$ grandit. Ainsi on ne peut plus distinguer un $n\omega$ d’un $(n+1)\omega$ quand $T \rightarrow \infty$ et donc une notion discrète de la pulsation ne suffit plus. On va donc remplacer les pulsations discrètes $n\omega$ par un paramètres $\omega$ qui peut prendre toutes les valeurs dans $\mathbb{R}$.</p>
 
@@ -416,7 +417,7 @@ La transformée de Fourier de $f$ est la fonction complexe définie en une pulst
 
 <p>La transformée de Fourier est une fonction complexe et donc contient deux informations liées à sa partie réelle et sa partie imaginaire. Plus précisément comme $\hat{f}(\omega)$ est un nombre complexe il peut s’écrire: $\hat{f}(\omega)=|\hat{f}(\omega)|e^{i\phi(\omega)}$. Une représentation fréquentielle de $f$ est donc une représentation de $|\hat{f}(\omega)|$ (le <em>module de la transformée de Fourier</em>) et de $\phi(\omega)$ (la <em>phase de la transformée de Fourier</em>).</p>
 
-<p>Pour son analyse de la trasnformée de Fourier on s’intéresse donc à deux courbes qu’on appelle <em>spectre d’amplitude</em> et <em>spectre de phase</em> qui représentent respectivement le module de notre fonction et sa phase, en fonction de la pulsation $\omega$ ou de la fréquence $f=\frac{2\pi}{\omega}$.</p>
+<p>Pour son analyse on s’intéresse donc à deux courbes qu’on appelle <em>spectre d’amplitude</em> et <em>spectre de phase</em> qui représentent respectivement le module de notre fonction et sa phase, en fonction de la pulsation $\omega$ ou de la fréquence $f=\frac{\omega}{2\pi}$.</p>
 
 <p>En appliquant cette transformée au signal précédent on obtient ces différents spectres:</p>
 
@@ -466,7 +467,9 @@ f*g(x)=\int_{-\infty}^{+\infty} f(x-t)g(x) dt
 
 <hr />
 
-<p>Cette opération est symétrique $f*g=g*f$. Il est notamment intéressant de considérer la convolution pour lisser des signaux (on parle de filtre passe-bas). On peut l’illustrer en considérant le produit de convolution de deux fonctions créneaux centrées en 0 :</p>
+<p>Le produit de convolution est bien définie dans le cas des fonctions intégrables. En effet $\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \lvert f(x-t)g(x) \rvert dt dx =\left(\int_{-\infty}^{+\infty} \lvert f(x) \rvert dx \right) \left(\int_{-\infty}^{+\infty} \lvert g(t) \rvert dt \right)&lt;+\infty$. On peut en conclure que l’application $x,t\rightarrow f(x-t)g(x)$ est intégrable sur $\mathbb{R} \times \mathbb{R}$ donc par le théorème de Fubini que l’application $t \rightarrow f(x-t)g(x)$ à $x$ fixé est intégrable et donc que le produit de convolution existe.</p>
+
+<p>Cette opération est symétrique $f*g=g*f$. Il est notamment intéressant de considérer la convolution pour lisser des signaux. On peut l’illustrer en considérant le produit de convolution de deux fonctions créneaux centrées en 0 :</p>
 
 <p align="center"> 
 <img src="/materials/Convolucion_Funcion_Pi.gif" />
@@ -514,6 +517,18 @@ Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction de carré intégrable su
 
 <hr />
 
+<h4 id="la-transformée-de-fourier-dans-ce-cadre-est-insuffisante-">La transformée de Fourier dans ce cadre est insuffisante <a name="insuf"></a></h4>
+
+<p>Qu’en est-il de la transformée de Fourier des signaux périodiques ? On peut effectivement se demander si nous avons un résultat qui permettrait de lier l’étude des séries de Fourier à celle de la transformée de Fourier. Par exemple quelque chose qui nous dirait que dans le cas d’un signal périodique la transformée de Fourier a une tête particulière.</p>
+
+<p>D’après les deux théories précédentes si on considère par exemple signal périodique $f$ qui est $C^{1}$ (continu et dérivable partout dont la dérivée est continue) alors il peut s’écrire par le théorème de Dirichlet sous la forme de sa série de Fourier: $f(t)=\sum_{n\in \mathbb{Z}} c_n(f) e^{in\omega t}$. Si on prend sa transformée de Fourier alors par linéarité on a $\mathcal{F}(f)= \sum_{n\in \mathbb{Z}} c_n(f) \mathcal{F}(e^{in\omega t})$. Cependant la fonction $t\rightarrow e^{in\omega t}$ n’est pas intégrable sur $\mathbb{R}$ !</p>
+
+<p>Pour s’en convaincre on peut regarder simplement la fonction sinus. On a $\int_{0}^{b} sin(t) dt= cos(b)-1$ or la fonction cosinus n’admet pas de limite quand $b\rightarrow \infty$ donc l’intégrale $\int_{0}^{+\infty} sin(t) dt$ n’est pas définie.</p>
+
+<p>En conclusion on ne peut pas définir la transformée de Fourier des fonctions périodiques car on ne peut pas définir les transformées de Fourier des fonctions simples $cos(t)$ ou encore $sin(t)$ car elle ne sont pas intégrables. Toutes les considérations sur la transformée de Fourier valables uniquement dans la théorie des fonctions intégrables (ou de carré intégrables pour l’égalité de Parseval) paraissent donc trop limitées.</p>
+
+<p>On peut cependant élargir la définition de la transformée de Fourier en utilisant la théorie des distributions ce qui est l’objet de la note <a href="/2020-05-19-fourier2/">Transformée de Fourier sur l’index</a></p>
+
 <h4 id="conclusion-">Conclusion <a name="conclu"></a></h4>
 
 <p>Je n’ai fait qu’un rapide aperçu des propriétés de bases de ces opérations et n’ai que très rapidement balayé les intérêts pratiques de ces objets. Ils sont utilisés partout en analyse du signal grâce à cette notion de dualité qui permet de regarder autrement le signal, de manière souvent plus pertinente.</p>
@@ -542,6 +557,10 @@ Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction de carré intégrable su
 
       <ul class="pager blog-pager">
         
+        
+        <li class="next">
+          <a href="/2020-05-17-bain/" data-toggle="tooltip" data-placement="top" title="Température de l'eau du bain de bébé">Next Post &rarr;</a>
+        </li>
         
       </ul>
 
