@@ -210,7 +210,7 @@ autoNumber: "AMS"
 
 <hr />
 <p><strong>Définition (Décroissance rapide)</strong>
-Une fonction $\phi: \mathbb{R} \rightarrow \mathbb{R}$ est dite <em>à décroissance rapide</em> si:
+Une fonction $\phi: \mathbb{R} \rightarrow \mathbb{C}$ est dite <em>à décroissance rapide</em> si:
 \begin{equation}
 \forall n\in \mathbb{N}, \exists C_n\geq0,  \lvert \phi(x) \rvert \leq \frac{C_n}{(1+ x^{2})^{n}} \text{ pour tout x}
 \end{equation}</p>
@@ -231,7 +231,7 @@ Une fonction $\phi: \mathbb{R} \rightarrow \mathbb{R}$ est dite <em>à décroiss
 
 <hr />
 <p><strong>Définition (Fonction test et Espace de Schwartz)</strong>
-On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \mathbb{R}$ infiniment différentiable dont toutes les dérivées décroissent rapidement. Plus précisément si $\phi^{(n)}$ est la dérivée $n$-ième de $\phi$ on a:
+On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \mathbb{C}$ infiniment différentiable dont toutes les dérivées décroissent rapidement. Plus précisément si $\phi^{(n)}$ est la dérivée $n$-ième de $\phi$ on a:
 \begin{equation}
 \forall k,n \in \mathbb{N}^{2}, \sup_{x\in \mathbb{R}} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty
 \end{equation}</p>
@@ -243,7 +243,7 @@ On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 \end{equation}</p>
 
 <p>\begin{equation}
-\forall k,n \in \mathbb{N}^{2}, \exists C_{n,k}\geq 0 \text{ } \lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{1+x^{2}} \text{ for all x}
+\forall k,n \in \mathbb{N}^{2}, \exists C_{n,k}\geq 0 \text{ } \lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{1+ x^{2}} \text{ for all x}
 \end{equation}</p>
 
 <p>On note $S(\mathbb{R})$ l’ensemble des fonctions tests. Cet ensemble s’appelle l’espace de Schwartz.</p>
@@ -256,9 +256,7 @@ On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 <img src="/materials/Schwartz.png" />
 </p>
 
-<p><strong>Remarque</strong> Les conditions (3), (4) et (5) sont bien équivalentes. En effet si les fonctions vérifient (3) alors il existe pour tout $n,k$ il existe $C_{n,k}$ tel que $\lvert x^{k+2} \phi^{(n)}(x)\rvert \leq C_{n,k}$ ce qui implique $\lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{x^{2}}\leq \frac{C_{n,k}}{1+x^{2}}$. Inversement (5) implique (3) de manière directe car $\frac{1}{1+x^{2}}\leq 1$.</p>
-
-<p>(TODO réécrire) De plus (4) implique (3) de manière directe. (3) implique (4) car $\lvert (1+x^{2})x^{k} \phi^{(n)}(x) \rvert\sim_{x\rightarrow \infty} \lvert x^{k+2}\phi^{(n)}(x) \rvert$ et donc tend vers 0 si (3) est vérifée. Donc $x^{k} \phi^{(n)}(x)=o_{x\rightarrow +\infty}(\frac{1}{1+x^{2}})$ et en particulier on a (4).</p>
+<p><strong>Remarque</strong> Les conditions (3), (4) et (5) sont bien équivalentes. En effet si les fonctions vérifient (3) alors il existe pour tout $n,k$ il existe $C_{n,k}$ tel que $\lvert x^{k+2} \phi^{(n)}(x)\rvert \leq C_{n,k}$ ce qui implique $\lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{x^{2}}\leq \frac{C_{n,k}}{1+x^{2}}$. Inversement (5) implique (3) de manière directe car $\frac{1}{1+x^{2}}\leq 1$.  En conclusion (3) est équivalent à (5). De plus on peut voir facilement que (4) implique (3) car si le sup était infini la limite ne pourrait pas être nulle et enfin que (5) implique (4).</p>
 
 <p>Ces fonctions tests permettent de définir de manière très générale une <em>distribution tempérée</em> comme étant le procédé qui à une fonction test de l’espace de Schwartz associe un scalaire. Plus précisément:</p>
 
