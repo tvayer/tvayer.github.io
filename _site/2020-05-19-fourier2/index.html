@@ -210,7 +210,7 @@ autoNumber: "AMS"
 
 <h4 id="espace-de-schwartz">Espace de Schwartz</h4>
 
-<p>Pour définir la transformée de Fourier dans ce contexte on va se restreindre à certains types de fonctions $\phi$ qu’on va pouvoir “mesurer” à l’aide de notre “capteur” $f$. Ces fonctions particulières, appelées <em>fonctions de l’espace de Schwarz</em> vont permettre de “lisser” les irrégularités des fonctions pour lesquelles on veut définir la transformée de Fourier.</p>
+<p>Pour définir la transformée de Fourier dans ce contexte on va se restreindre à certains types de fonctions $\phi$ qu’on va pouvoir “mesurer” à l’aide de notre “capteur” $f$. Ces fonctions particulières seront appelées <em>fonctions de l’espace de Schwarz</em>.</p>
 
 <p>Pour définir cet espace de fonctions on introduit la notion de décroissance rapide et croissance lente d’une fonction:</p>
 
@@ -280,7 +280,7 @@ On dit qu’une suite $(\phi_m)_m$ converge dans l’espace de Schwartz vers $\p
 
 <hr />
 
-<p>Ces fonctions tests permettent de définir de manière très générale une <em>distribution tempérée</em> comme étant le procédé qui à une fonction test de l’espace de Schwartz associe un scalaire. Plus précisément:</p>
+<p>Ces fonctions tests permettent de définir de manière très générale une <em>distribution tempérée</em> comme étant le procédé qui à une fonction test de l’espace de Schwartz associe une valeur scalaire. Plus précisément:</p>
 
 <hr />
 <p><strong>Définition (Distribution tempérée)</strong>
@@ -290,11 +290,11 @@ Une distribution tempérée est une fonction $T: S(\mathbb{R}) \rightarrow \math
 
 <p>On parle de distribution tempérée car la croissance de la distribution est <em>tempérée</em> par la décroissance rapide de la fonction test.</p>
 
-<p>On peut voir n’importe quelle fonction un peu régulière comme une distribution. Dans l’exemple de la température la distribution dépendait d’une fonction $f$ (notre capteur). On parle ici de <em>distribution tempérée associée à f</em>:</p>
+<p>L’idée centrale des distributions tempérée est qu’on peut voir n’importe quelle fonction un peu régulière $f$ comme une distribution. On parle ici de <em>distribution tempérée associée à f</em>:</p>
 
 <hr />
 <p><strong>Définition (Distribution tempérée associée à f)</strong>
-Soit $f$ une fonction intégrable localement et à croissance lente. On définit la distribution tempérée associée à $f$ comme étant l’application $T_f: S(\mathbb{R}) \rightarrow \mathbb{R}$ qui à $\phi$ associe:</p>
+Soit $f$ une fonction intégrable localement et à croissance lente. On définit la distribution tempérée associée à $f$ comme étant l’application $T_f: S(\mathbb{R}) \rightarrow \mathbb{R}$ qui à $\phi$ associe le scalaire:</p>
 
 <p>\begin{equation}
 T_f(\phi)=\int_{\mathbb{R}} f(x) \phi(x)dx
@@ -337,7 +337,7 @@ Le membre de droite tend vers $0$ par définition de $\phi_m \rightarrow \phi$ o
 On appelle transformée de Fourier d’une distribution tempérée associée à un fonction $f$ localement intégrable et à croissance lente la distribution tempérée $\mathcal{F}(T_f)$ définie par:</p>
 
 <p>\begin{equation}
-\forall \phi \in \mathbb{S}(\mathbb{R}), \text{ } \langle \mathcal{F}(T_f), \phi \rangle= \langle T_f, \mathcal{F}(\phi) \rangle
+\forall \phi \in S(\mathbb{R}), \text{ } \langle \mathcal{F}(T_f), \phi \rangle= \langle T_f, \mathcal{F}(\phi) \rangle
 \end{equation}</p>
 
 <hr />
