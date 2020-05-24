@@ -394,23 +394,23 @@ La méthodologie si on nous donne $f$:
 
 <p>L’idée centrale est de considérer les signaux non périodique comme périodique mais de <em>période infinie</em>, autrement dit que le motif de la fonction se répète à partir de l’infini. On va donc regarder le comportement des notions précédentes lorsque $T \rightarrow \infty$.</p>
 
-<p><strong><em>Que deviennent les pulsations ?</em></strong> On remarque que lorsque $T \rightarrow \infty$ la pulsation $\omega=\frac{2\pi}{T}$ tend vers 0. Ainsi les $n\omega$ se rapprochent de plus en plus à mesure que $T$ grandit. Ainsi on ne peut plus distinguer un $n\omega$ d’un $(n+1)\omega$ quand $T \rightarrow \infty$ et donc une notion discrète de la pulsation ne suffit plus. On va donc remplacer les pulsations discrètes $n\omega$ par un paramètres $\omega$ qui peut prendre toutes les valeurs dans $\mathbb{R}$.</p>
+<p><strong><em>Que deviennent les fréquences ?</em></strong> On remarque que lorsque $T \rightarrow \infty$ la fréquence $f=\frac{1}{T}$ tend vers 0. Ainsi les $n\omega$ se rapprochent de plus en plus à mesure que $T$ grandit. Ainsi on ne peut plus distinguer un $\frac{n}{T}$ d’un $\frac{n+1}{T}$ quand $T \rightarrow \infty$ et donc une notion discrète de la pulsation ne suffit plus. On va donc remplacer les $\frac{n\omega}{T}$ par un paramètre continu qui peut prendre toutes les valeurs dans $\mathbb{R}$.</p>
 
 <p><strong><em>Que deviennent les coefficients de la série de Fourier ?</em></strong> 
 On considère une fonction $f$ intégrable sur $\mathbb{R}$. On se propose d’étudier un peu $\lim_{T \rightarrow \infty} c_n(f)=\lim_{T \rightarrow \infty} \frac{1}{T} \int_{-T/2}^{T/2} f(t)e^{-in w(T) t}dt$. On peut borner l’exponentielle par 1, on remarque donc que l’intégrale $\int_{-T/2}^{T/2} f(t)e^{-in w(T) t}dt$ converge car $f$ est intégrable. Donc que $\lim_{T \rightarrow \infty} c_n(f)=0$. Ce qui ne nous donne pas beaucoup d’information sur ces coefficients. Cependant si on considère $\lim_{T \rightarrow \infty} T c_n(f)$ alors cette limite existe par le raisonnement précédent et:</p>
 
 <p>\begin{equation}
-\lim_{T \rightarrow \infty} T c_n(f)=\int_{-\infty}^{+\infty} f(t) e^{-i n \omega t}dt
+\lim_{T \rightarrow \infty} T c_n(f)=\int_{-\infty}^{+\infty} f(t) e^{\frac{-2 i \pi n t}{T}}dt
 \end{equation}</p>
 
-<p>On voit ici appraître la transformée de Fourier d’un signal. Elle sera égal à la limite de $T$ fois le coefficient de Fourier lorsque $T$ devient très grand. En résumé on la définit ainsi:</p>
+<p>On voit ici apparaître la transformée de Fourier d’un signal. Elle sera égal à la limite de $T$ fois le coefficient de Fourier lorsque $T$ devient très grand. En résumé on la définit ainsi:</p>
 
 <hr />
 <p><strong>Definition (Transformée de Fourier d’une fonction intégrable)</strong>
 Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction intégrable sur $\mathbb{R}$.
-La transformée de Fourier de $f$ est la fonction complexe définie en une pulstation $\omega$ par: 
+La transformée de Fourier de $f$ est la fonction complexe définie en $\omega$ par: 
 \begin{equation}
-\hat{f}(\omega)=\mathcal{F}(f)(\omega)=\int_{-\infty}^{+\infty} f(t)e^{-iwt}dt
+\hat{f}(\omega)=\mathcal{F}(f)(\omega)=\int_{-\infty}^{+\infty} f(t)e^{-2i\pi wt}dt
 \end{equation}</p>
 
 <hr />
@@ -436,7 +436,7 @@ La transformée de Fourier de $f$ est la fonction complexe définie en une pulst
 Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction intégrable sur $\mathbb{R}$.
 La transformée de Fourier inverse $f$ est la fonction définie en un temps $t$ par: 
 \begin{equation}
-\mathcal{F}^{-1}(\hat{f})(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} \hat{f}(\omega)e^{i\omega t}d\omega
+\mathcal{F}^{-1}(\hat{f})(t)=\int_{-\infty}^{+\infty} \hat{f}(\omega)e^{2i\pi \omega t}d\omega
 \end{equation}</p>
 
 <hr />
@@ -445,10 +445,9 @@ La transformée de Fourier inverse $f$ est la fonction définie en un temps $t$ 
 
 <hr />
 <p><strong>Théorème (Reconstruction du signal)</strong>
-Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction intégrable sur $\mathbb{R}$. Alors:</p>
-
-<p>\begin{equation}
-\forall t, f(t)=\mathcal{F}^{-1}(\hat{f})(t)
+Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction intégrable sur $\mathbb{R}$. Alors en tout point $t$ où $f$ est continue:
+\begin{equation}
+f(t)=\mathcal{F}^{-1}(\hat{f})(t)
 \end{equation}</p>
 
 <hr />
@@ -496,13 +495,13 @@ Soit $f,g:\mathbb{R} \rightarrow \mathbb{R}$ deux fonctions intégrables sur $\m
     <p>Contraction dans le domaine temporel: $\mathcal{F}(f(a.t))=\frac{1}{|a|}\mathcal{F}(f)(\omega/a)$.</p>
   </li>
   <li>
-    <p>Translation temporelle: $\mathcal{F}(f(t+t_{0}))=e^{it_{0}\omega}\mathcal{F}(f)(\omega)$.</p>
+    <p>Translation temporelle: $\mathcal{F}(f(t+t_{0}))=e^{2 i \pi t_{0}\omega}\mathcal{F}(f)(\omega)$.</p>
   </li>
   <li>
     <p>Parité: si la fonction est réelle alors $\hat{f}(-\omega)=\overline{\hat{f}(\omega)}$, si la fonction est réelle et paire la transformée est réelle et paire, si la fonction est réelle et impaire la transformée est imaginaire pure et impaire.</p>
   </li>
   <li>
-    <p>Dérivation: Si $f$ est de classe $C^{1}$ dont la dérivée est intégrable alors $\mathcal{F}(f’)(\omega)=i\omega F(f)(\omega)$</p>
+    <p>Dérivation: Si $f$ est de classe $C^{1}$ dont la dérivée est intégrable alors $\mathcal{F}(f’)(\omega)=2 i\pi\omega F(f)(\omega)$</p>
   </li>
 </ul>
 
@@ -512,10 +511,12 @@ Soit $f,g:\mathbb{R} \rightarrow \mathbb{R}$ deux fonctions intégrables sur $\m
 <p><strong>Proposition (Egalité de Plancherel)</strong>
 Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction de carré intégrable sur $\mathbb{R}$. On a: 
 \begin{equation}
-\int_{-\infty}^{+\infty} |f(t)|^{2}dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty} |\mathcal{F}(f)(\omega)|^{2}d\omega
+\int_{-\infty}^{+\infty} |f(t)|^{2}dt=\int_{-\infty}^{+\infty} |\mathcal{F}(f)(\omega)|^{2}d\omega
 \end{equation}</p>
 
 <hr />
+
+<p><strong>Remarque</strong> Toutes les notions précédents s’étendent facilement aux fonction de $\mathbb{C}$ dans $\mathbb{R}$</p>
 
 <h4 id="la-transformée-de-fourier-dans-ce-cadre-est-insuffisante-">La transformée de Fourier dans ce cadre est insuffisante <a name="insuf"></a></h4>
 

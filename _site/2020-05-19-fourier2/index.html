@@ -59,7 +59,7 @@
   
 
    
-  <meta property="og:description" content="EN FRICHE Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir dans cette note comment élargir la théorie à des objets plus généraux. On verra que...">
+  <meta property="og:description" content="Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela...">
   
 
 
@@ -85,7 +85,7 @@
   
 
   
-  <meta name="twitter:description" content="EN FRICHE Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir dans cette note comment élargir la théorie à des objets plus généraux. On verra que...">
+  <meta name="twitter:description" content="Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela...">
   
 
   
@@ -190,15 +190,32 @@ autoNumber: "AMS"
       
 
       <article role="main" class="blog-post">
-        <p>EN FRICHE</p>
+        <p>Dans le post <a href="/2020-05-04-fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> que l’on détaillera par la suite.</p>
 
-<p>Dans le post <a href="/2020-05-04-fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> qu’on détaillera par la suite.</p>
+<h1 id="sommaire">Sommaire</h1>
+<ol>
+  <li><a href="#distritemp">Distributions tempérées</a>
+    <ol>
+      <li><a href="#ftod">De la fonction aux distributions</a></li>
+      <li><a href="#Schwartz">Espace de Schwartz</a></li>
+    </ol>
+  </li>
+  <li><a href="#tftemp">La transformée de Fourier des distributions tempérées</a>
+    <ol>
+      <li><a href="#existence">Existence</a></li>
+      <li><a href="#defdef">$\mathcal{F}(T_f)$ définit une distribution tempérée</a></li>
+      <li><a href="#calcul">Comment calculer $\mathcal{F}(T_f)$ ?</a></li>
+      <li><a href="#application">Application: la transformée de Fourier des signaux périodiques réguliers</a></li>
+    </ol>
+  </li>
+  <li><a href="#conclu">Conclusion</a></li>
+</ol>
 
-<h3 id="1-distributions-tempérées">1. Distributions tempérées</h3>
+<h3 id="1-distributions-tempérées-">1. Distributions tempérées <a name="distritemp"></a></h3>
 
 <p>La théorie de Fourier peut s’étendre à des objets qu’on appelle les <em>distributions</em>. Cette théorie a été développée par Schwartz dans les années 50 et généralise en quelque sorte la notion de fonction.</p>
 
-<h4 id="de-la-fonction-aux-distributions">De la fonction aux distributions</h4>
+<h4 id="de-la-fonction-aux-distributions-">De la fonction aux distributions <a name="ftod"></a></h4>
 
 <p>L’idée de base de cette théorie est qu’une fonction n’est plus vue comme étant le procédé “à un point j’associe une valeur” mais plutôt comme une étant le processus “j’associe une valeur moyenne autour d’un point donné”.</p>
 
@@ -208,7 +225,7 @@ autoNumber: "AMS"
 
 <p>La transformée de Fourier dans ce cadre ne sera plus une notion <em>liée aux fonctions</em> mais sera une notion <em>liée aux distributions</em> c’est à dire à un certain type d’objets qui à une fonction $\phi$ donné associe une valeur représentant une moyenne locale de notre fonction $\phi$.</p>
 
-<h4 id="espace-de-schwartz">Espace de Schwartz</h4>
+<h4 id="espace-de-schwartz-">Espace de Schwartz <a name="Schwartz"></a></h4>
 
 <p>Pour définir la transformée de Fourier dans ce contexte on va se restreindre à certains types de fonctions $\phi$ qu’on va pouvoir “mesurer” à l’aide de notre “capteur” $f$. Ces fonctions particulières seront appelées <em>fonctions de l’espace de Schwarz</em>.</p>
 
@@ -264,7 +281,7 @@ On appelle <em>fonction test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 <img src="/materials/Schwartz.png" />
 </p>
 
-<p><strong>Remarque 1.</strong> Les conditions (3), (4) et (5) sont bien équivalentes. En effet si les fonctions vérifient (3) alors il existe pour tout $n,k$ il existe $C_{n,k}$ tel que $\lvert x^{k+2} \phi^{(n)}(x)\rvert \leq C_{n,k}$ ce qui implique $\lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{x^{2}}\leq \frac{C_{n,k}}{1+x^{2}}$. Inversement (5) implique (3) de manière directe car $\frac{1}{1+x^{2}}\leq 1$.  En conclusion (3) est équivalent à (5). De plus on peut voir facilement que (4) implique (3) car dans ce cas $x^{k} \phi^{(n)}(x)$ est aussi petite que l’on veut au voisinage de l’infini et par continuité elle est bornée pour tout intervalle, donc le sup est fini. Plus précisément si on suppose (4) alors pour $\epsilon &gt;0$ il existe $x_0$ tel que pour $x\geq x_0$ $\lvert x^{k} \phi^{(n)}(x) \rvert&lt; \epsilon$. Donc $\sup_{x &gt; x_0} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. De plus $x\rightarrow \lvert x^{k} \phi^{(n)}(x)\rvert$ est continue, donc bornée sur $[0,x_0]$ et donc $\sup_{x \in [0,x_0]} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. On peut faire le même raisonnement pour $x&lt;0$ pour déduire la propriété pour tout $x$. Enfin il est clair que (5) implique (4).</p>
+<p><strong>Remarque 1.</strong> Les conditions (3), (4) et (5) sont bien équivalentes. En effet si les fonctions vérifient (3) alors il existe pour tout $n,k$ il existe $C_{n,k}$ tel que $\lvert x^{k+2} \phi^{(n)}(x)\rvert \leq C_{n,k}$ ce qui implique $\lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{x^{2}}\leq \frac{C_{n,k}}{1+x^{2}}$. Inversement (5) implique (3) de manière directe car $\frac{1}{1+x^{2}}\leq 1$.  En conclusion (3) est équivalent à (5). De plus on peut voir facilement que (4) implique (3) car dans ce cas $x^{k} \phi^{(n)}(x)$ est aussi petite que l’on veut au voisinage de l’infini et par continuité elle est bornée pour tout intervalle fermé, donc le sup est fini. Plus précisément si on suppose (4) alors pour $\epsilon &gt;0$ il existe $x_0$ tel que pour $x\geq x_0$ $\lvert x^{k} \phi^{(n)}(x) \rvert&lt; \epsilon$. Donc $\sup_{x &gt; x_0} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. De plus $x\rightarrow \lvert x^{k} \phi^{(n)}(x)\rvert$ est continue, donc bornée sur $[0,x_0]$ et donc $\sup_{x \in [0,x_0]} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. On peut faire le même raisonnement pour $x&lt;0$ pour déduire la propriété pour tout $x$. Enfin il est clair que (5) implique (4).</p>
 
 <p>$S(\mathbb{R})$ est un espace de fonction dans lequel on peut définir une notion de continuité propres aux fonctions de l’espace de Schwartz.</p>
 
@@ -300,9 +317,11 @@ Soit $f$ une fonction intégrable localement et à croissance lente. On définit
 T_f(\phi)=\int_{\mathbb{R}} f(x) \phi(x)dx
 \end{equation}</p>
 
-<p>On note souvent $T_f(\phi)=\langle f, \phi \rangle$.</p>
+<hr />
 
-<p><strong>Remarque 2.</strong> Cette intégrale est bien définie. En effet Comme $f$ est localement intégrable sur n’importe quel intervalle et que $\phi$ est continue alors la fonction $x\rightarrow f(x)\phi(x)$ est intégrable sur n’importe quel intervalle. Le problème se trouve donc à l’infini mais comme la fonction $\phi$ appartient à l’espace de Schwartz et que $f$ est à croissance lente l’intégrale est donc finie. Plus précisément il existe des constantes $C(f),C(\phi)$ tels que $\lvert f(x) \rvert \leq C(1+x^2)$ et $\lvert \phi(x) \rvert \leq \frac{C(\phi)}{(1+x^2)^{2}}$ pour tout $x$. On peut donc conclure que  pour tout $x$, $\lvert f(x) \phi(x) \rvert \leq \frac{C(f)C(\phi)}{1+x^{2}}$ qui est le terme d’une intégrale convergente sur $\mathbb{R}$.</p>
+<p>On note souvent $T_f(\phi)=\langle f, \phi \rangle$ comme cela ressemble à un produit scalaire. De plus il arrive dans la littérature qu’on note $T_f$ simplement par $f$, c’est à dire qu’on identifie fonction et distribution.</p>
+
+<p><strong>Remarque 2.</strong> Cette intégrale est bien définie. En effet Comme $f$ est localement intégrable sur n’importe quel intervalle fermé et que $\phi$ est continue alors la fonction $x\rightarrow f(x)\phi(x)$ est intégrable sur n’importe quel intervalle fermé. Le problème se trouve donc à l’infini mais comme la fonction $\phi$ appartient à l’espace de Schwartz et que $f$ est à croissance lente l’intégrale est donc finie. Plus précisément il existe des constantes $C(f),C(\phi)$ tels que $\lvert f(x) \rvert \leq C(1+x^2)$ et $\lvert \phi(x) \rvert \leq \frac{C(\phi)}{(1+x^2)^{2}}$ pour tout $x$. On peut donc conclure que  pour tout $x$, $\lvert f(x) \phi(x) \rvert \leq \frac{C(f)C(\phi)}{1+x^{2}}$ qui est le terme d’une intégrale convergente sur $\mathbb{R}$.</p>
 
 <p><strong>Remarque 3.</strong> Une distribution tempérée définit bien une distribution. Elle est clairement linéaire en $\phi$ et elle est bien continue en $\phi$. En effet si $\phi_m \rightarrow \phi$ et $I_m=\lvert T_f(\phi_m)-T_f(\phi) \rvert$ alors $I_m\leq \int_{\mathbb{R}} \lvert f(x) \rvert \lvert \phi_m(x)-\phi(x) \rvert dx$. Soit $N\geq 2$ on a $1=(1+x^{2})^{N} (1+x^{2})^{-N}$ ce qui implique :
 \begin{equation}
@@ -328,29 +347,93 @@ Le membre de droite tend vers $0$ par définition de $\phi_m \rightarrow \phi$ o
 
 <p>On voit ici apparaître une ébauche de définiton de la transformée de Fourier d’une distribution tempérée associée à $f$. En effet en “déplaçant” la notion de transformée de Fourier de $f$ sur les fonctions tests $\phi$ (qui sont intégrables et donc pour lesquelles la transformée de Fourier existe) on va pouvoir la définir pour des classes de fonctions plus générales que les fonctions intégrables.</p>
 
-<h3 id="2-la-transformée-de-fourier-des-distributions-tempérées">2. La transformée de Fourier des distributions tempérées</h3>
+<h3 id="2-la-transformée-de-fourier-des-distributions-tempérées-">2. La transformée de Fourier des distributions tempérées <a name="tftemp"></a></h3>
+
+<p>Par la suite, pour un fonction intégrable $\phi$, on notera $\widehat{\phi}$ la transformée de Fourier de $\phi$ <em>au sens des fonctions</em>.</p>
 
 <p>De la même manière que la transformée de Fourier d’une fonction était une fonction la transformée de Fourier d’une distribution tempérée <em>est une distribution tempérée</em>.</p>
 
 <hr />
-<p><strong>Définition (Transformée de Fourier d’une distribution tempérée)</strong>
-On appelle transformée de Fourier d’une distribution tempérée associée à un fonction $f$ localement intégrable et à croissance lente la distribution tempérée $\mathcal{F}(T_f)$ définie par:</p>
+<p><strong>Définition (Transformée de Fourier d’une distribution tempérée associée à $f$)</strong>
+On appelle transformée de Fourier d’une distribution tempérée associée à une fonction $f$ localement intégrable et à croissance lente la distribution tempérée $\mathcal{F}(T_f)$ définie par:</p>
 
 <p>\begin{equation}
+\phi \in S(\mathbb{R}) \rightarrow \int_{\mathbb{R}} f(x) \widehat{\phi}(x) dx
+\end{equation}
+<!-- \begin{equation}
 \forall \phi \in S(\mathbb{R}), \text{ } \langle \mathcal{F}(T_f), \phi \rangle= \langle T_f, \mathcal{F}(\phi) \rangle
+\end{equation} --></p>
+
+<hr />
+
+<p>Beaucoup de questions se posent: l’intégrale définit plus haut existe-t-elle ? est-ce qu’on définit bien une distribution ? Comment la calculer ?</p>
+
+<h4 id="existence-">Existence <a name="existence"></a></h4>
+
+<p>D’après les résultats précédents il suffit que $\widehat{\phi}$ soit aussi de Schwartz pour que l’intégrale existe. On peut donner un sens à cet intégrale en utilisant le résultat suivant:</p>
+
+<hr />
+<p><strong>Théorème (Transformée de Fourier dans $S(\mathbb{R})$)</strong></p>
+<div align="center">
+$\phi \in S(\mathbb{R})$ si et seulement si $\widehat{\phi} \in S(\mathbb{R})$. 
+</div>
+
+<hr />
+<!-- De plus pour $\phi,\psi \in S(\mathbb{R})^{2}$ :
+
+\begin{equation}
+\int_{\mathbb{R}} \psi(x) \widehat{\phi}(x) dx=\int_{\mathbb{R}} \widehat{\psi}(x) \phi(x) dx
+\end{equation} -->
+
+<p>On peut donner une rapide esquisse de ce théorème. On peut prouver que $\phi \in S(\mathbb{R})$ si et seulement si $\lim_{x \rightarrow \pm \infty} \frac{d^{n}}{dx^{n}} x^{k} \phi(x)=0$ pour tout $n,k \in \mathbb{N}^{2}$. Or on sait par les règles de calculs que la transformée de Fourier de $x \rightarrow (-2i\pi x)^{k} \phi^{(n)}(x)$ est $x \rightarrow \frac{d^{k}}{dx^{k}} (2i\pi x)^{n} \widehat{\phi}(x)$. De plus on sait que pour une fonction intégrable sa transformée de Fourier tend vers $0$ à l’infini (lemme de Riemann-Lebesgue). Or $x \rightarrow (-2i\pi x)^{k} \phi^{(n)}(x)$ est de Schwartz donc intégrable aussi en utilisant Riemann-Lebesgue $\lim_{x \rightarrow \pm \infty} \frac{d^{n}}{dx^{n}} x^{k} \widehat{\phi}(x)=0$ ce qui prouve que $\widehat{\phi} \in S(\mathbb{R})$ si $\phi \in S(\mathbb{R})$. Pour l’implication opposée on applique le même argument en utilisant la transformée de Fourier inverse.</p>
+
+<p>Ce théorème nous prouve que l’intégrale définit équation (12) est bien définie car $f$ est localement intégrable et à croissance lente et $\phi \in S(\mathbb{R})$. Il a d’autres implications fortes pour l’étude des transformées de Fourier de fonctions de l’espace de Schwartz. Dans le cas général la transformée de Fourier inverse d’une fonction intégrable n’est pas forcément égale à la fonction: ceci n’est vrai aux points où la fonction est continue. Or grâce au théorème précédent les fonctions de l’espace de Schwartz n’ont pas ce problème et on peut inverser la transformée de Fourier partout.</p>
+
+<h4 id="mathcalft_f-définit-une-distribution-tempérée-">$\mathcal{F}(T_f)$ définit une distribution tempérée <a name="defdef"></a></h4>
+
+<p>Comme dit précédemment la transformée de Fourier d’une distribution tempérée est une distribution tempérée. La linéarité est claire grâce à la linéarité de la transformée de Fourier des fonctions. Il nous manque la continuité qui est vérifiée grâce au résultat suivant:</p>
+
+<hr />
+<p><strong>Théorème (Continuité de la transformée de Fourier dans $S(\mathbb{R})$)</strong>
+Considérons $(\phi_n)_n$ une suite de $S(\mathbb{R})$. On a:</p>
+
+<p>\begin{equation}
+\phi_n \rightarrow_{n\rightarrow \infty} \phi \iff \widehat{\phi_n} \rightarrow_{n\rightarrow \infty} \widehat{\phi}
 \end{equation}</p>
 
 <hr />
 
-<p>Beaucoup de questions se posent: est-ce qu’on définit bien une distribution ? Et-elle bien définie ? En particulier est-ce que si $\phi$ est de Schwartz alors $\mathcal{F}(\phi)$ est-elle de Schwartz ? Ressemble-t-elle à la transformée de Fourier classique ?</p>
+<p>La preuve de ce théorème utilise les mêmes idées que pour lé théorème précédent. Le lecteur peut se référer à la Proposition 19.2.5 dans [1] pour plus de détails. Ce théorème nous permet de montrer la continuité de $\mathcal{F}(T_f)$. Pour cela on peut par exemple utiliser le même raisonnement que dans la remarque 3 en remplaçant les $\phi$ par des $\widehat{\phi}$ qui sont aussi de Schwartz.</p>
 
-<h4 id="application-la-transformée-de-fourier-des-signaux-périodiques-réguliers">Application: la transformée de Fourier des signaux périodiques réguliers</h4>
+<p>En conclusion la transformée de Fourier d’une distribution tempérée associée à $f$ est bien une distribution tempérée.</p>
 
-<p>On considère un signal périodique $f$.</p>
+<p><strong>Remarque 5.</strong> On peut définir de manière plus générale la transformée de Fourier d’une distribution tempérée pas nécessairement associée à une fonction $f$ comme étant la distribution tempérée définie par $\mathcal{F}(T)(\phi)=T(\widehat{\phi})$.</p>
 
-<h4 id="mesures">Mesures</h4>
+<h4 id="comment-calculer-mathcalft_f--">Comment calculer $\mathcal{F}(T_f)$ ? <a name="calcul"></a></h4>
 
-<p>Toutes les mesures sont des distributions</p>
+<p>A la différence de la transformée de Fourier des fonctions la transformée de Fourier d’une distribution tempérée est définie de manière implicite. Dans le cas d’une fonction intégrable $f$ on avait la formule $\hat{f}(x)=\int_{\mathbb{R}} f(t)e^{-ixt} dt$ alors que dans le cas présent on ne dispose pas d’une telle formule il faut faire le calcul pour tout $\phi$.</p>
+
+<p>Une manière pratique de calculer ces transformées de Fourier est d’utiliser les notions de dérivations des distributions tempérées. On a effectivement vu qu’une distribution est en quelque sorte une “fonction” généralisée. On peut définir la dérivée d’une distribution tempérée en “déplaçant” la dérivée sur les fonctions tests de la même manière que pour la définition de sa transformée de Fourier. La distribution dérivée $T’$ est définie comme  $T’(\phi)=-T(\phi’)$. Cette notion est utile pour le calcul des transformées de Fourier des distributions car elle permet de trouver des équations aux dérivées partielles simples dont nos transformées de Fourier sont solutions. En résolvant ces équations on peut trouver facilement une expression de ces transformées de Fourier.</p>
+
+<p>On peut calculer cependant quelques cas faciles et utiles en pratiques.</p>
+
+<p><strong>Cas de la distribution $\delta$.</strong> On considère pour $a\in \mathbb{R}$ la fonction $f_{a}(x)=1$ si $x=a$ et $0$ sinon. Cette fonction correspond à notre capteur de précision infinie de l’introduction. C’est bien une fonction localement intégrable et à croissance lente. Sa distribution tempérée associée est la $T_{f_{a}}(\phi)=\int_{\mathbb{R}} f_{a}(x) \phi(x)dx=\phi(a)$ pour tout $\phi \in S(\mathbb{R})$. On note cette distribution $\delta_{a}$, elle s’appelle <em>la distribution de dirac en $a$</em>. Sa transformée de Fourier est la distribution $\mathcal{F}(\delta_{a})(\phi)=\int_{\mathbb{R}}f_{a}(x) \widehat{\phi}(x)dx=\widehat{\phi}(a)=\int_{\mathbb{R}} e^{-2 i\pi a x} \phi(x) dx$. On a donc $\langle \delta_{a}, \phi\rangle=\langle T_{g_a}, \phi \rangle$ où $g_a: x\rightarrow e^{-2i \pi ax}$. Ainsi $\mathcal{F}(\delta_a)=T_{g_a}$ ce qu’on écrit de manière moins formelle $\widehat{\delta_a}(x)=e^{-2i\pi ax}$.</p>
+
+<p><strong>Cas de la fonction $x \rightarrow e^{2i\pi ax}$.</strong> Cette fonction est la base des fonctions périodiques. Pour $a \in \mathbb{R}$ la fonction $f_a: x\rightarrow e^{2i \pi ax}$ est bien localement intégrable et à croissance lente car bornée par $1$. Elle définit donc une distribution tempérée $T_f$. On a par définition: $\langle F(T_f), \phi \rangle= \langle T_f, \widehat{\phi} \rangle=\int_{\mathbb{R}}e^{2i \pi ax} \widehat{\phi}(x)dx$. On remarque que cette expression est égale à $\mathcal{F}^{-1}(\widehat{\phi})(a)=\phi(a)$ car $\phi$ est de Schwartz. D’où $\langle \mathcal{F}(T_f), \phi \rangle=\langle \delta_{a}, \phi \rangle$. On peut l’écrire de manière un peut moins formelle $\widehat{e^{2i\pi ax}}=\delta_{a}$ qu’il faut lire comme “la transformée de Fourier de la distribution tempérée associée à la fonction $x\rightarrow e^{2i\pi ax}$ est la distribution tempérée dirac en $a$”. En prenant $a=0$ on trouve l’expression de la transformée de Fourier de la distribution tempérée associée à la fonction constante égale à $1$: $\widehat{1}=\delta_{0}$</p>
+
+<h4 id="application-la-transformée-de-fourier-des-signaux-périodiques-réguliers-">Application: la transformée de Fourier des signaux périodiques réguliers <a name="application"></a></h4>
+
+<p>Reprenons l’exemple du post précédent dans lequel on voulait lier les séries de Fourier et la transformée de Fourier. On considère un signal périodique $f$ de période $T$ qui peut s’écrire sous la forme de sa série de Fourier $f(t)=\sum_{n\in \mathbb{Z}} c_n(f) e^{\frac{2i \pi n t}{T}}$.</p>
+
+<p>On peut prouver que le signal définit bien une distribution tempérée $T_f$ (voir par exemple Proposition 36.1.3 dans [1]). Ainsi par linéarité de la transformée de Fourier et l’exemple précédent on a: 
+\begin{equation}
+\mathcal{F}(T_f)=\sum_{n\in \mathbb{Z}} c_n(f) \mathcal{F}(T_{t\rightarrow e^{\frac{2 i\pi n t}{T}}})=\sum_{n\in \mathbb{Z}} c_n(f) \delta_{\frac{n}{T}}
+\end{equation} 
+On peut donc définir la transformée de Fourier d’un signal périodique au sens des distribution. On peut la représenter comme une infinité de “pics” de valeurs les coefficients de Fourier du signal aux fréquences $\frac{n}{T}$.</p>
+
+<h3 id="3-conclusion-">3. Conclusion <a name="conclu"></a></h3>
+
+<p>Dans ce post j’ai rapidement abordé la notion de distribution tempérée qui généralise en quelque sorte les fonctions. Ces objets permettent de définir de manière assez générale une transformée de Fourier. On remarque en regardant l’équation (7) que ces objets sont assez proches des mesures de la théorie de Lebesgue. En effet si on considère dans l’équation (7) la mesure de densité $fd\lambda$ avec $\lambda$ la mesure de Lebesgue sur $\mathbb{R}$ on retombe sur l’intégrale de $\phi$ selon cette mesure. Plus généralement toutes les mesures finies peuvent définir une distribution ce qui justifie en quelque sorte le nom de “distribution de probabilité” (bien que je ne pense pas que le nom soit directement dérivé). On peut définir la transformée de Fourier d’une mesure finie sur $\mathbb{R}$ comme étant:</p>
 
 <hr />
 <p><strong>Définition (Mesures finies et transformée de Fourier)</strong>
@@ -358,8 +441,16 @@ On définit l’espace des mesures positives finies, et on le note $\mathcal{M}_
 
 <p>Pour $\mu \in \mathcal{M}_{+}(\mathbb{R})$ on définit sa transformée de Fourier comme: 
 \begin{equation}
-\mathcal{F}(\mu)(\nu)=\int_{\mathbb{R}} e^{-i\nu x}d\mu(x)
+\mathcal{F}(\mu)(\nu)=\int_{\mathbb{R}} e^{-2i\pi \nu x}d\mu(x)
 \end{equation}</p>
+
+<hr />
+
+<p>L’objectif de la note suivante sera d’étudier cet objet et de faire le lien avec celui présenté ici (quelles différences, quels points communs ?).</p>
+
+<h4 id="références">Références</h4>
+
+<p>[1] Claude Gasquet and Patrick Witomski, Fourier analysis and applications. Filtering, numerical computation, wavelets. Texts in Applied Mathematics. 1999.</p>
 
 <hr />
 
