@@ -196,19 +196,23 @@ autoNumber: "AMS"
 
 <h3 id="1-distributions-tempérées">1. Distributions tempérées</h3>
 
-<p>La théorie de Fourier peut s’étendre à des objets qu’on appelle les <em>distributions</em>. Cette théorie a été développée par Schwartz dans les années 50 et, de manière peu formelle, elle généralise la notion de fonctions.</p>
+<p>La théorie de Fourier peut s’étendre à des objets qu’on appelle les <em>distributions</em>. Cette théorie a été développée par Schwartz dans les années 50 et généralise en quelque sorte la notion de fonction.</p>
 
 <h4 id="de-la-fonction-aux-distributions">De la fonction aux distributions</h4>
 
 <p>L’idée de base de cette théorie est qu’une fonction n’est plus vue comme étant le procédé “à un point j’associe une valeur” mais plutôt comme une étant le processus “j’associe une valeur moyenne autour d’un point donné”.</p>
 
-<p>Ce procédé permet de lisser les irrégularités de la fonction de base et définit de façon plus “concrète” la notion de fonction. En effet, dans la vraie vie (celle de la physique), lorsqu’on veut mesurer quelque chose on dispose de capteurs qui ne sont pas parfaits.</p>
+<p>Cette approche permet de lisser les irrégularités de la fonction de base et définit de façon plus “concrète” la notion de fonction. En effet, dans la vraie vie (celle de la physique), lorsqu’on veut mesurer une fonction on dispose de capteurs imparfaits qui mesurent une valeur locale et moyennée de la fonction.</p>
 
-<p>Par exemple si on veut mesurer la température d’une pièce cela se traduit traditionnellement par “on cherche à déterminer en un point de la pièce $x_0$, par définition infinitésimal, la valeur $\phi(x_0)$ de cette température”. Cependant la valeur du capteur de température ne nous donnera pas la température en un point mais plutôt une valeur moyenne de la température autour de ce point. On aura donc plutôt accès à quelque chose comme $\frac{1}{\text{vol}(D)}\int_{D \subset \mathbb{R^{3}}} \phi(x) dx$ avec $\text{vol}(D)$ le volume de la région $D$ autour du point $x_0$. On peut réécrire cette expression comme $T_f(\phi)=\int_{\mathbb{R^{3}}} f(x) \phi(x)dx$ où $f(x)=\frac{1}{\text{vol}(D)}$ si $x \in D$ (le point x est dans la région du capteur) et $0$ ailleurs. $f$ représente en quelque sorte la “qualité” de notre capteur. Si on disposait d’un capteur infiniment précis on aurait $f(x)=1$ si $x=x_0$ et $0$ ailleurs et dans ce cas $T_f(\phi)=\phi(x_0)$. En évaluant en chaque point avec ce capteur infiniment précis on aurait alors accès à la fonction température $\phi$ en tout point de l’espace. Cette considération est la base de la notion de distribution.</p>
+<p>Par exemple si on veut mesurer la température d’une pièce cela se traduit traditionnellement par “on cherche à déterminer en un point de la pièce $x_0$, par définition infinitésimal, la valeur $\phi(x_0)$ de cette température”. Cependant la valeur du capteur de température ne nous donnera pas la température en un point mais plutôt une valeur moyenne de la température autour de ce point. On aura donc plutôt accès à quelque chose comme $\frac{1}{\text{vol}(D)}\int_{D \subset \mathbb{R^{3}}} \phi(x) dx$ avec $\text{vol}(D)$ le volume de la région $D$ autour du point $x_0$. On peut réécrire cette expression comme $T_f(\phi)=\int_{\mathbb{R^{3}}} f(x) \phi(x)dx$ où $f(x)=\frac{1}{\text{vol}(D)}$ si $x \in D$ (le point x est dans la région du capteur) et $0$ ailleurs. $f$ représente en quelque sorte la “qualité” de notre capteur. Pour un capteur infiniment précis on aurait $f(x)=1$ si $x=x_0$ et $0$ ailleurs et dans ce cas $T_f(\phi)=\phi(x_0)$. En évaluant en chaque point avec ce capteur infiniment précis on aurait alors accès à la fonction température $\phi$ en tout point de l’espace. Cette considération est la base de la notion de distribution.</p>
+
+<p>La transformée de Fourier dans ce cadre ne sera plus une notion <em>liée aux fonctions</em> mais sera une notion <em>liée aux distributions</em> c’est à dire à un certain type d’objets qui à une fonction $\phi$ donné associe une valeur représentant une moyenne locale de notre fonction $\phi$.</p>
 
 <h4 id="espace-de-schwartz">Espace de Schwartz</h4>
 
-<p>Pour l’étude de la transformée de Fourier on va se restreindre à certains types de fonctions $\phi$ qu’on va pouvoir “mesurer” à l’aide de notre “capteur” $f$. Pour cela on va introduire la notion de décroissance rapide et croissance lente d’une fonction:</p>
+<p>Pour définir la transformée de Fourier dans ce contexte on va se restreindre à certains types de fonctions $\phi$ qu’on va pouvoir “mesurer” à l’aide de notre “capteur” $f$. Ces fonctions particulières, appelées <em>fonctions de l’espace de Schwarz</em> vont permettre de “lisser” les irrégularités des fonctions pour lesquelles on veut définir la transformée de Fourier.</p>
+
+<p>Pour définir cet espace de fonctions on introduit la notion de décroissance rapide et croissance lente d’une fonction:</p>
 
 <hr />
 <p><strong>Définition (Décroissance rapide et croissance lente)</strong>
@@ -229,11 +233,11 @@ Une fonction $\phi: \mathbb{R} \rightarrow \mathbb{C}$ est dite <em>à décroiss
 
 <p>Par exemple la fonction $x\rightarrow e^{-\lvert x\rvert}$ est à décroissance rapide. Toute fonction à support compact (c’est à dire nulle en dehors d’un intervalle bornée) est aussi à décroissance rapide. De la même manière toute fonction bornée est à croissance lente.</p>
 
-<p>On ajoute à cette décroissance rapide une notion de régularité des fonctions $\phi$ considérées. Les fonctions admissibles seront des fonctions indéfiniment dérivables dont chaque dérivée est à décroissance rapide.</p>
+<p>On va aussi ajouter de une hypothèse de régularité aux fonctions $\phi$: les fonctions $\phi$ admissibles seront des fonctions indéfiniment dérivables dont chaque dérivée est à décroissance rapide.</p>
 
 <hr />
 <p><strong>Définition (Fonction test et Espace de Schwartz)</strong>
-On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \mathbb{C}$ infiniment différentiable dont toutes les dérivées décroissent rapidement. Plus précisément si $\phi^{(n)}$ est la dérivée $n$-ième de $\phi$ on a:
+On appelle <em>fonction test</em> une fonction $\phi: \mathbb{R} \rightarrow \mathbb{C}$ infiniment différentiable dont toutes les dérivées décroissent rapidement. Plus précisément si $\phi^{(n)}$ est la dérivée $n$-ième de $\phi$ on a:
 \begin{equation}
 \forall k,n \in \mathbb{N}^{2}, \sup_{x\in \mathbb{R}} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty
 \end{equation}</p>
@@ -254,7 +258,7 @@ On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 
 <p>On peut voir facilement par (5) que les fonctions de l’espace de Schwartz sont intégrables sur $\mathbb{R}$. De plus toute combinaison linéaire de fonctions de l’espace de Schwartz est de Schwartz.</p>
 
-<p>Les fonctions $C^{\infty}$ à support compact sont des fonctions de l’espace de Schwartz, tout comme les fonction du type $P(x)e^{-x^{2}}$ avec $P(x)$ un polynôme. En particulier la gaussienne $t\rightarrow e^{-t^{2}}$ est dans l’espace de Schwartz. La figure ci dessous la représente cette fonction ainsi que ses deux premières dérivées en rouge bleu et vert. En noir la fonction créneau qui est à décroissance rapide mais qui n’est pas infiniment dérivable et donc qui n’appartient pas à l’espace de Schwartz.</p>
+<p>Les fonctions $C^{\infty}$ à support compact sont des fonctions de l’espace de Schwartz, tout comme les fonction du type $P(x)e^{-x^{2}}$ avec $P(x)$ un polynôme. En particulier la gaussienne $t\rightarrow e^{-t^{2}}$ est dans l’espace de Schwartz. La figure ci dessous représente cette fonction ainsi que ses deux premières dérivées en rouge bleu et vert. En noir la fonction créneau qui est à décroissance rapide mais qui n’est pas infiniment dérivable et donc qui n’appartient pas à l’espace de Schwartz.</p>
 
 <p align="center"> 
 <img src="/materials/Schwartz.png" />
@@ -262,7 +266,7 @@ On appelle fonction <em>test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 
 <p><strong>Remarque 1.</strong> Les conditions (3), (4) et (5) sont bien équivalentes. En effet si les fonctions vérifient (3) alors il existe pour tout $n,k$ il existe $C_{n,k}$ tel que $\lvert x^{k+2} \phi^{(n)}(x)\rvert \leq C_{n,k}$ ce qui implique $\lvert x^{k} \phi^{(n)}(x)\rvert \leq \frac{C_{n,k}}{x^{2}}\leq \frac{C_{n,k}}{1+x^{2}}$. Inversement (5) implique (3) de manière directe car $\frac{1}{1+x^{2}}\leq 1$.  En conclusion (3) est équivalent à (5). De plus on peut voir facilement que (4) implique (3) car dans ce cas $x^{k} \phi^{(n)}(x)$ est aussi petite que l’on veut au voisinage de l’infini et par continuité elle est bornée pour tout intervalle, donc le sup est fini. Plus précisément si on suppose (4) alors pour $\epsilon &gt;0$ il existe $x_0$ tel que pour $x\geq x_0$ $\lvert x^{k} \phi^{(n)}(x) \rvert&lt; \epsilon$. Donc $\sup_{x &gt; x_0} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. De plus $x\rightarrow \lvert x^{k} \phi^{(n)}(x)\rvert$ est continue, donc bornée sur $[0,x_0]$ et donc $\sup_{x \in [0,x_0]} \lvert x^{k} \phi^{(n)}(x)\rvert &lt; +\infty$. On peut faire le même raisonnement pour $x&lt;0$ pour déduire la propriété pour tout $x$. Enfin il est clair que (5) implique (4).</p>
 
-<p>$\mathbb{S}(\mathbb{R})$ étant un espace de fonction on peut définir une notion de continuité propres aux fonctions de l’espace de Schwartz.</p>
+<p>$S(\mathbb{R})$ est un espace de fonction dans lequel on peut définir une notion de continuité propres aux fonctions de l’espace de Schwartz.</p>
 
 <hr />
 <p><strong>Définition (Continuité dans l’espace de Schwartz)</strong>
@@ -290,7 +294,7 @@ Une distribution tempérée est une fonction $T: S(\mathbb{R}) \rightarrow \math
 
 <hr />
 <p><strong>Définition (Distribution tempérée associée à f)</strong>
-Soit $f$ une fonction intégrable localement et à croissance lente. On définit la distribution tempérée associée à $f$ comme étant l’application $T_f: S(\mathbb{R}) \rightarrow \mathbb{R}$ telle que $\phi$ associe</p>
+Soit $f$ une fonction intégrable localement et à croissance lente. On définit la distribution tempérée associée à $f$ comme étant l’application $T_f: S(\mathbb{R}) \rightarrow \mathbb{R}$ qui à $\phi$ associe:</p>
 
 <p>\begin{equation}
 T_f(\phi)=\int_{\mathbb{R}} f(x) \phi(x)dx
@@ -300,11 +304,23 @@ T_f(\phi)=\int_{\mathbb{R}} f(x) \phi(x)dx
 
 <p><strong>Remarque 2.</strong> Cette intégrale est bien définie. En effet Comme $f$ est localement intégrable sur n’importe quel intervalle et que $\phi$ est continue alors la fonction $x\rightarrow f(x)\phi(x)$ est intégrable sur n’importe quel intervalle. Le problème se trouve donc à l’infini mais comme la fonction $\phi$ appartient à l’espace de Schwartz et que $f$ est à croissance lente l’intégrale est donc finie. Plus précisément il existe des constantes $C(f),C(\phi)$ tels que $\lvert f(x) \rvert \leq C(1+x^2)$ et $\lvert \phi(x) \rvert \leq \frac{C(\phi)}{(1+x^2)^{2}}$ pour tout $x$. On peut donc conclure que  pour tout $x$, $\lvert f(x) \phi(x) \rvert \leq \frac{C(f)C(\phi)}{1+x^{2}}$ qui est le terme d’une intégrale convergente sur $\mathbb{R}$.</p>
 
-<p><strong>Remarque 3.</strong> Une distribution tempérée définit bien une distribution. Elle est clairement linéaire en $\phi$ et elle est bien continue en $\phi$. En effet si $\phi_m \rightarrow \phi$ alors en notant $I_m=\lvert T_f(\phi_m)-T_f(\phi) \rvert$:
+<p><strong>Remarque 3.</strong> Une distribution tempérée définit bien une distribution. Elle est clairement linéaire en $\phi$ et elle est bien continue en $\phi$. En effet si $\phi_m \rightarrow \phi$ et $I_m=\lvert T_f(\phi_m)-T_f(\phi) \rvert$ alors $I_m\leq \int_{\mathbb{R}} \lvert f(x) \rvert \lvert \phi_m(x)-\phi(x) \rvert dx$. Soit $N\geq 2$ on a $1=(1+x^{2})^{N} (1+x^{2})^{-N}$ ce qui implique :
 \begin{equation}
-I_m\leq \int_{\mathbb{R}} \lvert f(x) \rvert \lvert \phi_m(x)-\phi(x) \rvert dx \leq \int_{\mathbb{R}} C(f) (1+x^{2}) \lvert \phi_m(x)-\phi(x) \rvert dx
+I_m\leq \int_{\mathbb{R}}(1+x^{2})^{N} (1+x^{2})^{-N} \lvert f(x) \rvert \lvert  \phi_m(x)-\phi(x) \rvert dx
 \end{equation}
-Le membre de droite est intégrable car par combinaison linéaire $\phi_m-\phi$ est aussi de Schwartz et on peut faire le même raisonnement que dans la remarque précédente. On peut donc appliquer le théorème de convergence dominé et intervertir limite et intégrale pour conclure que $\lim_{m\rightarrow+\infty} I_m \leq  \int_{\mathbb{R}} \lvert f(x) \rvert \lim_{m\rightarrow+\infty} \lvert \phi_m(x)-\phi(x) \rvert dx=0$.</p>
+Comme $f$ est à croissance lente $x \rightarrow (1+x^{2})^{N} \lvert f(x) \rvert$ est borné par une certaine constante $C(f)$. Aussi:
+\begin{equation}
+I_m\leq C(f) \int_{\mathbb{R}}(1+x^{2})^{-N+1} (1+x^{2})^{-1}\lvert  \phi_m(x)-\phi(x) \rvert dx
+\end{equation}
+De plus par combinaison linéaire $\phi_m-\phi$ est aussi de Schwartz ce qui implique: 
+\begin{equation}
+I_m\leq C(f) \sup_{x\in \mathbb{R}} \lvert (1+x^{2})^{-N+1}(\phi_m(x)-\phi(x)) \rvert \int_{\mathbb{R}} (1+x^{2})^{-1} dx
+\end{equation}
+On a $\int_{\mathbb{R}} \frac{1}{1+x^{2}} dx &lt; \infty$ et donc en faisant tendre $m \rightarrow +\infty$ dans l’expression précédente on a:
+\begin{equation}
+\lim_{m \rightarrow +\infty} I_m\leq C(f) \int_{\mathbb{R}} (1+x^{2})^{-1} dx \lim_{m \rightarrow +\infty} \sup_{x\in \mathbb{R}} \lvert (1+x^{2})^{-N+1}(\phi_m(x)-\phi(x)) \rvert 
+\end{equation}
+Le membre de droite tend vers $0$ par définition de $\phi_m \rightarrow \phi$ on a donc $I_m \rightarrow 0$ ce qui prouve la continuité.</p>
 
 <p><strong>Remarque 4.</strong> Cette représentation est unique. On peut effectivement vérifier que si $T_{f_1}(\phi)=T_{f_2}(\phi)$ pour tout $\phi$ alors $f_1=f_2$. C’est pour cette raison qu’on peut parler de “la” distribution associée à $f$.</p>
 
