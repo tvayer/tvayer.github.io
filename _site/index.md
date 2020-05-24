@@ -1,3 +1,4 @@
+YO1
 I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
 
 I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem and to use this new formulation for the classification of structured data.
@@ -20,9 +21,9 @@ I graduated from École Centrale de Lille with major in data science and now wor
 - Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2018) 
 
 ## Notes:
-- Quick posts about Fourier Analysis in French. 
-	- 1. [Analyse de Fourier sur le pouce]({% post_url /_posts/2020-05-04-fourier %}) (main properties of Fourier series, Fourier Transform)
-	- 2. [Analyse de Fourier sur l'index']({% post_url /_posts/2020-05-04-fourier %}) (main properties of Fourier series, Fourier Transform)
+- Quick posts about Fourier Analysis in French: 
+	- [Analyse de Fourier sur le pouce]({% post_url /_posts/2020-05-04-fourier %}) (main properties of Fourier series, Fourier Transform)
+	- [Analyse de Fourier sur l'index']({% post_url /_posts/2020-05-19-fourier %}) (Tempered distributions and Fourier Transform)
 
 
 ## Contacts
