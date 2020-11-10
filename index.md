@@ -1,12 +1,15 @@
 I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
 
-I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem and to use this new formulation for the classification of structured data.
+I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem.
 
 ### Accepted Papers
 - [CO-Optimal Transport](https://arxiv.org/abs/2002.03731). NeurIPS 2020.
 - [Fused Gromov-Wasserstein Distance for Structured Objects](https://www.mdpi.com/1999-4893/13/9/212). Algorithms. Special Issue Efficient Graph Algorithms in Machine Learning. 2020.
 - [Sliced Gromov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein). NeurIPS. 2019.
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML. 2019.
+
+### Thesis
+[A contribution to Optimal Transport on incomparable spaces](https://arxiv.org/abs/2011.04447)
 
 ### Preprints
 - [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848): available on ArXiV
