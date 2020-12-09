@@ -1,0 +1,83 @@
+\NeedsTeXFormat{LaTeX2e}
+ 
+\ProvidesPackage{cours0}[30/10/2008 Extension personnelle destinée aux cours V1.0, avec la note de bas de page]
+ 
+% extensions
+ 
+\RequirePackage[latin1]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[frenchb]{babel}
+\RequirePackage{amsmath,amsfonts,amsthm}
+\RequirePackage{bbm}
+\RequirePackage{fancyhdr} 
+\RequirePackage{lastpage}
+\RequirePackage{calc,ifthen,xspace}
+\RequirePackage{soul,enumerate,enumitem}
+\RequirePackage{MnSymbol}
+
+\textheight 24cm %\addtolength{\voffset}{-3.25truecm}
+\textwidth 18cm %\addtolength{\hoffset}{-3truecm}
+\setlength\oddsidemargin{-1cm}
+\setlength\evensidemargin{-1cm}
+\setlength\topmargin{-1.2cm}
+\setlength\footskip{1.5cm}
+\linespread{0.95}
+
+%Black Board Bold Face
+\newcommand{\N}{\mathbbm{N}}
+\newcommand{\Z}{\mathbbm{Z}}
+\newcommand{\R}{\mathbbm{R}}
+\newcommand{\C}{\mathbbm{C}}
+
+%Autres commandes
+\newcommand{\Dmat}{\begin{pmatrix}}
+\newcommand{\Fmat}{\end{pmatrix}}
+
+%Générateur de titre
+\newcommand{\mytitle}[1]
+{
+ \title{}
+ \noindent
+    \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+        \myinstitution & \hfill \mydate
+    \end{tabular*}
+ 
+    \vspace{0.25cm}
+
+    \noindent
+    \begin{tabular*}{\textwidth}{c}
+        \hline
+    \end{tabular*}
+
+    \vspace{0.15cm}
+
+    \noindent
+    \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
+        \mymodule & & \myschoolyear \\
+                &   #1      & \\
+    \end{tabular*}
+
+    \vspace{0.15cm}
+
+    \noindent
+    \begin{tabular*}{\textwidth}{c}
+        \hline
+    \end{tabular*}
+}
+
+%Style des pages
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[RO,LE]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\myinstitution}
+\fancyhead[R]{\mymodule \: \myschoolyear}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\Titre}
+\fancyfoot[LO,RE]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
