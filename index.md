@@ -1,6 +1,6 @@
-I'm a P.h.D student under the supervision of [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
+I am a post doctoral researcher at ENS Lyon within the [LIP](http://www.ens-lyon.fr/LIP/) laboratory in the [DANTE](https://team.inria.fr/dante/team-members/) team. I am currently working on compressing learning and sketching methods.  
 
-I graduated from École Centrale de Lille with major in data science and now working on Optimal Transport. More precisely my objective is to include the inherent structural information of usual machine learning objects (graph, time series...) in the Optimal Transportation problem.
+I was previously working on Optimal Transport and, in this context, I obtained my PhD in November 2020. I was supervised by [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
 
 ### Accepted Papers
 - [CO-Optimal Transport](https://arxiv.org/abs/2002.03731). NeurIPS 2020.
@@ -30,8 +30,7 @@ I graduated from École Centrale de Lille with major in data science and now wor
 
 ## Contacts
 
-- E-mail: titouan.vayer@irisa.fr
+- E-mail: titouan.vayer@ens-lyon.fr
 - Phone: +33 (0)6 82 32 55 70
-- Office: Somewhere in Vannes, somewhere in France
 
 ![Alt Text](/materials/mouette.gif)
