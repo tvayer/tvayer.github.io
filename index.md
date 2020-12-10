@@ -1,4 +1,4 @@
-I am a post doctoral researcher at ENS Lyon within the [LIP](http://www.ens-lyon.fr/LIP/) laboratory in the [DANTE](https://team.inria.fr/dante/team-members/) team. I am currently working on compressing learning and sketching methods.  
+I am a post doctoral researcher at ENS Lyon within the [LIP](http://www.ens-lyon.fr/LIP/) laboratory in the [DANTE](https://team.inria.fr/dante/team-members/) team. I am currently working on compressive learning and sketching methods.  
 
 I was previously working on Optimal Transport and, in this context, I obtained my PhD in November 2020. I was supervised by [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. 
 
