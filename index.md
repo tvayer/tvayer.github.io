@@ -3,7 +3,7 @@ I am a post doctoral researcher at ENS Lyon within the [LIP](http://www.ens-lyon
 I was previously working on Optimal Transport and, in this context, I obtained my PhD in November 2020. I was supervised by [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) an [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. You can find the manuscript of my thesis here: [A contribution to Optimal Transport on incomparable spaces](https://arxiv.org/abs/2011.04447). My resume (in French) can be found [here](/materials/cv_longFR.pdf).
 
 ### Accepted Papers
-- [Online Graph Dictionary Learning](https://arxiv.org/pdf/2102.06555.pdf): accepted to ICML. 2021.
+- [Online Graph Dictionary Learning](http://proceedings.mlr.press/v139/vincent-cuaz21a.html). ICML. 2021.
 - [CO-Optimal Transport](https://papers.nips.cc/paper/2020/hash/cc384c68ad503482fb24e6d1e3b512ae-Abstract.html). NeurIPS. 2020.
 - [Fused Gromov-Wasserstein Distance for Structured Objects](https://www.mdpi.com/1999-4893/13/9/212). Algorithms. Special Issue Efficient Graph Algorithms in Machine Learning. 2020.
 - [Sliced Gromov-Wasserstein](https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein). NeurIPS. 2019.
