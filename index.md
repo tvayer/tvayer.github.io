@@ -12,8 +12,9 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML. 2019.
 
 ### Preprints
-- [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848): available on ArXiV
-- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652): available on ArXiV
+- [Semi-relaxed Gromov Wasserstein divergence with applications on graphs](https://arxiv.org/abs/2110.02753). 2021
+- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652). 2021
+- [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848). 2020
 
 ### Teaching :
 - Ecole Centrale de Nantes (ECN) October 2019 : Towards more Deep Learning (GAN's, Wasserstein GAN's, VAE, Fine-Tuning), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2019) 
