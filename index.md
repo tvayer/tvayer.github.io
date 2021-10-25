@@ -4,7 +4,7 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 
 ### News
 
-- I will be giving a talk at the AAAI 2021 workshop [Optimal Transport and Structred Data Modeling](https://ot-sdm.github.io/)
+- I will be giving a talk at the AAAI 2022 workshop [Optimal Transport and Structred Data Modeling](https://ot-sdm.github.io/)
 
 ### Accepted Papers
 - [Optimization of the Diffusion Time in Graph Diffused-Wasserstein Distances: Application to Domain Adaptation](https://hal.inria.fr/hal-03353622/document). ICTAI. 2021
