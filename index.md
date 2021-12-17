@@ -7,6 +7,7 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 - I am invited as a speaker at the AAAI 2022 workshop [Optimal Transport and Structred Data Modeling](https://ot-sdm.github.io/)
 
 ### Accepted Papers
+- [Subspace Detours Meet Gromov–Wasserstein](https://www.mdpi.com/1999-4893/14/12/366). Algorithms. 2021.
 - [Optimization of the Diffusion Time in Graph Diffused-Wasserstein Distances: Application to Domain Adaptation](https://hal.inria.fr/hal-03353622/document). ICTAI. 2021
 - [Online Graph Dictionary Learning](http://proceedings.mlr.press/v139/vincent-cuaz21a.html). ICML. 2021.
 - [POT: Python Optimal Transport](https://jmlr.org/papers/v22/20-451.html). JMLR Software. 2021
@@ -16,19 +17,19 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 - [Optimal Transport for structured data with application on graphs](http://proceedings.mlr.press/v97/titouan19a.html). ICML. 2019.
 
 ### Preprints
-- [Controlling Wasserstein distances by Kernel norms with application to Compressive Statistical Learning](https://arxiv.org/abs/2112.00423). ArXiV. 2021
-- [Semi-relaxed Gromov Wasserstein divergence with applications on graphs](https://arxiv.org/pdf/2110.02753.pdf). ArXiV. 2021
-- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652). ArXiV. 2021
-- [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848). ArXiV. 2020
+- [Controlling Wasserstein distances by Kernel norms with application to Compressive Statistical Learning](https://arxiv.org/abs/2112.00423). 2021
+- [Semi-relaxed Gromov Wasserstein divergence with applications on graphs](https://arxiv.org/pdf/2110.02753.pdf). 2021
+- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652). 2021
+- [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848). 2020
 
 
 ### Teaching :
 - Ecole Centrale de Nantes (ECN) October 2019 : Towards more Deep Learning (GAN's, Wasserstein GAN's, VAE, Fine-Tuning), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2019) 
 - Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available [here](https://github.com/tvayer/tvayer.github.io/tree/master/cours/deep_ecn_2018) 
 
-### Talks 
-- November 2021: I gave a talk "Less is More ? How Optimal Transport can help for compressive learning" for the GDR ISIS meeting [Transport Optimal et Apprentissage Statistique
-](http://intranet.gdr-isis.fr/index.php?page=reunion&idreunion=461). 
+### Some Talks 
+- November & December 2021: I gave a talk "Less is More ? How Optimal Transport can help for compressive learning" in [CMAP Ecole Polytechnique](https://portail.polytechnique.edu/cmap/fr/page-daccueil) for the GDR ISIS meeting [Transport Optimal et Apprentissage Statistique
+](http://intranet.gdr-isis.fr/index.php?page=reunion&idreunion=461). [Slides](/materials/prez_cmap.pdf)
 - January 2020: I was invited at [MIA](https://www6.inrae.fr/mia-paris) UMR 518 Paris to talk about "The optimal transportation problem for structured data". [Slides](/materials/prez_mia.pdf)
 - March 2019: I was invited at [Qarma](https://qarma.lis-lab.fr/) in Aix-Marseille University to talk about "Optimal Transport for Structured data". [Slides](/materials/Titouan_Marseille_2019.pdf)
 - Juin 2018: "Fused Gromov-Wasserstein Distance" at [CAp Conference](http://cap2018.litislab.fr/)
