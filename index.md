@@ -4,6 +4,7 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 
 ### News
 
+- Our papers "Semi-relaxed Gromov Wasserstein divergence with applications on graphs" and "Fast Multiscale Diffusion on Graphs" are accepted to ICLR 2022 and ICASSP 2022 !
 - I am invited as a speaker at the AAAI 2022 workshop [Optimal Transport and Structred Data Modeling](https://ot-sdm.github.io/)
 
 ### Accepted Papers
