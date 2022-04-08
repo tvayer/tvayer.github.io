@@ -8,6 +8,8 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 - I am invited as a speaker at the AAAI 2022 workshop [Optimal Transport and Structred Data Modeling](https://ot-sdm.github.io/)
 
 ### Accepted Papers
+- [Semi-relaxed Gromov Wasserstein divergence with applications on graphs](https://openreview.net/forum?id=RShaMexjc-x). ICLR. 2022
+- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652). ICASSP. 2022
 - [Subspace Detours Meet Gromov–Wasserstein](https://www.mdpi.com/1999-4893/14/12/366). Algorithms. 2021.
 - [Optimization of the Diffusion Time in Graph Diffused-Wasserstein Distances: Application to Domain Adaptation](https://hal.inria.fr/hal-03353622/document). ICTAI. 2021
 - [Online Graph Dictionary Learning](http://proceedings.mlr.press/v139/vincent-cuaz21a.html). ICML. 2021.
@@ -19,8 +21,6 @@ I was previously working on Optimal Transport and, in this context, I obtained m
 
 ### Preprints
 - [Controlling Wasserstein distances by Kernel norms with application to Compressive Statistical Learning](https://arxiv.org/abs/2112.00423). 2021
-- [Semi-relaxed Gromov Wasserstein divergence with applications on graphs](https://arxiv.org/pdf/2110.02753.pdf). 2021
-- [Fast Multiscale Diffusion on Graphs](https://arxiv.org/abs/2104.14652). 2021
 - [Time Series Alignment with Global Invariances](https://arxiv.org/abs/2002.03848). 2020
 
 
