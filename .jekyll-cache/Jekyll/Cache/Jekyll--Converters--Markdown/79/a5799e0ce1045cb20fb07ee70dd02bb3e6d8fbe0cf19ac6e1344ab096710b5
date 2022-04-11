@@ -1,4 +1,4 @@
-<p>Dans le post <a href="/fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> que l’on détaillera par la suite.</p>
+I"1n<p>Dans le post <a href="/fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> que l’on détaillera par la suite.</p>
 
 <h1 id="sommaire">Sommaire</h1>
 <ol>
@@ -276,3 +276,4 @@ On définit l’espace des mesures positives finies, et on le note $\mathcal{M}_
 <!-- Prenons le cas de la fonction $f:t\rightarrow e^{i n \omega t}$. Cette fonction définit une mesure $\mu=f d\lambda$.
 
 Alors $\mathcal{F}(f)(\nu)=\int_{\mathbb{R}} e^{-i \nu x}$ -->
+:ET

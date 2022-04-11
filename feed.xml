@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-11T10:44:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Titouan Vayer</title><subtitle>Personal website and blog. </subtitle><author><name>Titouan Vayer</name><email>titouan.vayer@ens-lyon.fr</email></author><entry><title type="html">Analyse de Fourier sur l’index</title><link href="http://localhost:4000/fourier2/" rel="alternate" type="text/html" title="Analyse de Fourier sur l’index" /><published>2020-05-19T00:00:00+02:00</published><updated>2020-05-19T00:00:00+02:00</updated><id>http://localhost:4000/fourier2</id><content type="html" xml:base="http://localhost:4000/fourier2/"><![CDATA[<p>Dans le post <a href="/fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> que l’on détaillera par la suite.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-11T14:23:04+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Titouan Vayer</title><subtitle>Personal website and blog. </subtitle><author><name>Titouan Vayer</name><email>titouan.vayer@ens-lyon.fr</email></author><entry><title type="html">Analyse de Fourier sur l’index</title><link href="http://localhost:4000/fourier2/" rel="alternate" type="text/html" title="Analyse de Fourier sur l’index" /><published>2020-05-19T00:00:00+02:00</published><updated>2020-05-19T00:00:00+02:00</updated><id>http://localhost:4000/fourier2</id><content type="html" xml:base="http://localhost:4000/fourier2/"><![CDATA[<p>Dans le post <a href="/fourier/">précédent</a> nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée de Fourier pour des fonctions simples comme $cos(t)$ ou $sin(t)$. On va voir rapidement dans cette note comment élargir la théorie à des objets plus généraux. On verra que cela passe par la notion de <em>distribution temperée</em> qui est étoitement liée à la notion de <em>mesure</em> que l’on détaillera par la suite.</p>
 
 <h1 id="sommaire">Sommaire</h1>
 <ol>
@@ -87,7 +87,7 @@ On appelle <em>fonction test</em> une fonction $\phi: \mathbb{R} \rightarrow \ma
 <p>Les fonctions $C^{\infty}$ à support compact sont des fonctions de l’espace de Schwartz, tout comme les fonction du type $P(x)e^{-x^{2}}$ avec $P(x)$ un polynôme. En particulier la gaussienne $t\rightarrow e^{-t^{2}}$ est dans l’espace de Schwartz. La figure ci dessous représente cette fonction ainsi que ses deux premières dérivées en rouge bleu et vert. En noir la fonction créneau qui est à décroissance rapide mais qui n’est pas infiniment dérivable et donc qui n’appartient pas à l’espace de Schwartz.</p>
 
 <p align="center"> 
-<img src="/materials/Schwartz.png" />
+<img src="/Schwartz.png" />
 </p>
 
 <p>La régularité des fonctions de l’espace de Schwartz vont nous permettre d’avoir de bonnes propriétés pour définir la transformée de Fourier des distributions.</p>
@@ -310,7 +310,7 @@ Soit $f: \mathbb{R} \rightarrow \mathbb{R}$ une function. On dit que $f$ a une p
 <hr />
 
 <p align="center"> 
-<img src="/materials/period.png" />
+<img src="/period.png" />
 </p>
 
 <p><strong>Definition (Série de Fourier d’une fonction)</strong><br />
@@ -457,7 +457,7 @@ On note $(e_n)$ la suite de fonctions $e_n(x)=e^{in \omega x}$. Pour $p\neq q$ o
 <p>Les notions précédentes étaient relatives aux fonctions périodiques. Que se passe t’il lorsqu’on veut définir des notions équivalentes pour des fonctions que ne sont pas périodiques ? Par exemple considérons les deux fonctions suivantes:</p>
 
 <p align="center"> 
-<img src="/materials/nonperiod.png" />
+<img src="/nonperiod.png" />
 </p>
 
 <p>La courbe en bleue représente la fonction périodique précédente à laquelle on a ajouté un bruit. Elle ne se répète plus exactement dans le temps, même si on devine bien un certain pattern sous jacent. La deuxième fonction est une fonction “créneau” ou “porte” qui est nulle avant 0.05 et vaut 1 ensuite.</p>
@@ -496,7 +496,7 @@ La transformée de Fourier de $f$ est la fonction complexe définie en $\omega$ 
 <p>En appliquant cette transformée au signal précédent on obtient ces différents spectres:</p>
 
 <p align="center"> 
-<img src="/materials/tf.png" />
+<img src="/tf.png" />
 </p>
 
 <p>Ces courbes représentations fréquentielles de nos signaux sont une autre manière de représenter les représenter, et, souvent permettent une meilleur analyse de ces signaux.</p>
@@ -545,7 +545,7 @@ f*g(x)=\int_{-\infty}^{+\infty} f(x-t)g(x) dt<br />
 <p>Cette opération est symétrique $f*g=g*f$. Il est notamment intéressant de considérer la convolution pour lisser des signaux. On peut l’illustrer en considérant le produit de convolution de deux fonctions créneaux centrées en 0 :</p>
 
 <p align="center"> 
-<img src="/materials/Convolucion_Funcion_Pi.gif" />
+<img src="/Convolucion_Funcion_Pi.gif" />
 </p>
 
 <p>Le résultat est un signal triangulaire centré en 0. Cette opération se calcule très facilement dans le domaine fréquentiel en utilisant la transformée de Fourier:</p>

@@ -1,4 +1,4 @@
-<p>Ce post est un rapide aperçu de notions basiques sur les séries de Fourier et sur la transformée de Fourier. Je me suis restreint par choix à l’étude des fonctions réelles.</p>
+I"�i<p>Ce post est un rapide aperçu de notions basiques sur les séries de Fourier et sur la transformée de Fourier. Je me suis restreint par choix à l’étude des fonctions réelles.</p>
 
 <h1 id="sommaire">Sommaire</h1>
 <ol>
@@ -339,3 +339,4 @@ Soit $f:\mathbb{R} \rightarrow \mathbb{R}$ une fonction de carré intégrable su
 
 <p>En substance: partout où il existe un signal, il existe sa transformée de Fourier. Considérer cette transformée c’est commencer à comprendre le signal et pouvoir le manipuler.</p>
 
+:ET
