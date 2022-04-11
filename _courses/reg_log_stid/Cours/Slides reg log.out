@@ -1,0 +1,13 @@
+\BOOKMARK [2][]{Outline0.1}{Introduction : la classification supervis\351e binaire}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Objectifs du cours}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Le mod\350le de r\351gression logistique}{}% 3
+\BOOKMARK [3][]{Outline0.3.1.18}{Le mod\350le de r\351gression lin\351aire}{Outline0.3}% 4
+\BOOKMARK [3][]{Outline0.3.2.19}{R\351gression logistique}{Outline0.3}% 5
+\BOOKMARK [3][]{Outline0.3.3.23}{Le mod\350le}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.4.25}{Les variables explicatives}{Outline0.3}% 7
+\BOOKMARK [3][]{Outline0.3.5.26}{Hypoth\350se de lin\351arit\351 du logit}{Outline0.3}% 8
+\BOOKMARK [2][]{Outline0.4}{Estimation des param\350tres du mod\350le}{}% 9
+\BOOKMARK [3][]{Outline0.4.1.34}{Test du rapport de vraisemblance : test de significativit\351 globale du mod\350le}{Outline0.4}% 10
+\BOOKMARK [3][]{Outline0.4.2.36}{Test de Wald : test de significativit\351 individuelle des variables}{Outline0.4}% 11
+\BOOKMARK [2][]{Outline0.5}{Odds et odds-ratio}{}% 12
+\BOOKMARK [2][]{Outline0.6}{Evaluation et s\351lection du ``meilleur'' mod\350le}{}% 13

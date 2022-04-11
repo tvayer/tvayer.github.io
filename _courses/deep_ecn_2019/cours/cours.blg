@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: cours.aux
+The style file: apalike.bst
+Database file #1: ./biblio.bib
+A bad cross reference---entry "googfellow2014"
+refers to entry "DBLP:conf/nips/2014", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/nips/2014"
+Warning--empty booktitle in Griewank2012WhoIT
+You've used 27 entries,
+            1935 wiz_defined-function locations,
+            631 strings with 8565 characters,
+and the built_in function-call counts, 11399 in all, are:
+= -- 1083
+> -- 592
+< -- 11
++ -- 203
+- -- 201
+* -- 971
+:= -- 2022
+add.period$ -- 83
+call.type$ -- 27
+change.case$ -- 230
+chr.to.int$ -- 27
+cite$ -- 28
+duplicate$ -- 425
+empty$ -- 719
+format.name$ -- 234
+if$ -- 2205
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 28
+newline$ -- 137
+num.names$ -- 87
+pop$ -- 212
+preamble$ -- 1
+purify$ -- 230
+quote$ -- 0
+skip$ -- 338
+stack$ -- 0
+substring$ -- 637
+swap$ -- 70
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 160
+warning$ -- 1
+while$ -- 81
+width$ -- 0
+write$ -- 350
+(There was 1 error message)

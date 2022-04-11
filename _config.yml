@@ -1,0 +1,279 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+minimal_mistakes_skin    : default #"dark" #"default"  #"air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+##"https://aasiaeet.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+#"aasiaeet/aasiaeet"# GitHub username/repo-name .g. "mmistakes/minimal-mistakes"
+
+# Site Settings
+locale                   : "fr"
+title                    : "Titouan Vayer"
+title_separator          : "-"
+name                     : "Titouan Vayer"
+description              : "Personal website and blog. "
+url                      : "https://tvayer.github.io/"  #"https://aasiaeet.netlify.com" 
+repository               : #"aasiaeet/aasiaeet.github.io" 
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 100
+comments:
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  disqus:
+    shortname            :  # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+  read_more              : "enabled" # if enabled, adds a "read more" link to excerpts 
+search                   : true #, false (default)
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
+
+# Social Sharing
+twitter:
+  username               : "tvayer"
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+
+# Site Author
+author:
+  name             : "Titouan Vayer"
+  avatar           : "/assets/images/me3.png"
+  bio              : "Postdoctoral researcher at ENS Lyon"
+  location         : #"MBI, Ohio State University"
+  email            : titouan.vayer@ens-lyon.fr
+  uri              :
+  home             : # null (default), "absolute or relative url to link to author home"
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : tvayer
+  gitlab           :
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  tumblr           :
+  twitter          : t_vayer
+  vine             :
+  weibo            :
+  xing             :
+  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+kramdown:
+  input: GFM
+  
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n" #"<!--more-->"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: true 
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: Europe/Paris
+
+future: true
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll/scholar
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  #- jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll/scholar
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  #- jemoji
+
+  
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: descending
+
+  source: ./_bibliography
+  bibliography: papers.bib
+  bibliography_template: bibtemplate 
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  repository: /publications
+  repository_file_delimiter: "." 
+  
+  query: "@*"
+ 
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+theme: minimal-mistakes-jekyll
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+    
+# Collections
+collections:
+  courses:
+    output: true
+    permalink: /:collection/:path
+    
+defaults:
+  # _courses
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      
+  # _posts
+  - scope:
+      path: ""
+      type: posts  
+    values:
+      layout: single
+      author_profile: true
+      read_time: true 
+      comments: true
+      share: false
+      related: true

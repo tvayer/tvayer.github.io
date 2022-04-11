@@ -1,0 +1,204 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage{cours0}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{eurosym}
+
+\geometry{hmargin=3cm, vmargin=2.5cm}
+
+
+%\newcommand{\myauthor}{Laetitia { \sc Chapel}}
+%\newcommand{\myemail}{laetitia.chapel@univ-ubs.fr}
+%%\newcommand{\documentadress}{http://www.math.jussieu.fr/$\sim$gabriel}
+%\newcommand{\mydate}{8 février 2013}
+%\newcommand{\myinstitution}{STID 2}
+%\newcommand{\Titre}{ \Large\textbf{Scoring} }
+
+\newcommand{\cbox}[1]{\parbox[t]{1.6cm}{\centering #1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}	
+\newcommand{\myyear}{2020}
+\newcommand{\myschoolyear}{2019--2020}
+\newcommand{\mydate}{Janvier 2020}
+\newcommand{\mymodule}{Régression logistique}
+\newcommand{\myinstitution}{DUT STID}
+\newcommand{\Titre}{TD3 -- Odds ratio et linéarité du logit}
+
+
+\begin{document}
+\thispagestyle{plain}
+\mytitle{\Titre}
+
+\newcounter{exo_counter}
+
+
+
+
+%
+%\noindent Remarques : \\
+%
+%\begin{itemize}
+	%\item [$\bullet$] La qualité de la rédaction et des graphiques, les explications fournies et la précision du vocabulaire utilisé sont importantes. 
+	%\item [$\bullet$] Si vous introduisez des notations, vous devez les définir.
+%\end{itemize}
+
+\par 
+\bigskip
+\noindent\textbf{Partie 3 -- Significativité globale du modèle, calcul et interprétation des OR}
+
+\par 
+\bigskip
+\begin{enumerate}
+\item \textbf{Modélisation de \texttt{survived} en fonction de l'intercept uniquement}
+	\begin{enumerate}
+		\item Donner l'odds associé à ce modèle et le commenter.
+		\begin{verbatim}
+		surv.null <- glm(survived ~ 1, family = binomial, data = df)
+exp(coef(surv.null))
+		\end{verbatim}
+	\end{enumerate}
+	
+	\item \textbf{Modélisation de \texttt{survived} en fonction du sexe du passager}
+	\begin{enumerate}
+	\item Réaliser un test du rapport de vraisemblance pour cette variable explicative.  Poser les hypothèses et conclure.
+		\begin{verbatim}
+		1-pchisq(surv.sex$null.deviance-surv.sex$deviance, 
+		         surv.sex$df.null-surv.sex$df.residual)
+		\end{verbatim}
+		\item Calculer l'OR en prenant comme modalité de référence \texttt{sex = 'male'}. 
+		\item Interpréter l'OR : quelle est l'impact sur la probabilité de survie lorsque l'on est une femme, par rapport aux hommes ?
+	\end{enumerate}
+	
+	\item \textbf{Modélisation de \texttt{survived} en fonction de la classe du passager}
+	\begin{enumerate}
+			\item Réaliser un test du rapport de vraisemblance pour cette variable explicative.  Poser les hypothèses et conclure.
+		\item Calculer les OR en considérant la modalité de référence \texttt{pclass = `3'}. 
+		\item Interpréter les OR
+		\item Interpréter l'OR associé aux modalités \texttt{pclass = `1'} et \texttt{pclass = `2'} en terme d'augmentation des chances de survie.
+	\end{enumerate}
+	
+	\item \textbf{Modélisation de \texttt{survived} en fonction de l'âge}
+	\begin{enumerate}
+		\item Calculer l'OR associé à la variable \texttt{age}
+		\item Interpréter l'OR : quel est l'impact sur la probabilité de survie lorsque l'âge augmente de 1 année ? de 10 ans ?
+			\item Le modèle est-il globalement significatif ? Poser les hypothèses et conclure.
+			\item Le test précédent vous fait-il revoir votre interprétation des OR ?
+		\item Interpréter le resultat des deux commandes suivantes :
+		\begin{verbatim}
+		confint(surv.age)
+		exp(confint(surv.age))
+		\end{verbatim}
+	\end{enumerate}
+\par 
+\newpage
+\noindent\textbf{Partie 4 -- Linéarité du logit}
+\par 
+\bigskip
+	La régression logistique fait l'hypothèse de linéarité du logit. Cette hypothèse n'a pas d'impact dans le cas de variables explicatives binaires mais doit être vérifiée dans le cas de variables explicatives continues. On voit bien notamment que l'OR est constant quelle que soit la valeur de $x_i$. Cette hypothèse n'est pas forcément vérifiée : par exemple, si on souhaite modéliser la probabilité d'avoir la maladie d'Alzheimer, l'augmentation des chances est bien plus importante entre \texttt{60 et 70 ans} qu'entre \texttt{20 et 30 ans}. On doit donc vérifier l'hypothèse de linéarité du logit avant d'introduire une variable quantitative dans le modèle. Dans le cas où l'hypothèse n'est pas vérifiée, on peut alors rechercher une transformation de la variable qui la rendrait linéaire, soit découper la variable en classes.\\
+		Pour vérifier l'hypothèse, on commence par découper la variable en classes 
+		\begin{verbatim}
+		bornes <- c(quantile(df$age, probs = seq(0, 1, by = 0.2)))
+		df$age_discret <- cut(df$age, breaks=bornes)
+		\end{verbatim}
+		et on récupère la probabilité d'être $y=1$ dans chaque classe.
+				\begin{verbatim}
+		pix = table(df$age_discret, df$survived)/rowSums(table(df$age_discret, df$survived))
+				\end{verbatim}
+	On peut ensuite en déduire le logit associé à chaque classe : 
+					\begin{verbatim}
+		logit=log((pix[,2])/(1-pix[,2]))
+				\end{verbatim}
+				que l'on trace en fonction des centres de classes
+									\begin{verbatim}
+				x = (c(0,19,25,31,42)+c(19,25,31,42,80))/2
+plot(x, logit)
+lines(x, lm(logit~x)$fit)
+				\end{verbatim}
+				Si les points forment (à peu près) une droite, on accepte l'hypothèse de linéarité du logit et on peut introduire la variable explicative continue dans le modèle.\\
+				Que concluez-vous ici quand à l'hypothèse de linéarité du logit pour la variable \texttt{age} ?
+\end{enumerate}
+%\par 
+%\bigskip
+%\noindent\textbf{Partie 3 -- Prédiction de la souscription d'un abonnement en fonction d'une seule variable : évaluation de la classification}
+%\par 
+%\bigskip
+%\begin{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction des revenus}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? Répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle, en choisissant un seuil $s = 0.5$. Calculer le taux d'erreur, le taux de succès, la sensibilité, le taux de faux positifs et la spécificité. Commenter. Le taux d'erreur obtenu est-il un bon taux d'erreur ?
+			%\item Qu'est ce qui change si au lieu de modéliser la souscription d'un abonnement, on choisit de modéliser la non souscription d'un abonnement ?
+	%\end{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction du sexe - modalité de référence \texttt{gender}='male'}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle, en choisissant un seuil $s = 0.5$. Calculer le taux d'erreur, le taux de succès, la sensibilité, le taux de faux positifs et la spécificité. Commenter. Le taux d'erreur obtenu est-il un bon taux d'erreur ? 
+			%\item Expliquer les résultats en regardant les probabilités estimées.
+	%\end{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction du travail - modalité de référence \texttt{employ}=0}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle. Commenter.
+	%\end{enumerate}
+%\end{enumerate}
+%\par 
+%\bigskip
+%\noindent\textbf{Partie 4 -- Prédiction de la souscription d'un abonnement en fonction de toutes les variables et sélection du meilleur modèle}
+	%
+%\begin{enumerate}
+	%\item Écrire le modèle contenant toutes les variables disponibles. Le modèle est-il globalement significatif ? Selon le test de Wald, quelles sont les variables significatives à entrer dans le modèle ?
+	%\item Sélectionner le meilleur modèle en utilisant les procédures stepwise, forward et backward. Donnent-elles tous le même modèle ? Si non, quel modèle choisir ?
+%\end{enumerate}
+	
+%	
+%\item Pour chaque variable qualitative, indiquer quel est la modalité de référence :
+%
+%
+%
+%\underline{REMARQUE} concernant la variable \texttt{classeAge} : il n'est pas possible d'introduire une variable qualitative à $n>2$ modalités dans une régression logistique. On doit recoder ce type de variable en $n-1$ variables binaires, la variable manquante étant la variable de référence. Dans le cas de la variable \texttt{classeAge} qui comporte 3 modalités, si on choisit la classe d'age 2 pour référence, le logiciel R créée automatiquement 2 variables binaires (on n'a pas besoin de créer ces variables explicitement) :
+%\begin{itemize}
+%	\item la variable \texttt{classeAge1}, dont la valeur est égale à 1 lorsque \texttt{classeAge=1}, et 0 sinon ;
+%	\item la variable \texttt{classeAge3}, dont la valeur est égale à 1 lorsque \texttt{classeAge=3}, et 0 sinon.
+%\end{itemize}
+%Ainsi, si \texttt{classeAge=2} (soit la modalité de référence), on a \texttt{classeAge1 = 0} et \texttt{classeAge3 = 0}.
+%\par
+%\bigskip
+%
+%
+%	\item Donner les estimations ponctuelles des coefficients. Quelles sont les variables significatives (à 5\%) ? Quel est le nom du test qui permet de répondre à cette question ?
+%	\item Le modèle est-il globalement significatif ? Justifier la réponse.
+%	\item Donner et interpréter les OR liés :
+%	\begin{itemize}
+%		\item aux différentes classes d'âge
+%		\item au sexe
+%		\item aux nombre d'assurances
+%		\item aux montants d'assurance (en milliers d'euros et non pas en euros)
+%	\end{itemize}
+%	\item Comment obtenir les estimations $\hat{\pi}(x)$ à partir du modèle ? Donner la valeur $\hat{\pi}(x)$ pour l'individu ayant les caractéristiques suivantes : \\
+%	classeAge = 1, sexe = 1, revenus = 1 (soit 1 millier d'\euro), nbAssur = 6, monttAssur = 1500.
+%	\item Pour ce même individu, en déduire $\hat{y}$, en choisissant un seuil $s = 0.5$. Justifier.
+%	\item On choisit un seuil $s=0.5$.
+%	\begin{enumerate}
+%		\item Quel est le taux d'erreur \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de succès \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de vrais positifs \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de faux positifs \textbf{non biaisé} du modèle ?
+%		\item Si on raisonne avec le taux d'erreur non biaisé du modèle, est ce un modèle intéressant ? Justifier.
+%	\end{enumerate}
+%	\item Si on regarde la courbe ROC du modèle, est ce un modèle intéressant ? Justifier.
+%	\item Si on regarde l'aire sous la courbe ROC du modèle, est ce un modèle intéressant ? Justifier.
+%	\item \textbf{Ciblage} : la compagnie souhaite envoyer une communication ciblée à certains de ses clients parmi les 4000 clients restants de la base de données.
+%	\begin{enumerate}
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle envoie un courrier à l'ensemble des 4000 clients de sa base de données ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle envoie 800 courriers au hasard ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle sélectionne les 800 personnes les plus appétentes selon le modèle ? D'ailleurs, comment peut-elle sélectionner ces 800 personnes ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle avait réalisé un ciblage parfait ?
+%	\end{enumerate}
+%\end{enumerate}
+\end{document}

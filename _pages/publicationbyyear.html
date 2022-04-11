@@ -1,0 +1,27 @@
+---
+layout: single 
+permalink: /publicationbyyear/
+author_profile: true
+title: Publication
+years: [2022, 2021, 2020, 2019]
+toc: true 
+---
+<p> 
+You can also find my articles on my 
+<a href= "https://scholar.google.fr/citations?user=PJEv3JgAAAAJ&hl=fr"> Google Scholar profile</a>.  
+</p> 
+<p>
+* Indicates equal contribution.
+</p> 
+<!-- <a href="/publicationbytopic/"><button type="button" class="btn" style="outline:none">By Topic </button></a> 
+ --><a href="/publicationbyyear/"><button type="button" class="btn" style="outline:none">By Year  </button></a> 
+
+<h3  class="pubyear">Preprints</h3>
+{% bibliography -f prpr %}
+
+{% for y in page.years %}
+  <h3  id="{{y}}" class="pubyear">{{y}}</h3>
+  {% bibliography -f papers -q @*[year={{y}}]* %}
+{% endfor %}
+
+

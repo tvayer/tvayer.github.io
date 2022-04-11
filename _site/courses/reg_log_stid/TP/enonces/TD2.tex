@@ -1,0 +1,251 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage{cours0}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{eurosym}
+
+\geometry{hmargin=3cm, vmargin=2.5cm}
+
+
+%\newcommand{\myauthor}{Laetitia { \sc Chapel}}
+%\newcommand{\myemail}{laetitia.chapel@univ-ubs.fr}
+%%\newcommand{\documentadress}{http://www.math.jussieu.fr/$\sim$gabriel}
+%\newcommand{\mydate}{8 février 2013}
+%\newcommand{\myinstitution}{STID 2}
+%\newcommand{\Titre}{ \Large\textbf{Scoring} }
+
+\newcommand{\cbox}[1]{\parbox[t]{1.6cm}{\centering #1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}	
+\newcommand{\myyear}{2016}
+\newcommand{\myschoolyear}{2019--2020}
+\newcommand{\mydate}{Janvier 2020}
+\newcommand{\mymodule}{Régression logistique}
+\newcommand{\myinstitution}{DUT STID}
+\newcommand{\Titre}{TD2 -- Mise en oeuvre de la régression logistique sous R}
+
+
+\begin{document}
+\thispagestyle{plain}
+\mytitle{\Titre}
+
+\newcounter{exo_counter}
+
+
+
+
+%
+%\noindent Remarques : \\
+%
+%\begin{itemize}
+	%\item [$\bullet$] La qualité de la rédaction et des graphiques, les explications fournies et la précision du vocabulaire utilisé sont importantes. 
+	%\item [$\bullet$] Si vous introduisez des notations, vous devez les définir.
+%\end{itemize}
+
+
+\noindent \textbf{Les données} Le naufrage du Titanic est sûrement le plus célèbre des accidents maritimes de l'époque
+contemporaine. Le 15 avril 1922, il entraîna la mort de 1502 personnes sur les 2224 passagers
+présents à bord dont le pauvre Léonardo, qui n'en demandait pas tant. Bien que des tentatives
+d'explication aient été abordées dans le film éponyme d'une longueur presque crapuleuse,
+les causes qui ont entraîné la survie ou la mort des passagers demeurent en grande partie
+inexpliquées. L'objectif sera donc pour vous de démêler les fils de la fatalité à bord du Titanic.
+Pour cela nous allons nous intéresser à la modélisation de la survie des passagers en fonction
+de données explicatives recueillies sur un échantillon de 1310 personnes présentes sur le navire.
+Les données sont les suivantes :
+\begin{itemize}
+	\item \texttt{pclass} : la classe de la cabine réservée par le passager (1ère, 2ème ou 3ème classe)
+	\item \texttt{survived} : si le passager a survécu (\texttt{survived}=1) ou non (\texttt{survived}=0)
+	\item \texttt{name} : le nom du passager
+	\item \texttt{sex} : le sexe du passager (\texttt{male} ou \texttt{female})
+	\item \texttt{age} : l'âge du passager
+
+	\item \texttt{sibsp} : le nombre de relations familiales au même niveau (frère/soeur ou mari/femme)
+du passager présents sur le Titanic
+	\item \texttt{parch} :  le nombre de relations familiales d'un niveau diérent (parents ou enfants) du
+passager présents sur le Titanic
+	\item \texttt{embarked} : le port d'embarquement du passager (\texttt{C} = Cherbourg, \texttt{Q} = Queenstown, \texttt{S}
+= Southampton)
+\end{itemize}
+\par
+\bigskip
+\noindent On cherche à prédire la survie \texttt{survived}$=1$  en fontion de toutes les variables.
+\par
+\bigskip
+%\noindent\textbf{Partie 0 -- Modèle de régression logistique}
+%Montrer que les formulations 
+%$$\pi(x) = \dfrac{\exp(\beta_0 + \beta_1\vect{x_1}+ \cdots + \beta_p\vect{x_p})}{1+\exp(\beta_0 + \beta_1\vect{x_1}+ \cdots + \beta_p\vect{x_p})} $$
+%et 
+%$$\text{logit}(\pi(x)) = \log\left(\dfrac{\pi(x)}{1-\pi(x)} \right)= \beta_0 + \beta_1\vect{x_1}+ \cdots + \beta_p\vect{x_p} $$
+%sont équivalentes.
+%\par
+%\bigskip
+\noindent\textbf{Partie 1 -- Lecture du fichier et préparation des données}
+\par 
+\bigskip
+\begin{enumerate}
+\item Lire le jeu de données et répérer ses variables
+\begin{verbatim}
+df <- read.table("titanic.csv", sep=";", header=TRUE, dec=",", na.strings = "")
+\end{verbatim}
+\item Identifier les variables qualitatives et changer leur type en \texttt{factor} 
+\begin{verbatim}
+class(df$pclass)
+df$pclass <- factor(df$pclass)
+str(df)
+\end{verbatim}
+\item Certains individus ont des données manquantes (l'âge notamment). Supprimer ces individus du fichier. Combien d'individus comporte finalement le jeu de données avec lequel on va travailler ?
+\begin{verbatim}
+df <- df[complete.cases(df),]
+\end{verbatim}
+\end{enumerate}
+\par 
+\bigskip
+
+\newpage
+\noindent\textbf{Partie 2 -- Prédiction de  \texttt{survived} en fonction d'une seule variable}
+
+\par 
+\bigskip
+\begin{enumerate}
+		\item Que modélise t-on ? Indiquer à \textsf{R} la modalité à prédire.
+				\begin{verbatim}
+df$survived <- relevel(df$survived, ref="0")
+						\end{verbatim}
+		\item Combien de passagers ont-ils survécu au naufrage ?
+		\begin{verbatim}
+table(df$survived)
+\end{verbatim}
+\item \textbf{Modélisation de \texttt{survived} en fonction de l'intercept uniquement}
+	\begin{enumerate}
+		\item Écrire le modèle. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+		\begin{verbatim}
+surv.null <- glm(survived ~ 1, family = binomial, data = df)
+		surv.null 
+		\end{verbatim}
+		\item  Retrouver à la main la valeur du coefficient $b_0$ donné par \textsf{R}.
+		\item Donner le modèle que l'on aura obtenu si on avait modélisé \texttt{survived}$=0$.
+	\end{enumerate}
+	\item \textbf{Modélisation de \texttt{survived} en fonction de l'âge}
+	\begin{enumerate}
+		\item Écrire le modèle. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+		\begin{verbatim}
+surv.age <- glm(survived ~ age, family = binomial, data = df)
+summary(surv.age)
+		\end{verbatim}
+		\item Qu'est ce qui change si, au lieu de modéliser le faible poids de naissance, on choisit de modéliser le non faible poids de naissance ?
+		\item Quelle est la probabilité pour un individu de 20 ans au moment du drame, tel que Jack, de survivre au naufrage du Titanic ? un individu de 28 ans, telle que Rose, de survivre au naufrage du Titanic ?
+		\item Soumettre le code suivant et expliquer la sortie.
+		\begin{verbatim}
+newdata = data.frame(age = 20)
+lin = predict(surv.age, newdata)
+exp(lin)/(1+exp(lin))
+		\end{verbatim}	
+	\end{enumerate}
+	\item \textbf{Modélisation de \texttt{survived} en fonction du sexe du passager}
+	\begin{enumerate}
+		\item Écrire le modèle en considérant la modalité de référence \texttt{sex = 'male'}. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+				\begin{verbatim}
+		df$sex<- relevel(df$sex, ref='male')
+		\end{verbatim}	
+				\item Écrire le modèle en considérant la modalité de référence \texttt{sex = 'female'}. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+	\item Montrer que les 2 modèles sont bien équivalents. 
+	\item Calculer la probabilité de survie pour la modalité \texttt{sex = 'female'} pour les deux modèles. 
+	\item Retrouver à la main la valeur de $b_0$ lorsque la modalité de référence est \texttt{sex = 'female'} et \texttt{sex = 'male'}.
+					\begin{verbatim}
+		table(df$survived, df$sex)
+		\end{verbatim}	
+	\end{enumerate}
+	\item \textbf{Modélisation de \texttt{survived} en fonction de la classe du passager}
+	\begin{enumerate}
+		\item Écrire le modèle en considérant la modalité de référence \texttt{pclass = `1'}. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+				\item Écrire le modèle en considérant la modalité de référence \texttt{pclass = `2'}. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.
+						\item Écrire le modèle en considérant la modalité de référence \texttt{pclass = `3'}. Dans un premier temps, en donner la formulation générale, puis indiquer spécifiquement le nom des variables, ainsi que l'estimation ponctuelle des coefficients dans l'équation.		
+\item Montrer que les 3 modèles sont équivalents.
+\item Calculer la probabilité d'être $\texttt{survived=1}$ pour les 3 valeurs de \texttt{pclass}. Commenter.
+	\end{enumerate}
+\end{enumerate}
+%\par 
+%\bigskip
+%\noindent\textbf{Partie 3 -- Prédiction de la souscription d'un abonnement en fonction d'une seule variable : évaluation de la classification}
+%\par 
+%\bigskip
+%\begin{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction des revenus}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? Répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle, en choisissant un seuil $s = 0.5$. Calculer le taux d'erreur, le taux de succès, la sensibilité, le taux de faux positifs et la spécificité. Commenter. Le taux d'erreur obtenu est-il un bon taux d'erreur ?
+			%\item Qu'est ce qui change si au lieu de modéliser la souscription d'un abonnement, on choisit de modéliser la non souscription d'un abonnement ?
+	%\end{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction du sexe - modalité de référence \texttt{gender}='male'}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle, en choisissant un seuil $s = 0.5$. Calculer le taux d'erreur, le taux de succès, la sensibilité, le taux de faux positifs et la spécificité. Commenter. Le taux d'erreur obtenu est-il un bon taux d'erreur ? 
+			%\item Expliquer les résultats en regardant les probabilités estimées.
+	%\end{enumerate}
+	%\item \textbf{Modélisation de la souscription en fonction du travail - modalité de référence \texttt{employ}=0}
+	%\begin{enumerate}
+			%\item Le modèle est-il  significatif ? répondre à la question en utilisant le test du rapport de vraisemblance (significativité globale du modèle).
+			%\item Quelles sont les valeurs du $R^2$ et pseudo-$R^2$associées au modèle ? Commenter.
+			%\item Quelles sont les valeurs de concordance du modèle ? Commenter.
+			%\item Donner la matrice de confusion associée au modèle. Commenter.
+	%\end{enumerate}
+%\end{enumerate}
+%\par 
+%\bigskip
+%\noindent\textbf{Partie 4 -- Prédiction de la souscription d'un abonnement en fonction de toutes les variables et sélection du meilleur modèle}
+	%
+%\begin{enumerate}
+	%\item Écrire le modèle contenant toutes les variables disponibles. Le modèle est-il globalement significatif ? Selon le test de Wald, quelles sont les variables significatives à entrer dans le modèle ?
+	%\item Sélectionner le meilleur modèle en utilisant les procédures stepwise, forward et backward. Donnent-elles tous le même modèle ? Si non, quel modèle choisir ?
+%\end{enumerate}
+	
+%	
+%\item Pour chaque variable qualitative, indiquer quel est la modalité de référence :
+%
+%
+%
+%\underline{REMARQUE} concernant la variable \texttt{classeAge} : il n'est pas possible d'introduire une variable qualitative à $n>2$ modalités dans une régression logistique. On doit recoder ce type de variable en $n-1$ variables binaires, la variable manquante étant la variable de référence. Dans le cas de la variable \texttt{classeAge} qui comporte 3 modalités, si on choisit la classe d'age 2 pour référence, le logiciel R créée automatiquement 2 variables binaires (on n'a pas besoin de créer ces variables explicitement) :
+%\begin{itemize}
+%	\item la variable \texttt{classeAge1}, dont la valeur est égale à 1 lorsque \texttt{classeAge=1}, et 0 sinon ;
+%	\item la variable \texttt{classeAge3}, dont la valeur est égale à 1 lorsque \texttt{classeAge=3}, et 0 sinon.
+%\end{itemize}
+%Ainsi, si \texttt{classeAge=2} (soit la modalité de référence), on a \texttt{classeAge1 = 0} et \texttt{classeAge3 = 0}.
+%\par
+%\bigskip
+%
+%
+%	\item Donner les estimations ponctuelles des coefficients. Quelles sont les variables significatives (à 5\%) ? Quel est le nom du test qui permet de répondre à cette question ?
+%	\item Le modèle est-il globalement significatif ? Justifier la réponse.
+%	\item Donner et interpréter les OR liés :
+%	\begin{itemize}
+%		\item aux différentes classes d'âge
+%		\item au sexe
+%		\item aux nombre d'assurances
+%		\item aux montants d'assurance (en milliers d'euros et non pas en euros)
+%	\end{itemize}
+%	\item Comment obtenir les estimations $\hat{\pi}(x)$ à partir du modèle ? Donner la valeur $\hat{\pi}(x)$ pour l'individu ayant les caractéristiques suivantes : \\
+%	classeAge = 1, sexe = 1, revenus = 1 (soit 1 millier d'\euro), nbAssur = 6, monttAssur = 1500.
+%	\item Pour ce même individu, en déduire $\hat{y}$, en choisissant un seuil $s = 0.5$. Justifier.
+%	\item On choisit un seuil $s=0.5$.
+%	\begin{enumerate}
+%		\item Quel est le taux d'erreur \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de succès \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de vrais positifs \textbf{non biaisé} du modèle ?
+%		\item Quel est le taux de faux positifs \textbf{non biaisé} du modèle ?
+%		\item Si on raisonne avec le taux d'erreur non biaisé du modèle, est ce un modèle intéressant ? Justifier.
+%	\end{enumerate}
+%	\item Si on regarde la courbe ROC du modèle, est ce un modèle intéressant ? Justifier.
+%	\item Si on regarde l'aire sous la courbe ROC du modèle, est ce un modèle intéressant ? Justifier.
+%	\item \textbf{Ciblage} : la compagnie souhaite envoyer une communication ciblée à certains de ses clients parmi les 4000 clients restants de la base de données.
+%	\begin{enumerate}
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle envoie un courrier à l'ensemble des 4000 clients de sa base de données ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle envoie 800 courriers au hasard ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle sélectionne les 800 personnes les plus appétentes selon le modèle ? D'ailleurs, comment peut-elle sélectionner ces 800 personnes ?
+%		\item Combien de polices d'assurance peut elle espérer vendre si elle avait réalisé un ciblage parfait ?
+%	\end{enumerate}
+%\end{enumerate}
+\end{document}
