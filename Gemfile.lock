@@ -127,7 +127,7 @@ GEM
     webrick (1.7.0)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   jekyll (~> 4.0)
@@ -138,4 +138,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.1.2
+   2.3.7
