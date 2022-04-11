@@ -1,0 +1,13 @@
+# main links
+main:
+  - title: "Bio"
+    url: /bio
+  - title: "Publication"
+    url: /publicationbyyear
+  - title: "Research"
+    url: /research
+  - title: "Teaching"
+    url: /teaching
+  - title: "Blog"
+    url: /blog
+

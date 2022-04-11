@@ -1,7 +1,10 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem "github-pages", '163', group: :jekyll_plugins
+gem "jekyll", "~> 4.0"
+gem "jekyll-scholar"
+gem "minimal-mistakes-jekyll"
+gem "kramdown-parser-gfm" 
 
-# enable tzinfo-data for local build
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
-gem 'jekyll-paginate'
+group :jekyll_plugins do
+  gem "jekyll-archives"
+end
