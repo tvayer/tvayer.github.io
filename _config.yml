@@ -239,7 +239,7 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-#theme: minimal-mistakes-jekyll
+theme: minimal-mistakes-jekyll
 
 # HTML Compression
 # - http://jch.penibelst.de/
