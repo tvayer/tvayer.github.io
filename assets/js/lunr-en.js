@@ -23,7 +23,7 @@ var idx = lunr(function () {
     
       this.add({
           title: "Analyse de Fourier sur l'index",
-          excerpt: "Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée...",
+          excerpt: "On va voir rapidement dans cette note comment élargir la transformée de Fourier à des objets plus généraux.\n\n\n\n",
           categories: [],
           tags: [],
           id: 1
@@ -59,7 +59,7 @@ var store = [
       {
         "title": "Analyse de Fourier sur l'index",
         "url": "https://tvayer.github.io//fourier2/",
-        "excerpt": "Dans le post précédent nous avons vu que la théorie des fonctions intégrables n’est pas suffisante pour définir la transformée...",
+        "excerpt": "On va voir rapidement dans cette note comment élargir la transformée de Fourier à des objets plus généraux.\n\n\n\n",
         "teaser":
           
             null
