@@ -47,7 +47,7 @@ var store = [
       
       {
         "title": "Analyse de Fourier sur le pouce",
-        "url": "http://localhost:4000/fourier/",
+        "url": "https://tvayer.github.io//fourier/",
         "excerpt": "Ce post est un rapide aperçu de notions basiques sur les séries de Fourier et sur la transformée de Fourier....",
         "teaser":
           
@@ -58,7 +58,7 @@ var store = [
       
       {
         "title": "Analyse de Fourier sur l'index",
-        "url": "http://localhost:4000/fourier2/",
+        "url": "https://tvayer.github.io//fourier2/",
         "excerpt": "On va voir rapidement dans cette note comment élargir la transformée de Fourier à des objets plus généraux.\n\n\n\n",
         "teaser":
           
