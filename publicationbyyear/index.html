@@ -446,44 +446,45 @@ You can also find my articles on my
     Comparing probability distributions is at the crux of many machine learning algorithms. Maximum Mean Discrepancies (MMD) and Optimal Transport distances (OT) are two classes of distances between probability measures that have attracted abundant attention in past years. This paper establishes some conditions under which the Wasserstein distance can be controlled by MMD norms. Our work is motivated by the compressive statistical learning (CSL) theory, a general framework for resource-efficient large scale learning in which the training data is summarized in a single vector (called sketch) that captures the information relevant to the considered learning task. Inspired by existing results in CSL, we introduce the Hölder Lower Restricted Isometric Property (Hölder LRIP) and show that this property comes with interesting guarantees for compressive statistical learning. Based on the relations between the MMD and the Wasserstein distance, we provide guarantees for compressive statistical learning by introducing and studying the concept of Wasserstein learnability of the learning task, that is when some task-specific metric between probability distributions can be bounded by a Wasserstein distance.
     </div>
 	
-</li>
-<li><span id="Vaytimeseries"><b>Vayer, T</b>., Chapel, L., Courty, N., Flamary, R., Soullard, Y., &amp; Tavenard, R. (2020). <i>Time Series Alignment with Global Invariances</i>.</span>
+</li></ol>
+
+
+  <h3  id="2022" class="pubyear">2022</h3>
+  <ol class="bibliography"><li><span id="vayer2022time"><b>Vayer, T</b>., Tavenard, R., Chapel, L., Flamary, R., Courty, N., &amp; Soullard, Y. (2022). Time Series Alignment with Global Invariances. <i>Transactions on Machine Learning Research</i>.</span>
 
 
     
-    <button class="btn btnId btnPub--abstract" id="b_Vaytimeseries-abstract" style="outline:none;">Abstract</button>
+    <button class="btn btnId btnPub--abstract" id="b_vayer2022time-abstract" style="outline:none;">Abstract</button>
     
 
-	<button class="btn btnId btnPub--BibTex" id="b_Vaytimeseries-bibtex" style="outline:none;">BibTeX</button>
+	<button class="btn btnId btnPub--BibTex" id="b_vayer2022time-bibtex" style="outline:none;">BibTeX</button>
     
     
 	
 	
 	
 	
-	<a href="https://hal.archives-ouvertes.fr/hal-02473959"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+	<a href="https://openreview.net/forum?id=JXCH5N4Ujy"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
     
 
-	<div class="dropDownBibtex" id="Vaytimeseries-bibtex">
-    <pre>@article{Vaytimeseries,
+	<div class="dropDownBibtex" id="vayer2022time-bibtex">
+    <pre>@article{vayer2022time,
   title = {Time Series Alignment with Global Invariances},
-  author = {Vayer, Titouan and Chapel, Laetitia and Courty, Nicolas and Flamary, Rémi and Soullard, Yann and Tavenard, Romain},
-  year = {2020},
-  note = {https://hal.archives-ouvertes.fr/hal-02473959}
+  author = {Vayer, Titouan and Tavenard, Romain and Chapel, Laetitia and Flamary, R{\'e}mi and Courty, Nicolas and Soullard, Yann},
+  journal = {Transactions on Machine Learning Research},
+  year = {2022},
+  note = {https://openreview.net/forum?id=JXCH5N4Ujy}
 }
 </pre>
     </div>
 	
 	
-	<div class="dropDownAbstract" id="Vaytimeseries-abstract">
-    In this work we address the problem of comparing time series while taking into account both feature space transformation and temporal variability. The proposed framework combines a latent global transformation of the feature space with the widely used Dynamic Time Warping (DTW). The latent global transformation captures the feature invariance while the DTW (or its smooth counterpart soft-DTW) deals with the temporal shifts. We cast the problem as a joint optimization over the global transformation and the temporal alignments. The versatility of our framework allows for several variants depending on the invariance class at stake. Among our contributions we define a differentiable loss for time series and present two algorithms for the computation of time series barycenters under our new geometry. We illustrate the interest of our approach on both simulated and real world data.
+	<div class="dropDownAbstract" id="vayer2022time-abstract">
+    Multivariate time series are ubiquitous objects in signal processing. Measuring a distance or similarity between two such objects is of prime interest in a variety of applications, including machine learning, but can be very difficult as soon as the temporal dynamics and the representation of the time series, i.e. the nature of the observed quantities, differ from one another. In this work, we propose a novel distance accounting both feature space and temporal variabilities by learning a latent global transformation of the feature space together with a temporal alignment, cast as a joint optimization problem. The versatility of our framework allows for several variants depending on the invariance class at stake. Among other contributions, we define a differentiable loss for time series and present two algorithms for the computation of time series barycenters under this new geometry. We illustrate the interest of our approach on both simulated and real world data and show the robustness of our approach compared to state-of-the-art methods.
     </div>
 	
-</li></ol>
-
-
-  <h3  id="2022" class="pubyear">2022</h3>
-  <ol class="bibliography"><li><span id="VayGnn">Vincent-Cuaz, C., Flamary, R., Corneli, M., <b>Vayer, T</b>., &amp; Courty, N. (2022). Template based Graph Neural Network with Optimal Transport   Distances. <i>Neural Information Processing Systems (NeurIPS)</i>.</span>
+</li>
+<li><span id="VayGnn">Vincent-Cuaz, C., Flamary, R., Corneli, M., <b>Vayer, T</b>., &amp; Courty, N. (2022). Template based Graph Neural Network with Optimal Transport   Distances. <i>Neural Information Processing Systems (NeurIPS)</i>.</span>
 
 
     
@@ -760,6 +761,8 @@ partitioning, clustering and completion.
 
 
     
+    <button class="btn btnId btnPub--abstract" id="b_Vayerfgwalgorithms-abstract" style="outline:none;">Abstract</button>
+    
 
 	<button class="btn btnId btnPub--BibTex" id="b_Vayerfgwalgorithms-bibtex" style="outline:none;">BibTeX</button>
     
@@ -791,7 +794,7 @@ partitioning, clustering and completion.
 	
 	
 	<div class="dropDownAbstract" id="Vayerfgwalgorithms-abstract">
-    
+    Optimal transport theory has recently found many applications in machine learning thanks to its capacity to meaningfully compare various machine learning objects that are viewed as distributions. The Kantorovitch formulation, leading to the Wasserstein distance, focuses on the features of the elements of the objects, but treats them independently, whereas the Gromov–Wasserstein distance focuses on the relations between the elements, depicting the structure of the object, yet discarding its features. In this paper, we study the Fused Gromov-Wasserstein distance that extends the Wasserstein and Gromov–Wasserstein distances in order to encode simultaneously both the feature and structure information. We provide the mathematical framework for this distance in the continuous setting, prove its metric and interpolation properties, and provide a concentration result for the convergence of finite samples. We also illustrate and interpret its use in various applications, where structured objects are involved.
     </div>
 	
 </li>
