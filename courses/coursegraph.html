@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="pandoc" />
+  <title>Machine learning for graphs and with graphs</title>
+  <link rel="stylesheet" href="https://latex.now.sh/style.css">
+  <link rel="stylesheet" href="prism/prism.css">
+  <script src="prism/prism.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style type="text/css">
+    body {
+      counter-reset: fignumber sidenote-counter theorem definition;
+    }
+    div#back2index {text-align: right;}
+    h1#toctitle {text-align: left;}
+    #TOC ul {list-style-type: none;}
+    h1:not(.title) {margin-top: 1.625rem;}
+    img {display: inline;}
+    figure {text-align: center;}
+    figcaption::before {
+      counter-increment: fignumber;
+      content: 'Figure ' counter(fignumber) '. ';
+      font-weight: bold;
+    }
+    .csl-entry {
+      clear: left;
+      margin-bottom: 1em;
+    }
+    .csl-left-margin {
+      float: left;
+      padding-right: .5em;
+      text-align: right;
+      width: 5em;
+    }
+    .csl-right-inline {
+      margin: 0 .4em 0 5.5em;
+      text-align: justify;
+    }
+    .theorem, details {
+        background-color: #eee;
+        border-radius: .5em;
+        padding: .2em 1em;
+    }
+    details > p {
+        margin: 0;
+    }
+    details > summary {
+      font-weight: bold;
+    }
+    details {
+      margin-top: 1rem;
+    }
+  </style>
+  <script type="text/javascript">
+    function change_bib_urls() {
+      var div_element = document.getElementById("refs");
+      var myLinks = div_element.getElementsByTagName('a');
+
+      for (var myItem = 0; myItem < myLinks.length; myItem++) {
+        var myChild = myLinks[myItem]
+        myChild.innerText = "Link";
+        myChild.target = "_blank";
+      }
+    }
+  </script>
+</head>
+<body onload="change_bib_urls();">
+<div id="header">
+<h1 id="machine-learning-for-graphs-and-with-graphs">Machine learning for graphs and with graphs</h2>
+<!-- <center>
+<img src="/courses/graph.png" width="150" />
+</center> -->
+<h3 id="summary">Summary</h3>
+<p>Data organized in graphs have become omnipresent in machine learning and more generally in data science. They allow to represent both <strong>entities</strong> (variables, individuals, etc.) and the <strong>complex interaction relationships between them</strong>. <strong>Combined with machine learning (ML) methods</strong>, this point of view on the data <strong>has allowed spectacular advances</strong> in many fields such as in bioinformatics (e.g. prediction of 3D structure of proteins, see  AlphaFold algorithm), in brain imaging, genomics, or in computational social sciences. <strong>These data raise specific issues:</strong> they do not admit a simple representation in vector form, are often heterogeneous and of high dimension. Dealing with them thus <strong>requires advanced analysis methods</strong>.</p>
+<p>We have therefore witnessed a <strong>recent explosion of scientific works</strong> aiming at modeling/manipulating graphs, leading to various methodologies and approaches (graph learning, graph signal processing, optimal transport on graphs, graph kernels, graph neural networks, etc.). </p>
+<p>The objective of this course is threefold. First, it aims at presenting <strong>the essential tools of graph theory for data science</strong>, second, it introduces the <strong>classical machine learning methods for dealing with graphs</strong> and finally, it presents <strong>some of the most recent ML methods with structured data</strong>. </p>
+<p><strong>Particular emphasis will be placed on the practical implementation of the various algorithms</strong> seen during the course (using Python). </p>
+<h3 id="organization">Organization</h3>
+<ul>
+<li><strong>Lecturers</strong>: Titouan Vayer (Inria, ENS Lyon, LIP). </li>
+<li><strong>Duration</strong>: total 16 * 2 hours = 11 * 2 hours of lectures + 5 * 2 hours of practical sessions with exercises + Python TP</li>
+<li><strong>Evaluation</strong>: an oral presentation on a selected research article <strong>or</strong> a presentation of practical and theoretical results of an algorithm seen during the course applied to real data.</li>
+</ul>
+<h3 id="outline">Outline</h3>
+<ol>
+<li>Introduction<ul>
+<li>Graphs in real world problems</li>
+<li>An introduction to machine learning (data, supervised and unsupervised learning, classification, regression)</li>
+</ul>
+</li>
+<li>A primer on graph theory for ML and data science<ul>
+<li>Basic definitions, Laplacian/Markov matrix, spectral decomposition of graph matrices.</li>
+<li>An illustration of one of the most used algorithms: the Google PageRank algorithm</li>
+</ul>
+</li>
+<li>Practical session<ul>
+<li>Using Networkx [1]</li>
+</ul>
+</li>
+<li>Spectral embedding of graphs and graph clustering<ul>
+<li>Community detection</li>
+<li>Fiedler vector, graph cuts</li>
+</ul>
+</li>
+<li>An introduction to graph signal processing<ul>
+<li>Signals on graph, Fourier transform, smoothness, filters</li>
+</ul>
+</li>
+<li>Practical session <ul>
+<li>Using PyGSP [2]</li>
+</ul>
+</li>
+<li>An introduction to kernels for machine learning<ul>
+<li>A bit of Reproducing kernel Hilbert space theory</li>
+<li>In practice: classification and regression with kernels</li>
+</ul>
+</li>
+<li>Kernels for graphs<ul>
+<li>Weisfeiler-Lehman kernel, valid optimal assignment kernels</li>
+<li>Application to graphs classification</li>
+</ul>
+</li>
+<li>Practical session <ul>
+<li>Using GraKeL [3]</li>
+</ul>
+</li>
+<li>Graph neural networks (part 1)<ul>
+<li>Neural networks in machine learning</li>
+<li>A first model: spectral based GNN</li>
+</ul>
+</li>
+<li>Graph neural networks (part 2)<ul>
+<li>Message-passing neural networks</li>
+<li>Invariant and equivariant layers</li>
+</ul>
+</li>
+<li>Practical session<ul>
+<li>Using PyTorch Geometric [4]</li>
+</ul>
+</li>
+<li>Comparing graphs: matching and distances<ul>
+<li>The problem of graph matching and graph isomorphism</li>
+<li>Optimization on permutation matrices, Birkhoff polytope</li>
+</ul>
+</li>
+<li>Introduction to optimal transport theory, application to ML for graphs<ul>
+<li>Linear optimal transport:  Wasserstein distance, entropic regularization, Sinkhorn algorithm</li>
+<li>Non linear optimal transport: Gromov-Wasserstein distance</li>
+<li>Graphs applications</li>
+</ul>
+</li>
+<li>Practical session<ul>
+<li>Using Python Optimal Transport [5]</li>
+</ul>
+</li>
+<li>Learning graphs from (unstructured) data<ul>
+<li>Gaussian graphical models</li>
+<li>From LASSO to graphical LASSO</li>
+<li>Learning graphs with Laplacian constraints</li>
+</ul>
+</li>
+</ol>
+<h5 id="refs">Refs:</h5>
+<p>[1] Aric A. Hagberg, Daniel A. Schult and Pieter J. Swart, <em>Exploring network structure, dynamics, and function using NetworkX</em>. <a href="https://networkx.org/">https://networkx.org/</a><br>
+[2] Michaël Defferrard, Lionel Martin, Rodrigo Pena,  and Nathanaël Perraudin. <em>PyGSP: Graph Signal Processing in Python</em>. <a href="https://github.com/epfl-lts2/pygsp/">https://github.com/epfl-lts2/pygsp/</a><br>
+[3] Giannis Siglidis, Giannis Nikolentzos, Stratis Limnios, Christos Giatsidis, Konstantinos Skianis, Michalis Vazirgiannis. <em>GraKeL: A Graph Kernel Library in Python</em>. <a href="https://github.com/ysig/GraKeL">https://github.com/ysig/GraKeL</a><br>
+[4] Fey, Matthias and Lenssen, Jan E. <em>Fast Graph Representation Learning with PyTorch Geometric</em> <a href="https://github.com/pyg-team/pytorch_geometric">https://github.com/pyg-team/pytorch_geometric</a><br>
+[5] Rémi Flamary, Nicolas Courty, Alexandre Gramfort et al. <em>POT: Python Optimal Transport</em>. <a href="https://github.com/PythonOT/POT">https://github.com/PythonOT/POT</a></p>
+<h3 id="required-notions">Required notions</h3>
+<p>Some notions in linear algebra, statistics and Python programming. Notions in machine learning theory is a plus but an introduction will be given at the beginning of the course.</p>
+<h3 id="resources">Resources</h3>
+<h4 id="general-machine-learning-theory">General machine learning theory:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_eed5a107fcdf9c5a8a1a1dce65618d9a.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_f9437bc9877e27da855a7055ef138abb.png" width="150" />
+</p>
+
+<h4 id="graphs-in-datascience">Graphs in datascience:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_baf8b2d239c5c437b693291910c5e9a5.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_d5d690b477bf4801da1a88973ff7ece0.png" width="150" />
+</p>
+
+<h4 id="kernels-for-graphs-and-graph-neural-networks">Kernels for graphs and graph neural networks:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_aa1820809b8663766f99b8e7fad7c367.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_e6761107cbf99b7d53e5b72bee95530f.png
+" width="250" /> 
+  <img src="https://notes.inria.fr/uploads/upload_63fa49dda674b5f3d66096f35354a00c.png
+" width="150" /> 
+</p>
+
+<h4 id="optimal-transport">Optimal transport:</h4>
+<p float="left">
+
+  <img src="https://notes.inria.fr/uploads/upload_08e4989df326538a18a6e802254a2538.png" width="150" /> 
+</p>
+</body>
+</html>
+
+
+
