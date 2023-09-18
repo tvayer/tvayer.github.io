@@ -414,74 +414,6 @@ You can also find my articles on my
     Many approaches in machine learning rely on a weighted graph to encode the similarities between samples in a dataset. Entropic affinities (EAs), which are notably used in the popular Dimensionality Reduction (DR) algorithm t-SNE, are particular instances of such graphs. To ensure robustness to heterogeneous sampling densities, EAs assign a kernel bandwidth parameter to every sample in such a way that the entropy of each row in the affinity matrix is kept constant at a specific value, whose exponential is known as perplexity. EAs are inherently asymmetric and row-wise stochastic, but they are used in DR approaches after undergoing heuristic symmetrization methods that violate both the row-wise constant entropy and stochasticity properties. In this work, we uncover a novel characterization of EA as an optimal transport problem, allowing a natural symmetrization that can be computed efficiently using dual ascent. The corresponding novel affinity matrix derives advantages from symmetric doubly stochastic normalization in terms of clustering performance, while also effectively controlling the entropy of each row thus making it particularly robust to varying noise levels. Following, we present a new DR algorithm, SNEkhorn, that leverages this new affinity matrix. We show its clear superiority to state-of-the-art approaches with several indicators on both synthetic and real-world datasets.
     </div>
 	
-</li>
-<li><span id="collasentropicwass">Collas, A., <b>Vayer, T</b>., Flamary, R., &amp; Breloy, A. (2023). <i>Entropic Wasserstein component analysis</i>.</span>
-
-
-    
-    <button class="btn btnId btnPub--abstract" id="b_collasentropicwass-abstract" style="outline:none;">Abstract</button>
-    
-
-	<button class="btn btnId btnPub--BibTex" id="b_collasentropicwass-bibtex" style="outline:none;">BibTeX</button>
-    
-    
-	
-	
-	
-	
-	<a href="https://hal.science/hal-04022713/file/otpca.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
-    
-
-	<div class="dropDownBibtex" id="collasentropicwass-bibtex">
-    <pre>@article{collasentropicwass,
-  note = {https://hal.science/hal-04022713/file/otpca.pdf},
-  title = {{Entropic Wasserstein component analysis}},
-  author = {Collas, Antoine and Vayer, Titouan and Flamary, R{\'e}mi and Breloy, Arnaud},
-  year = {2023},
-  archiveprefix = {arXiv}
-}
-</pre>
-    </div>
-	
-	
-	<div class="dropDownAbstract" id="collasentropicwass-abstract">
-    Dimension reduction (DR) methods provide systematic approaches for analyzing high-dimensional data. A key requirement for DR is to incorporate global dependencies among original and embedded samples while preserving clusters in the embedding space. To achieve this, we combine the principles of optimal transport (OT) and principal component analysis (PCA). Our method seeks the best linear subspace that minimizes reconstruction error using entropic OT, which naturally encodes the neighborhood information of the samples. From an algorithmic standpoint, we propose an efficient block-majorization-minimization solver over the Stiefel manifold. Our experimental results demonstrate that our approach can effectively preserve high-dimensional clusters, leading to more interpretable and effective embeddings. Python code of the algorithms and experiments is available online.
-    </div>
-	
-</li>
-<li><span id="Hippertgraphical">Hippert-Ferrer, A., Bouchard, F., Mian, A., <b>Vayer, T</b>., &amp; Breloy, A. (2022). <i>Learning Graphical Factor Models with Riemannian Optimization</i>.</span>
-
-
-    
-    <button class="btn btnId btnPub--abstract" id="b_Hippertgraphical-abstract" style="outline:none;">Abstract</button>
-    
-
-	<button class="btn btnId btnPub--BibTex" id="b_Hippertgraphical-bibtex" style="outline:none;">BibTeX</button>
-    
-    
-	
-	
-	
-	
-	<a href="https://arxiv.org/abs/2210.11950"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
-    
-
-	<div class="dropDownBibtex" id="Hippertgraphical-bibtex">
-    <pre>@misc{Hippertgraphical,
-  note = {https://arxiv.org/abs/2210.11950},
-  author = {Hippert-Ferrer, Alexandre and Bouchard, Florent and Mian, Ammar and Vayer, Titouan and Breloy, Arnaud},
-  title = {Learning Graphical Factor Models with Riemannian Optimization},
-  archiveprefix = {arXiv},
-  year = {2022}
-}
-</pre>
-    </div>
-	
-	
-	<div class="dropDownAbstract" id="Hippertgraphical-abstract">
-    Graphical models and factor analysis are well-established tools in multivariate statistics. While these models can be both linked to structures exhibited by covariance and precision matrices, they are generally not jointly leveraged within graph learning processes. This paper therefore addresses this issue by proposing a flexible algorithmic framework for graph learning under low-rank structural constraints on the covariance matrix. The problem is expressed as penalized maximum likelihood estimation of an elliptical distribution (a generalization of Gaussian graphical models to possibly heavy-tailed distributions), where the covariance matrix is optionally constrained to be structured as low-rank plus diagonal (low-rank factor model). The resolution of this class of problems is then tackled with Riemannian optimization, where we leverage geometries of positive definite matrices and positive semi-definite matrices of fixed rank that are well suited to elliptical models. Numerical experiments on real-world data sets illustrate the effectiveness of the proposed approach.
-    </div>
-	
 </li></ol>
 
 
@@ -520,6 +452,79 @@ You can also find my articles on my
 	
 	<div class="dropDownAbstract" id="Vaysketch2023-abstract">
     Comparing probability distributions is at the crux of many machine learning algorithms. Maximum Mean Discrepancies (MMD) and Wasserstein distances are two classes of distances between probability distributions that have attracted abundant attention in past years. This paper establishes some conditions under which the Wasserstein distance can be controlled by MMD norms. Our work is motivated by the compressive statistical learning (CSL) theory, a general framework for resource-efficient large scale learning in which the training data is summarized in a single vector (called sketch) that captures the information relevant to the considered learning task. Inspired by existing results in CSL, we introduce the Hölder Lower Restricted Isometric Property and show that this property comes with interesting guarantees for compressive statistical learning. Based on the relations between the MMD and the Wasserstein distances, we provide guarantees for compressive statistical learning by introducing and studying the concept of Wasserstein regularity of the learning task, that is when some task-specific metric between probability distributions can be bounded by a Wasserstein distance.
+    </div>
+	
+</li>
+<li><span id="Hippertgraphical">Hippert-Ferrer, A., Bouchard, F., Mian, A., <b>Vayer, T</b>., &amp; Breloy, A. (2023). Learning Graphical Factor Models with Riemannian Optimization. In D. Koutra, C. Plant, M. Gomez Rodriguez, E. Baralis, &amp; F. Bonchi (Eds.), <i>Machine Learning and Knowledge Discovery in Databases: Research Track</i> (pp. 349–366). Springer Nature Switzerland.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_Hippertgraphical-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_Hippertgraphical-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://arxiv.org/abs/2210.11950"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="Hippertgraphical-bibtex">
+    <pre>@inproceedings{Hippertgraphical,
+  author = {Hippert-Ferrer, Alexandre and Bouchard, Florent and Mian, Ammar and Vayer, Titouan and Breloy, Arnaud},
+  editor = {Koutra, Danai and Plant, Claudia and Gomez Rodriguez, Manuel and Baralis, Elena and Bonchi, Francesco},
+  title = {Learning Graphical Factor Models with Riemannian Optimization},
+  booktitle = {Machine Learning and Knowledge Discovery in Databases: Research Track},
+  year = {2023},
+  publisher = {Springer Nature Switzerland},
+  address = {Cham},
+  pages = {349--366},
+  isbn = {978-3-031-43421-1},
+  note = {https://arxiv.org/abs/2210.11950}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="Hippertgraphical-abstract">
+    Graphical models and factor analysis are well-established tools in multivariate statistics. While these models can be both linked to structures exhibited by covariance and precision matrices, they are generally not jointly leveraged within graph learning processes. This paper therefore addresses this issue by proposing a flexible algorithmic framework for graph learning under low-rank structural constraints on the covariance matrix. The problem is expressed as penalized maximum likelihood estimation of an elliptical distribution (a generalization of Gaussian graphical models to possibly heavy-tailed distributions), where the covariance matrix is optionally constrained to be structured as low-rank plus diagonal (low-rank factor model). The resolution of this class of problems is then tackled with Riemannian optimization, where we leverage geometries of positive definite matrices and positive semi-definite matrices of fixed rank that are well suited to elliptical models. Numerical experiments on synthetic and real-world data sets illustrate the effectiveness of the proposed approach.
+    </div>
+	
+</li>
+<li><span id="collasentropicwass">Collas, A., <b>Vayer, T</b>., Flamary, R., &amp; Breloy, A. (2023). Entropic Wasserstein component analysis. <i> IEEE International Workshop on Machine Learning for Signal Processing (MLSP)</i>.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_collasentropicwass-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_collasentropicwass-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://hal.science/hal-04022713/file/otpca.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="collasentropicwass-bibtex">
+    <pre>@inproceedings{collasentropicwass,
+  author = {Collas, Antoine and Vayer, Titouan and Flamary, Rémi and Breloy, Arnaud},
+  title = {Entropic Wasserstein component analysis},
+  booktitle = { IEEE International Workshop on Machine Learning for Signal Processing (MLSP)},
+  year = {2023},
+  note = {https://hal.science/hal-04022713/file/otpca.pdf}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="collasentropicwass-abstract">
+    Dimension reduction (DR) methods provide systematic approaches for analyzing high-dimensional data. A key requirement for DR is to incorporate global dependencies among original and embedded samples while preserving clusters in the embedding space. To achieve this, we combine the principles of optimal transport (OT) and principal component analysis (PCA). Our method seeks the best linear subspace that minimizes reconstruction error using entropic OT, which naturally encodes the neighborhood information of the samples. From an algorithmic standpoint, we propose an efficient block-majorization-minimization solver over the Stiefel manifold. Our experimental results demonstrate that our approach can effectively preserve high-dimensional clusters, leading to more interpretable and effective embeddings. Python code of the algorithms and experiments is available online.
     </div>
 	
 </li></ol>
