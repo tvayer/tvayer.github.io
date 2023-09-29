@@ -171,7 +171,75 @@
 [5] Rémi Flamary, Nicolas Courty, Alexandre Gramfort et al. <em>POT: Python Optimal Transport</em>. <a href="https://github.com/PythonOT/POT">https://github.com/PythonOT/POT</a></p>
 <h3 id="required-notions">Required notions</h3>
 <p>Some notions in linear algebra, statistics and Python programming. Notions in machine learning theory is a plus but an introduction will be given at the beginning of the course.</p>
-<h3 id="resources">Resources</h3>
+<h2>Evaluation and list of articles</h2>
+<p>The evaluation will consist in homework about an article in the list proposed underneath. The work can be done and written by pairs of students (if you agree, not required). The work has to be sent to the lecturers. </p>
+<p>The report has to be in two parts:</p>
+<p>1) Answer the following questions, so as to provide a general overview and of some technical points of the article (with an indication of the expected length of pages).</p>
+<p>a) What is the main scientific questions raised in this article ? What is the field of the question, and the main field of the authors or their group/laboratory ? </p>
+<p>b) Described the main contribution of the article; what are the novelties (ideas, techniques) ? </p>
+<p>c) Write a stat-of-the-art about the scientific question asked, trying to summarize what are alternative solutions in the scientific literature, and writing what is different between the proposed method and other existing ones. </p>
+<p>d) Write the model or the question put forward in this article. </p>
+<p>e) Explain a technical point that is important in finding the solution (note: the objective is not paraphrasing the article, but finding a point where additional explanations are useful, and develop them). (1 p.)</p>
+<p>f) Describe the significance of the experimental results</p>
+<p>g) Give what you think are some strong points, and some weak points, of the article </p>
+<p>2) Choose an aspect of the article that can be implemented and studied. Then, code a method proposed or described in the article and conduct numerical experiments. A report (with equations, figures, tables,...) about what you did should be given (2 to 4 pages) in addition to a code that can be run in python, preferentially in a notebook. This code should have  an identified main program, the data used should be appended (or clearly identified, with a direct donwnload link), so that we can run it and reproduce the results obtained.</p>
+<h3 id="graph-kernels">Graph kernels</h3>
+<ul>
+<li><p>On Valid Optimal Assignment Kernels and Applications to Graph Classification, Nils M. Kriege, Pierre-Louis Giscard, Richard C. Wilson, NeurIPS, 2016.</p>
+</li>
+<li><p>Wasserstein Weisfeiler-Lehman Graph Kernels,  Matteo Togninalli, Elisabetta Ghisu, Felipe Llinares-López, Bastian Rieck, and Karsten Borgwardt, NeurIPS 2019.</p>
+</li>
+</ul>
+<h3 id="graph-neural-networks">Graph neural networks</h3>
+<h4 id="supervised">Supervised</h4>
+<p>The following two articles contitute actually one work (because some of them will be presented in the course). If you choose these articles, we ask you to make a  comparison between them from a theoretical point of view (different architectures, purposes, the limitations ...).</p>
+<hr>
+<ul>
+<li>Inductive Representation Learning on Large Graphs, William L. Hamilton, Rex Ying, Jure Leskovec, NeurIPS 2017.</li>
+<li>Graph Attention Networks, Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio, ICLR 2018.</li>
+</ul>
+<hr>
+<ul>
+<li><p>How Powerful are Graph Neural Networks?, Keyulu Xu, Weihua Hu, Jure Leskovec, Stefanie Jegelka, ICLR 2019.</p>
+</li>
+<li><p>Template based Graph Neural Network with Optimal Transport Distances, Cédric Vincent-Cuaz, Rémi Flamary, Marco Corneli, Titouan Vayer, Nicolas Courty, NeurIPS 2022.</p>
+</li>
+<li><p>Invariant and Equivariant Graph Networks, Haggai Maron, Heli Ben-Hamu, Nadav Shamir, Yaron Lipman, ICLR 2019.</p>
+</li>
+<li><p>Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering, Michaël Defferrard, Xavier Bresson, Pierre Vandergheynst, NeurIPS 2016.</p>
+</li>
+<li><p>Hierarchical Graph Representation Learning with Differentiable Pooling, Rex Ying, Jiaxuan You, Christopher Morris, Xiang Ren, William L. Hamilton, Jure Leskovec, NeurIPS 2019</p>
+</li>
+<li><p>Position-aware Graph Neural Networks, Jiaxuan You, Rex Ying, Jure Leskovec, ICML 2019</p>
+</li>
+</ul>
+<hr>
+<p>For all GNN in the supervised part, there is a bonus if the experiments are done after taking into account: </p>
+<ul>
+<li><p>A Fair Comparison of Graph Neural Networks for Graph Classification, Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli, ICLR 2020</p>
+</li>
+<li><p>Open Graph Benchmark: Datasets for Machine Learning on Graphs, Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure, 2020.</p>
+</li>
+</ul>
+<hr>
+<h4 id="unsupervised-">Unsupervised</h4>
+<ul>
+<li>Partition and Code: learning how to compress graphs, Giorgos Bouritsas, Andreas Loukas, Nikolaos Karalias, Michael M. Bronstein, NeurIPS 2021</li>
+</ul>
+<h4 id="theory-of-gnn-">Theory of GNN:</h4>
+<ul>
+<li>Representation Learning on Graphs with Jumping Knowledge Networks, Keyulu Xu, Chengtao Li, Yonglong Tian, Tomohiro Sonobe, Ken-ichi Kawarabayashi, Stefanie Jegelka, ICML 2018. </li>
+</ul>
+<h3 id="graph-learning-gsp">Graph learning/GSP</h3>
+<ul>
+<li><p>Learning graphs from data: A signal representation perspective, Xiaowen Dong, Dorina Thanou, Michael Rabbat, Pascal Frossard, IEEE Signal Processing Magazine, 2019.</p>
+</li>
+<li><p>Compressive Spectral Clustering, Nicolas Tremblay, Gilles Puy, Remi Gribonval, Pierre Vandergheynst Proceedings of The 33rd International Conference on Machine Learning, PMLR 48:1002-1011, 2016.</p>
+</li>
+<li><p>Simultaneous Graph Signal Clustering and Graph Learning, Abdullah Karaaslanli, Selin Aviyente Proceedings of the 39th International Conference on Machine Learning, PMLR 162:10762-10772, 2022.</p>
+</li>
+<li><p>Learning Structural Node Embeddings via Diffusion Wavelets. Claire Donnat, Marinka Zitnik, David Hallac, and Jure Leskovec. KDD 2018. </p></li>
+<h2 id="resources">Resources</h2>
 <h4 id="general-machine-learning-theory">General machine learning theory:</h4>
 <p float="left">
   <img src="https://notes.inria.fr/uploads/upload_eed5a107fcdf9c5a8a1a1dce65618d9a.png" width="150" />
