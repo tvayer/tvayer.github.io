@@ -379,39 +379,75 @@ You can also find my articles on my
  --><a href="/publicationbyyear/"><button type="button" class="btn" style="outline:none">By Year  </button></a> 
 
 <h3  class="pubyear">Preprints</h3>
-<ol class="bibliography"><li><span id="vanassel">Van Assel, H., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). <i>SNEkhorn: Dimension Reduction with Symmetric Entropic Affinities</i>.</span>
+<ol class="bibliography"><li><span id="vanassel2023interpolating">Van Assel, H., Vincent-Cuaz, C., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). <i>Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein</i>.</span>
 
 
     
-    <button class="btn btnId btnPub--abstract" id="b_vanassel-abstract" style="outline:none;">Abstract</button>
+    <button class="btn btnId btnPub--abstract" id="b_vanassel2023interpolating-abstract" style="outline:none;">Abstract</button>
     
 
-	<button class="btn btnId btnPub--BibTex" id="b_vanassel-bibtex" style="outline:none;">BibTeX</button>
+	<button class="btn btnId btnPub--BibTex" id="b_vanassel2023interpolating-bibtex" style="outline:none;">BibTeX</button>
     
     
 	
 	
 	
 	
-	<a href="https://hal.science/hal-04103326/file/paper.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+	<a href="https://arxiv.org/pdf/2310.03398.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
     
 
-	<div class="dropDownBibtex" id="vanassel-bibtex">
-    <pre>@article{vanassel,
-  title = {{SNEkhorn: Dimension Reduction with Symmetric Entropic Affinities}},
-  author = {Van Assel, Hugues and Vayer, Titouan and Flamary, R{\'e}mi and Courty, Nicolas},
+	<div class="dropDownBibtex" id="vanassel2023interpolating-bibtex">
+    <pre>@article{vanassel2023interpolating,
+  title = {Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein},
+  author = {Van Assel, Hugues and Vincent-Cuaz, Cédric and Vayer, Titouan and Flamary, Rémi and Courty, Nicolas},
+  note = {https://arxiv.org/pdf/2310.03398.pdf},
   year = {2023},
-  month = may,
-  note = {https://hal.science/hal-04103326/file/paper.pdf},
-  hal_id = {hal-04103326},
+  eprint = {2310.03398},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="vanassel2023interpolating-abstract">
+    We present a versatile adaptation of existing dimensionality reduction (DR) objectives, enabling the simultaneous reduction of both sample and feature sizes. Correspondances between input and embedding samples are computed through a semi-relaxed Gromov-Wasserstein optimal transport (OT) problem. When the embedding sample size matches that of the input, our model recovers classical popular DR models. When the embedding’s dimensionality is unconstrained, we show that the OT plan delivers a competitive hard clustering. We emphasize the importance of intermediate stages that blend DR and clustering for summarizing real data and apply our method to visualize datasets of images.
+    </div>
+	
+</li>
+<li><span id="vanasselhal04229636">Van Assel, H., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). <i>Optimal Transport with Adaptive Regularisation</i>.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_vanasselhal04229636-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_vanasselhal04229636-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://hal.science/hal-04229636/document"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="vanasselhal04229636-bibtex">
+    <pre>@article{vanasselhal04229636,
+  title = {{Optimal Transport with Adaptive Regularisation}},
+  author = {Van Assel, Hugues and Vayer, Titouan and Flamary, Remi and Courty, Nicolas},
+  year = {2023},
+  month = oct,
+  note = {https://hal.science/hal-04229636/document},
+  hal_id = {hal-04229636},
   hal_version = {v1}
 }
 </pre>
     </div>
 	
 	
-	<div class="dropDownAbstract" id="vanassel-abstract">
-    Many approaches in machine learning rely on a weighted graph to encode the similarities between samples in a dataset. Entropic affinities (EAs), which are notably used in the popular Dimensionality Reduction (DR) algorithm t-SNE, are particular instances of such graphs. To ensure robustness to heterogeneous sampling densities, EAs assign a kernel bandwidth parameter to every sample in such a way that the entropy of each row in the affinity matrix is kept constant at a specific value, whose exponential is known as perplexity. EAs are inherently asymmetric and row-wise stochastic, but they are used in DR approaches after undergoing heuristic symmetrization methods that violate both the row-wise constant entropy and stochasticity properties. In this work, we uncover a novel characterization of EA as an optimal transport problem, allowing a natural symmetrization that can be computed efficiently using dual ascent. The corresponding novel affinity matrix derives advantages from symmetric doubly stochastic normalization in terms of clustering performance, while also effectively controlling the entropy of each row thus making it particularly robust to varying noise levels. Following, we present a new DR algorithm, SNEkhorn, that leverages this new affinity matrix. We show its clear superiority to state-of-the-art approaches with several indicators on both synthetic and real-world datasets.
+	<div class="dropDownAbstract" id="vanasselhal04229636-abstract">
+    Regularising the primal formulation of optimal transport (OT) with a strictly convex term leads to enhanced numerical complexity and a denser transport plan. Many formulations impose a global constraint on the transport plan, for instance by relying on entropic regularisation. As it is more expensive to diffuse mass for outlier points compared to central ones, this typically results in a significant imbalance in the way mass is spread across the points. This can be detrimental for some applications where a minimum of smoothing is required per point. To remedy this, we introduce OT with Adaptive RegularIsation (OTARI), a new formulation of OT that imposes constraints on the mass going in or/and out of each point. We then showcase the benefits of this approach for domain adaptation.
     </div>
 	
 </li></ol>
@@ -565,6 +601,40 @@ You can also find my articles on my
 	
 	<div class="dropDownAbstract" id="pouliquen-abstract">
     We provide a framework and algorithm for tuning the hyperparameters of the Graphical Lasso via a bilevel optimization problem solved with a first-order method. In particular, we derive the Jacobian of the Graphical Lasso solution with respect to its regularization hyperparameters.
+    </div>
+	
+</li>
+<li><span id="vanassel">Van Assel, H., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). SNEkhorn: Dimension Reduction with Symmetric Entropic Affinities. <i>Neural Information Processing Systems (NeurIPS)</i>.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_vanassel-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_vanassel-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://hal.science/hal-04103326/file/paper.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="vanassel-bibtex">
+    <pre>@inproceedings{vanassel,
+  title = {{SNEkhorn: Dimension Reduction with Symmetric Entropic Affinities}},
+  author = {Van Assel, Hugues and Vayer, Titouan and Flamary, R{\'e}mi and Courty, Nicolas},
+  year = {2023},
+  booktitle = {Neural Information Processing Systems (NeurIPS)},
+  note = {https://hal.science/hal-04103326/file/paper.pdf}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="vanassel-abstract">
+    Many approaches in machine learning rely on a weighted graph to encode the similarities between samples in a dataset. Entropic affinities (EAs), which are notably used in the popular Dimensionality Reduction (DR) algorithm t-SNE, are particular instances of such graphs. To ensure robustness to heterogeneous sampling densities, EAs assign a kernel bandwidth parameter to every sample in such a way that the entropy of each row in the affinity matrix is kept constant at a specific value, whose exponential is known as perplexity. EAs are inherently asymmetric and row-wise stochastic, but they are used in DR approaches after undergoing heuristic symmetrization methods that violate both the row-wise constant entropy and stochasticity properties. In this work, we uncover a novel characterization of EA as an optimal transport problem, allowing a natural symmetrization that can be computed efficiently using dual ascent. The corresponding novel affinity matrix derives advantages from symmetric doubly stochastic normalization in terms of clustering performance, while also effectively controlling the entropy of each row thus making it particularly robust to varying noise levels. Following, we present a new DR algorithm, SNEkhorn, that leverages this new affinity matrix. We show its clear superiority to state-of-the-art approaches with several indicators on both synthetic and real-world datasets.
     </div>
 	
 </li></ol>
