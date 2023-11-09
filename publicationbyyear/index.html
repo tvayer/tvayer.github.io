@@ -379,43 +379,46 @@ You can also find my articles on my
  --><a href="/publicationbyyear/"><button type="button" class="btn" style="outline:none">By Year  </button></a> 
 
 <h3  class="pubyear">Preprints</h3>
-<ol class="bibliography"><li><span id="vanassel2023interpolating">Van Assel, H., Vincent-Cuaz, C., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). <i>Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein</i>.</span>
+<ol class="bibliography"><li><span id="vayercompressive"><b>Vayer, T</b>., Lasalle, E., Gribonval, R., &amp; Gonçalves, P. (2023). <i>Compressive Recovery of Sparse Precision Matrices</i>.</span>
 
 
     
-    <button class="btn btnId btnPub--abstract" id="b_vanassel2023interpolating-abstract" style="outline:none;">Abstract</button>
+    <button class="btn btnId btnPub--abstract" id="b_vayercompressive-abstract" style="outline:none;">Abstract</button>
     
 
-	<button class="btn btnId btnPub--BibTex" id="b_vanassel2023interpolating-bibtex" style="outline:none;">BibTeX</button>
+	<button class="btn btnId btnPub--BibTex" id="b_vayercompressive-bibtex" style="outline:none;">BibTeX</button>
     
     
 	
 	
 	
 	
-	<a href="https://arxiv.org/pdf/2310.03398.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+	<a href="https://hal.science/hal-04275341/file/compressive_esti_precision.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
     
 
-	<div class="dropDownBibtex" id="vanassel2023interpolating-bibtex">
-    <pre>@article{vanassel2023interpolating,
-  title = {Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein},
-  author = {Van Assel, Hugues and Vincent-Cuaz, Cédric and Vayer, Titouan and Flamary, Rémi and Courty, Nicolas},
-  note = {https://arxiv.org/pdf/2310.03398.pdf},
+	<div class="dropDownBibtex" id="vayercompressive-bibtex">
+    <pre>@article{vayercompressive,
+  title = {{Compressive Recovery of Sparse Precision Matrices}},
+  author = {Vayer, Titouan and Lasalle, Etienne and Gribonval, R{\'e}mi and Gon{\c c}alves, Paulo},
+  note = {https://hal.science/hal-04275341/file/compressive_esti_precision.pdf},
   year = {2023},
-  eprint = {2310.03398},
-  archiveprefix = {arXiv},
-  primaryclass = {cs.LG}
+  month = nov,
+  hal_id = {hal-04275341},
+  hal_version = {v1}
 }
 </pre>
     </div>
 	
 	
-	<div class="dropDownAbstract" id="vanassel2023interpolating-abstract">
-    We present a versatile adaptation of existing dimensionality reduction (DR) objectives, enabling the simultaneous reduction of both sample and feature sizes. Correspondances between input and embedding samples are computed through a semi-relaxed Gromov-Wasserstein optimal transport (OT) problem. When the embedding sample size matches that of the input, our model recovers classical popular DR models. When the embedding’s dimensionality is unconstrained, we show that the OT plan delivers a competitive hard clustering. We emphasize the importance of intermediate stages that blend DR and clustering for summarizing real data and apply our method to visualize datasets of images.
+	<div class="dropDownAbstract" id="vayercompressive-abstract">
+    We consider the problem of learning a graph modeling the statistical relations of the d variables of a dataset with n samples X ∈\mathbbR^n \times d. Standard approaches amount to searching for a precision matrix Θrepresentative of a Gaussian graphical model that adequately explains the data. However, most maximum likelihood-based estimators usually require storing the d^2 values of the empirical covariance matrix, which can become prohibitive in a high-dimensional setting. In this work, we adopt a compressive viewpoint and aim to estimate a sparse Θfrom a sketch of the data, i.e. a low-dimensional vector of size m ≪d^2 carefully designed from X using nonlinear random features. Under certain assumptions on the spectrum of Θ(or its condition number), we show that it is possible to estimate it from a sketch of size m=Ω((d+2k)\log(d)) where k is the maximal number of edges of the underlying graph. These information-theoretic guarantees are inspired by compressed sensing theory and involve restricted isometry properties and instance optimal decoders. We investigate the possibility of achieving practical recovery with an iterative algorithm based on the graphical lasso, viewed as a specific denoiser. We compare our approach and graphical lasso on synthetic datasets, demonstrating its favorable performance even when the dataset is compressed.
     </div>
 	
-</li>
-<li><span id="vanasselhal04229636">Van Assel, H., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). <i>Optimal Transport with Adaptive Regularisation</i>.</span>
+</li></ol>
+
+
+  <h3  id="2023" class="pubyear">2023</h3>
+  <ol class="bibliography"><li><span id="vanasselhal04229636">Van Assel, H., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). Optimal Transport with Adaptive Regularisation. <i>NeurIPS 2023 Workshop Optimal Transport and Machine Learning</i>.</span>
 
 
     
@@ -429,18 +432,16 @@ You can also find my articles on my
 	
 	
 	
-	<a href="https://hal.science/hal-04229636/document"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+	<a href="https://openreview.net/forum?id=Kwrz4fYD2E"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
     
 
 	<div class="dropDownBibtex" id="vanasselhal04229636-bibtex">
-    <pre>@article{vanasselhal04229636,
+    <pre>@inproceedings{vanasselhal04229636,
   title = {{Optimal Transport with Adaptive Regularisation}},
   author = {Van Assel, Hugues and Vayer, Titouan and Flamary, Remi and Courty, Nicolas},
   year = {2023},
-  month = oct,
-  note = {https://hal.science/hal-04229636/document},
-  hal_id = {hal-04229636},
-  hal_version = {v1}
+  booktitle = {NeurIPS 2023 Workshop Optimal Transport and Machine Learning},
+  note = {https://openreview.net/forum?id=Kwrz4fYD2E}
 }
 </pre>
     </div>
@@ -450,11 +451,42 @@ You can also find my articles on my
     Regularising the primal formulation of optimal transport (OT) with a strictly convex term leads to enhanced numerical complexity and a denser transport plan. Many formulations impose a global constraint on the transport plan, for instance by relying on entropic regularisation. As it is more expensive to diffuse mass for outlier points compared to central ones, this typically results in a significant imbalance in the way mass is spread across the points. This can be detrimental for some applications where a minimum of smoothing is required per point. To remedy this, we introduce OT with Adaptive RegularIsation (OTARI), a new formulation of OT that imposes constraints on the mass going in or/and out of each point. We then showcase the benefits of this approach for domain adaptation.
     </div>
 	
-</li></ol>
+</li>
+<li><span id="vanassel2023interpolating">Van Assel, H., Vincent-Cuaz, C., <b>Vayer, T</b>., Flamary, R., &amp; Courty, N. (2023). Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein. <i>NeurIPS 2023 Workshop Optimal Transport and Machine Learning</i>.</span>
 
 
-  <h3  id="2023" class="pubyear">2023</h3>
-  <ol class="bibliography"><li><span id="Vaysketch2023"><b>Vayer, T</b>., &amp; Gribonval, R. (2023). Controlling Wasserstein Distances by Kernel Norms with Application to Compressive Statistical Learning. <i>Journal of Machine Learning Research</i>, <i>24</i>(149), 1–51.</span>
+    
+    <button class="btn btnId btnPub--abstract" id="b_vanassel2023interpolating-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_vanassel2023interpolating-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://openreview.net/forum?id=CmgB5fGWbN"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="vanassel2023interpolating-bibtex">
+    <pre>@inproceedings{vanassel2023interpolating,
+  title = {Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein},
+  author = {Van Assel, Hugues and Vincent-Cuaz, Cédric and Vayer, Titouan and Flamary, Rémi and Courty, Nicolas},
+  booktitle = {NeurIPS 2023 Workshop Optimal Transport and Machine Learning},
+  note = {https://openreview.net/forum?id=CmgB5fGWbN},
+  year = {2023}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="vanassel2023interpolating-abstract">
+    We present a versatile adaptation of existing dimensionality reduction (DR) objectives, enabling the simultaneous reduction of both sample and feature sizes. Correspondances between input and embedding samples are computed through a semi-relaxed Gromov-Wasserstein optimal transport (OT) problem. When the embedding sample size matches that of the input, our model recovers classical popular DR models. When the embedding’s dimensionality is unconstrained, we show that the OT plan delivers a competitive hard clustering. We emphasize the importance of intermediate stages that blend DR and clustering for summarizing real data and apply our method to visualize datasets of images.
+    </div>
+	
+</li>
+<li><span id="Vaysketch2023"><b>Vayer, T</b>., &amp; Gribonval, R. (2023). Controlling Wasserstein Distances by Kernel Norms with Application to Compressive Statistical Learning. <i>Journal of Machine Learning Research</i>, <i>24</i>(149), 1–51.</span>
 
 
     
@@ -618,7 +650,7 @@ You can also find my articles on my
 	
 	
 	
-	<a href="https://hal.science/hal-04103326/file/paper.pdf"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+	<a href="https://openreview.net/forum?id=y9U0IJ2uFr"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
     
 
 	<div class="dropDownBibtex" id="vanassel-bibtex">
@@ -627,7 +659,7 @@ You can also find my articles on my
   author = {Van Assel, Hugues and Vayer, Titouan and Flamary, R{\'e}mi and Courty, Nicolas},
   year = {2023},
   booktitle = {Neural Information Processing Systems (NeurIPS)},
-  note = {https://hal.science/hal-04103326/file/paper.pdf}
+  note = {https://openreview.net/forum?id=y9U0IJ2uFr}
 }
 </pre>
     </div>
