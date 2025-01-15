@@ -488,7 +488,7 @@ $(document).ready(function() {
         })
       });
     resultdiv.empty();
-    resultdiv.prepend('<p class="results__found">'+result.length+' Result(s) found</p>');
+    resultdiv.prepend('<p class="results__found">'+result.length+' Résultat(s) trouvé(s)</p>');
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){

@@ -206,7 +206,7 @@
         </button>
         
         <button class="greedy-nav__toggle" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
+          <span class="visually-hidden">Menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -379,7 +379,43 @@ You can also find my articles on my
  --><a href="/publicationbyyear/"><button type="button" class="btn" style="outline:none">By Year  </button></a> 
 
 <h3  class="pubyear">Preprints</h3>
-<ol class="bibliography"><li><span id="pouliquen2024schurspositivedefinitenetworkdeep">Pouliquen, C., Massias, M., &amp; <b>Vayer, T</b>. (2024). <i>Schur’s Positive-Definite Network: Deep Learning in the SPD cone with structure</i>.</span>
+<ol class="bibliography"><li><span id="lasalle2024pascoparallelstructuredcoarsening">Lasalle, E., Vaudaine, R., <b>Vayer, T</b>., Borgnat, P., Gribonval, R., Gonçalves, P., &amp; Karsai, M. (2024). <i>PASCO (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms</i>.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_lasalle2024pascoparallelstructuredcoarsening-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_lasalle2024pascoparallelstructuredcoarsening-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://arxiv.org/abs/2412.13592"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="lasalle2024pascoparallelstructuredcoarsening-bibtex">
+    <pre>@article{lasalle2024pascoparallelstructuredcoarsening,
+  title = {PASCO (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms},
+  author = {Lasalle, Etienne and Vaudaine, Rémi and Vayer, Titouan and Borgnat, Pierre and Gribonval, Rémi and Gonçalves, Paulo and Karsai, Màrton},
+  year = {2024},
+  eprint = {2412.13592},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG},
+  note = {https://arxiv.org/abs/2412.13592}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="lasalle2024pascoparallelstructuredcoarsening-abstract">
+    Clustering the nodes of a graph is a cornerstone of graph analysis and has been extensively studied. However, some popular methods are not suitable for very large graphs: e.g., spectral clustering requires the computation of the spectral decomposition of the Laplacian matrix, which is not applicable for large graphs with a large number of communities. This work introduces PASCO, an overlay that accelerates clustering algorithms. Our method consists of three steps: 1-We compute several independent small graphs representing the input graph by applying an efficient and structure-preserving coarsening algorithm. 2-A clustering algorithm is run in parallel onto each small graph and provides several partitions of the initial graph. 3-These partitions are aligned and combined with an optimal transport method to output the final partition. The PASCO framework is based on two key contributions: a novel global algorithm structure designed to enable parallelization and a fast, empirically validated graph coarsening algorithm that preserves structural properties. We demonstrate the strong performance of 1 PASCO in terms of computational efficiency, structural preservation, and output partition quality, evaluated on both synthetic and real-world graph datasets.
+    </div>
+	
+</li>
+<li><span id="pouliquen2024schurspositivedefinitenetworkdeep">Pouliquen, C., Massias, M., &amp; <b>Vayer, T</b>. (2024). <i>Schur’s Positive-Definite Network: Deep Learning in the SPD cone with structure</i>.</span>
 
 
     
@@ -1246,7 +1282,7 @@ partitioning, clustering and completion.
     
       <div class="search-content">
         <div class="search-content__inner-wrap">
-  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Entrez votre recherche..." />
   <div id="results" class="results"></div>
 </div>
       </div>
@@ -1275,7 +1311,7 @@ partitioning, clustering and completion.
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 Titouan Vayer. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 Titouan Vayer. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
 <!-- AJax for DropDown Effect of Abstract and BibTex -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
