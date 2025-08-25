@@ -465,42 +465,6 @@ You can also find my articles on my
     </div>
 	
 </li>
-<li><span id="lasalle2024pascoparallelstructuredcoarsening">Lasalle, E., Vaudaine, R., <b>Vayer, T</b>., Borgnat, P., Gribonval, R., Gonçalves, P., &amp; Karsai, M. (2024). <i>PASCO (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms</i>.</span>
-
-
-    
-    <button class="btn btnId btnPub--abstract" id="b_lasalle2024pascoparallelstructuredcoarsening-abstract" style="outline:none;">Abstract</button>
-    
-
-	<button class="btn btnId btnPub--BibTex" id="b_lasalle2024pascoparallelstructuredcoarsening-bibtex" style="outline:none;">BibTeX</button>
-    
-    
-	
-	
-	
-	
-	<a href="https://arxiv.org/abs/2412.13592"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
-    
-
-	<div class="dropDownBibtex" id="lasalle2024pascoparallelstructuredcoarsening-bibtex">
-    <pre>@article{lasalle2024pascoparallelstructuredcoarsening,
-  title = {PASCO (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms},
-  author = {Lasalle, Etienne and Vaudaine, Rémi and Vayer, Titouan and Borgnat, Pierre and Gribonval, Rémi and Gonçalves, Paulo and Karsai, Màrton},
-  year = {2024},
-  eprint = {2412.13592},
-  archiveprefix = {arXiv},
-  primaryclass = {cs.LG},
-  note = {https://arxiv.org/abs/2412.13592}
-}
-</pre>
-    </div>
-	
-	
-	<div class="dropDownAbstract" id="lasalle2024pascoparallelstructuredcoarsening-abstract">
-    Clustering the nodes of a graph is a cornerstone of graph analysis and has been extensively studied. However, some popular methods are not suitable for very large graphs: e.g., spectral clustering requires the computation of the spectral decomposition of the Laplacian matrix, which is not applicable for large graphs with a large number of communities. This work introduces PASCO, an overlay that accelerates clustering algorithms. Our method consists of three steps: 1-We compute several independent small graphs representing the input graph by applying an efficient and structure-preserving coarsening algorithm. 2-A clustering algorithm is run in parallel onto each small graph and provides several partitions of the initial graph. 3-These partitions are aligned and combined with an optimal transport method to output the final partition. The PASCO framework is based on two key contributions: a novel global algorithm structure designed to enable parallelization and a fast, empirically validated graph coarsening algorithm that preserves structural properties. We demonstrate the strong performance of 1 PASCO in terms of computational efficiency, structural preservation, and output partition quality, evaluated on both synthetic and real-world graph datasets.
-    </div>
-	
-</li>
 <li><span id="vayercompressive"><b>Vayer, T</b>., Lasalle, E., Gribonval, R., &amp; Gonçalves, P. (2023). <i>Compressive Recovery of Sparse Precision Matrices</i>.</span>
 
 
@@ -522,7 +486,7 @@ You can also find my articles on my
     <pre>@article{vayercompressive,
   title = {{Compressive Recovery of Sparse Precision Matrices}},
   author = {Vayer, Titouan and Lasalle, Etienne and Gribonval, R{\'e}mi and Gon{\c c}alves, Paulo},
-  note = {https://hal.science/hal-04275341/file/compressive_esti_precision.pdf},
+  note = {https://arxiv.org/pdf/2311.04673},
   year = {2023},
   month = nov,
   hal_id = {hal-04275341},
@@ -540,7 +504,47 @@ You can also find my articles on my
 
 
   <h3  id="2025" class="pubyear">2025</h3>
-  <ol class="bibliography"><li><span id="vanassel2024distributional">Van Assel, H., Vincent-Cuaz, C., Courty, N., Flamary, R., Frossard, P., &amp; <b>Vayer, T</b>. (2025). Distributional Reduction: Unifying Dimensionality Reduction and Clustering with Gromov-Wasserstein Projection. <i>Transactions on Machine Learning Research</i>.</span>
+  <ol class="bibliography"><li><span id="Etienne2025">Lasalle, E., Vaudaine, R., <b>Vayer, T</b>., Borgnat, P., Gribonval, R., Gonçalves, P., &amp; Karsai, M. (2025). Pasco (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms. <i>Machine Learning</i>, <i>114</i>(10), 212.</span>
+
+
+    
+    <button class="btn btnId btnPub--abstract" id="b_Etienne2025-abstract" style="outline:none;">Abstract</button>
+    
+
+	<button class="btn btnId btnPub--BibTex" id="b_Etienne2025-bibtex" style="outline:none;">BibTeX</button>
+    
+    
+	
+	
+	
+	
+	<a href="https://hal.science/hal-04837207v2/document"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">URL</button></a>
+    
+
+	<div class="dropDownBibtex" id="Etienne2025-bibtex">
+    <pre>@article{Etienne2025,
+  author = {Lasalle, Etienne and Vaudaine, Rémi and Vayer, Titouan and Borgnat, Pierre and Gribonval, Rémi and Gonçalves, Paulo and Karsai, Màrton},
+  title = {Pasco (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms},
+  journal = {Machine Learning},
+  year = {2025},
+  month = aug,
+  day = {22},
+  volume = {114},
+  number = {10},
+  pages = {212},
+  issn = {1573-0565},
+  note = {https://hal.science/hal-04837207v2/document}
+}
+</pre>
+    </div>
+	
+	
+	<div class="dropDownAbstract" id="Etienne2025-abstract">
+    Clustering the nodes of a graph is a cornerstone of graph analysis and has been extensively studied. However, some popular methods are not suitable for very large graphs: e.g., spectral clustering requires the computation of the spectral decomposition of the Laplacian matrix, which is not applicable for large graphs with a large number of communities. This work introduces PASCO, an overlay that accelerates clustering algorithms. Our method consists of three steps: (1) We compute several independent small graphs representing the input graph by applying an efficient and structure-preserving coarsening algorithm. (2) A clustering algorithm is run in parallel onto each small graph and provides several partitions of the initial graph. (3) These partitions are aligned and combined with an optimal transport method to output the final partition. The PASCO framework is based on two key contributions: a novel global algorithm structure designed to enable parallelization and a fast, empirically validated graph coarsening algorithm that preserves structural properties. We demonstrate the strong performance of PASCO in terms of computational efficiency, structural preservation, and output partition quality, evaluated on both synthetic and real-world graph datasets.
+    </div>
+	
+</li>
+<li><span id="vanassel2024distributional">Van Assel, H., Vincent-Cuaz, C., Courty, N., Flamary, R., Frossard, P., &amp; <b>Vayer, T</b>. (2025). Distributional Reduction: Unifying Dimensionality Reduction and Clustering with Gromov-Wasserstein Projection. <i>Transactions on Machine Learning Research</i>.</span>
 
 
     
