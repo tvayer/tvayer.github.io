@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Introduction : la classification supervis\'ee binaire}{3}{0}{1}
+\beamer@sectionintoc {2}{Objectifs du cours}{15}{0}{2}
+\beamer@sectionintoc {3}{Le mod\`ele de r\'egression logistique}{17}{0}{3}
+\beamer@subsectionintoc {3}{1}{Le mod\`ele de r\'egression lin\'eaire}{18}{0}{3}
+\beamer@subsectionintoc {3}{2}{R\'egression logistique}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Le mod\`ele}{23}{0}{3}
+\beamer@subsectionintoc {3}{4}{Les variables explicatives}{25}{0}{3}
+\beamer@subsectionintoc {3}{5}{Hypoth\`ese de lin\'earit\'e du logit}{26}{0}{3}
+\beamer@sectionintoc {4}{Estimation des param\`etres du mod\`ele}{27}{0}{4}
+\beamer@subsectionintoc {4}{1}{Test du rapport de vraisemblance : test de significativit\'e globale du mod\`ele}{34}{0}{4}
+\beamer@subsectionintoc {4}{2}{Test de Wald : test de significativit\'e individuelle des variables}{36}{0}{4}
+\beamer@sectionintoc {5}{Odds et odds-ratio}{38}{0}{5}
+\beamer@sectionintoc {6}{Evaluation et s\'election du ``meilleur'' mod\`ele}{44}{0}{6}

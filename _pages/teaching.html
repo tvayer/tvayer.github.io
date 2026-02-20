@@ -1,0 +1,51 @@
+---
+layout: single
+title: "Teaching"
+permalink: /teaching/
+author_profile: true
+---
+
+
+
+
+
+
+
+
+
+{{
+"
+####  [Computational Optimal Transport for Machine and Deep Learning](https://mathurinm.github.io/otml/) (M2, ENS Lyon 2024-2026)
+
+In the last decade, optimal transport has rapidly emerged as a versatile tool to compare distributions and clouds of points. As such, it has found numerous successful applications in Statistics, Signal Processing, Machine Learning and Deep Learning. This class introduces the theoretical and numerical bases of optimal transport, and reviews its latest developments.
+
+#### [Machine Learning for Graphs and with Graphs](/courses/coursegraph.html) (M2, ENS Lyon 2023-2025)
+
+The objective of this course is threefold: it aims at presenting the essential tools of graph theory for data science, it introduces the classical machine learning methods for dealing with graphs and finally, it presents some of the most recent ML methods with structured data.
+
+#### [Fundamentals of Machine Learning](/courses/courseml.html) (M1, ENS Lyon 2022-2025)
+
+This course aims to provide a comprehensive introduction to the fundamentals of machine learning, combining both theoretical insights and practical applications.
+
+#### Deep learning (ECN 2018-2019)
+- Ecole Centrale de Nantes (ECN) October 2019 : Deep Learning (GAN's, Wasserstein GAN's, VAE, Fine-Tuning), all materials available [here](/courses/deep_ecn_2019)
+- Ecole Centrale de Nantes (ECN) October 2018 : Generative models (GAN's, Wasserstein GAN's and VAE), all materials available [here](/courses/deep_ecn_2018)"
+| markdownify }}
+<!-- Comment for now - When you had a course: change the layout to archive and uncomment this.
+{% capture written_label %}'None'{% endcapture %}
+
+{% for collection in site.collections %}
+  {% unless collection.output == false or collection.label == "posts" %}
+    {% capture label %}{{ collection.label }}{% endcapture %}
+    {% if label != written_label %}
+      <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label }}</h2>
+      {% capture written_label %}{{ label }}{% endcapture %}
+    {% endif %}
+  {% endunless %}
+  {% for post in collection.docs %}
+    {% unless collection.output == false or collection.label == "posts" or post.label != "info" %}
+      {% include archive-single.html %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+-->

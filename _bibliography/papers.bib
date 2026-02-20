@@ -1,0 +1,344 @@
+@inproceedings{houedry2025bridgingarbitrarytreemetrics,
+      title={Bridging Arbitrary and Tree Metrics via Differentiable Gromov Hyperbolicity},
+      author={Pierre Houedry and Nicolas Courty and Florestan Martin-Baillon and Laetitia Chapel and Titouan Vayer},
+      year={2025},
+      note={https://arxiv.org/pdf/2505.21073},
+      abstract= {Trees and the associated shortest-path tree metrics provide a powerful framework
+      for representing hierarchical and combinatorial structures in data. Given an arbitrary
+      metric space, its deviation from a tree metric can be quantified by Gromov’s δhyperbolicity. Nonetheless, designing algorithms that bridge an arbitrary metric to
+      its closest tree metric is still a vivid subject of interest, as most common approaches
+      are either heuristical and lack guarantees, or perform moderately well. In this work,
+      we introduce a novel differentiable optimization framework, coined DELTAZERO,
+      that solves this problem. Our method leverages a smooth surrogate for Gromov’s
+      $\delta$-hyperbolicity which enables a gradient-based optimization, with a tractable
+      complexity. The corresponding optimization procedure is derived from a problem
+      with better worst case guarantees than existing bounds, and is justified statistically.
+      Experiments on synthetic and real-world datasets demonstrate that our method
+      consistently achieves state-of-the-art distortion.
+      },
+      booktitle = {Neural Information Processing Systems (NeurIPS)}
+}
+
+
+@Article{Etienne2025,
+author={Etienne Lasalle and Rémi Vaudaine and Titouan Vayer and Pierre Borgnat and Rémi Gribonval and Paulo Gonçalves and Màrton Karsai},
+title={Pasco (PArallel Structured COarsening): an overlay to speed up graph clustering algorithms},
+journal={Machine Learning},
+year={2025},
+month={Aug},
+day={22},
+volume={114},
+number={10},
+pages={212},
+abstract={Clustering the nodes of a graph is a cornerstone of graph analysis and has been extensively studied. However, some popular methods are not suitable for very large graphs: e.g., spectral clustering requires the computation of the spectral decomposition of the Laplacian matrix, which is not applicable for large graphs with a large number of communities. This work introduces PASCO, an overlay that accelerates clustering algorithms. Our method consists of three steps: (1) We compute several independent small graphs representing the input graph by applying an efficient and structure-preserving coarsening algorithm. (2) A clustering algorithm is run in parallel onto each small graph and provides several partitions of the initial graph. (3) These partitions are aligned and combined with an optimal transport method to output the final partition. The PASCO framework is based on two key contributions: a novel global algorithm structure designed to enable parallelization and a fast, empirically validated graph coarsening algorithm that preserves structural properties. We demonstrate the strong performance of PASCO in terms of computational efficiency, structural preservation, and output partition quality, evaluated on both synthetic and real-world graph datasets.},
+issn={1573-0565},
+note={https://hal.science/hal-04837207v2/document}
+}
+
+
+
+
+
+@article{vanassel2024distributional,
+      title={{Distributional Reduction: Unifying Dimensionality Reduction and Clustering with Gromov-Wasserstein Projection}},
+      author={Van Assel, Hugues and Vincent-Cuaz, Cédric and Courty, Nicolas and Flamary, Rémi and Frossard, Pascal and Vayer, Titouan},
+      year={2025},
+      journal={Transactions on Machine Learning Research},
+      note = {https://openreview.net/pdf?id=cllm6SS354},
+      abstract= {Unsupervised learning aims to capture the underlying structure of potentially large and
+high-dimensional datasets. Traditionally, this involves using dimensionality reduction (DR)
+methods to project data onto lower-dimensional spaces or organizing points into meaningful
+clusters (clustering). In this work, we revisit these approaches under the lens of optimal
+transport and exhibit relationships with the Gromov-Wasserstein problem. This unveils a
+new general framework, called distributional reduction, that recovers DR and clustering as
+special cases and allows addressing them jointly within a single optimization problem. We
+empirically demonstrate its relevance to the identification of low-dimensional prototypes
+representing data at different scales, across multiple image and genomic datasets.}
+}
+
+
+@inproceedings{pouliquen2025schurs,
+title={Schur's Positive-Definite Network: Deep Learning in the {SPD} cone with structure},
+author={Can Pouliquen and Mathurin Massias and Titouan Vayer},
+booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},
+year={2025},
+note={https://openreview.net/forum?id=v1B4aet9ct},
+abstract= {Estimating matrices in the symmetric positive-definite (SPD) cone is of interest for many applications ranging from computer vision to graph learning. While there exist various convex optimization-based estimators, they remain limited in expressivity due to their model-based approach. The success of deep learning has thus led many to use neural networks to learn to estimate SPD matrices in a data-driven fashion. For learning structured outputs, one promising strategy involves architectures designed by unrolling iterative algorithms, which potentially benefit from inductive bias properties. However, designing correct unrolled architectures for SPD learning is difficult: they either do not guarantee that their output has all the desired properties, rely on heavy computations, or are overly restrained to specific matrices which hinders their expressivity. In this paper, we propose a novel and generic learning module with guaranteed SPD outputs called SpodNet, that also enables learning a larger class of functions than existing approaches. Notably, it solves the challenging task of learning jointly SPD and sparse matrices. Our experiments demonstrate the versatility of SpodNet layers.}
+}
+
+
+
+@inproceedings{vanasselhal04229636,
+  TITLE = {{Optimal Transport with Adaptive Regularisation}},
+  AUTHOR = {Van Assel, Hugues and Vayer, Titouan and Flamary, Remi and Courty, Nicolas},
+  abstract = {Regularising the primal formulation of optimal transport (OT) with a strictly convex term leads to enhanced numerical complexity and a denser transport plan. Many formulations impose a global constraint on the transport plan, for instance by relying on entropic regularisation. As it is more expensive to diffuse mass for outlier points compared to central ones, this typically results in a significant imbalance in the way mass is spread across the points. This can be detrimental for some applications where a minimum of smoothing is required per point. To remedy this, we introduce OT with Adaptive RegularIsation (OTARI), a new formulation of OT that imposes constraints on the mass going in or/and out of each point. We then showcase the benefits of this approach for domain adaptation.},
+  YEAR = {2023},
+  booktitle={NeurIPS 2023 Workshop Optimal Transport and Machine Learning},
+  note = {https://openreview.net/forum?id=Kwrz4fYD2E}
+}
+
+
+@inproceedings{vanassel2023interpolating,
+      title={Interpolating between Clustering and Dimensionality Reduction with Gromov-Wasserstein}, 
+      author={Van Assel, Hugues and Vincent-Cuaz, Cédric and Vayer, Titouan and Flamary, Rémi and Courty, Nicolas},
+      abstract = {We present a versatile adaptation of existing dimensionality reduction (DR) objectives, enabling the simultaneous reduction of both sample and feature sizes. Correspondances between input and embedding samples are computed through a semi-relaxed Gromov-Wasserstein optimal transport (OT) problem. When the embedding sample size matches that of the input, our model recovers classical popular DR models. When the embedding's dimensionality is unconstrained, we show that the OT plan delivers a competitive hard clustering. We emphasize the importance of intermediate stages that blend DR and clustering for summarizing real data and apply our method to visualize datasets of images.},
+      booktitle={NeurIPS 2023 Workshop Optimal Transport and Machine Learning},
+      note = {https://openreview.net/forum?id=CmgB5fGWbN},
+      year={2023}
+}
+
+
+
+@article{Vaysketch2023,
+  title ={Controlling Wasserstein Distances by Kernel Norms with Application to Compressive Statistical Learning},
+  journal={Journal of Machine Learning Research},
+  author={Titouan Vayer and R{\'e}mi Gribonval},
+  year={2023},
+  volume={24},
+  number={149},
+  pages = {1--51},
+  note = {http://jmlr.org/papers/v24/21-1516.html},
+abstract = {Comparing probability distributions is at the crux of many machine learning algorithms. Maximum Mean Discrepancies (MMD) and Wasserstein distances are two classes of distances between probability distributions that have attracted abundant attention in past years. This paper establishes some conditions under which the Wasserstein distance can be controlled by MMD norms. Our work is motivated by the compressive statistical learning (CSL) theory, a general framework for resource-efficient large scale learning in which the training data is summarized in a single vector (called sketch) that captures the information relevant to the considered learning task. Inspired by existing results in CSL, we introduce the Hölder Lower Restricted Isometric Property and show that this property comes with interesting guarantees for compressive statistical learning. Based on the relations between the MMD and the Wasserstein distances, we provide guarantees for compressive statistical learning by introducing and studying the concept of Wasserstein regularity of the learning task, that is when some task-specific metric between probability distributions can be bounded by a Wasserstein distance.}
+}
+
+@article{vayer2022time,
+title={Time Series Alignment with Global Invariances},
+author={Titouan Vayer and Romain Tavenard and Laetitia Chapel and R{\'e}mi Flamary and Nicolas Courty and Yann Soullard},
+journal={Transactions on Machine Learning Research},
+year={2022},
+abstract = {Multivariate time series are ubiquitous objects in signal processing. Measuring a distance or similarity between two such objects is of prime interest in a variety of applications, including machine learning, but can be very difficult as soon as the temporal dynamics and the representation of the time series, i.e. the nature of the observed quantities, differ from one another. In this work, we propose a novel distance accounting both feature space and temporal variabilities by learning a latent global transformation of the feature space together with a temporal alignment, cast as a joint optimization problem. The versatility of our framework allows for several variants depending on the invariance class at stake. Among other contributions, we define a differentiable loss for time series and present two algorithms for the computation of time series barycenters under this new geometry. We illustrate the interest of our approach on both simulated and real world data and show the robustness of our approach compared to state-of-the-art methods.},
+note={https://openreview.net/forum?id=JXCH5N4Ujy}
+}
+
+
+
+@article{Vaysubspace,
+AUTHOR = {Bonet, Clément and Vayer, Titouan and Courty, Nicolas and Septier, François and Drumetz, Lucas},
+TITLE = {{Subspace Detours Meet Gromov–Wasserstein}},
+JOURNAL = {Algorithms},
+VOLUME = {14},
+YEAR = {2021},
+NUMBER = {12},
+ISSN={1999-4893}, 
+note={http://dx.doi.org/10.3390/a14120366}, 
+abstract ={In the context of optimal transport (OT) methods, the subspace detour approach was recently proposed by Muzellec and Cuturi. It consists of first finding an optimal plan between the measures projected on a wisely chosen subspace and then completing it in a nearly optimal transport plan on the whole space. The contribution of this paper is to extend this category of methods to the Gromov–Wasserstein problem, which is a particular type of OT distance involving the specific geometry of each distribution. After deriving the associated formalism and properties, we give an experimental illustration on a shape matching problem. We also discuss a specific cost for which we can show connections with the Knothe–Rosenblatt rearrangement.},
+month={Dec}, 
+pages={366} 
+}
+
+
+@article{Vaypot,
+  author  = {R\'{e}mi Flamary* and Nicolas Courty* and Alexandre Gramfort* and Mokhtar Z. Alaya and Aur\'{e}lie Boisbunon and Stanislas Chambon and Laetitia Chapel and Adrien Corenflos and Kilian Fatras and Nemo Fournier and L\'{e}o Gautheron and Nathalie T.H. Gayraud and Hicham Janati and Alain Rakotomamonjy and Ievgen Redko and Antoine Rolet and Antony Schutz and Vivien Seguy and Danica J. Sutherland and Romain Tavenard and Alexander Tong and Titouan Vayer},
+  abstract = {Optimal transport has recently been reintroduced to the machine learning community thanks in part to novel efficient optimization procedures allowing for medium to large scale applications. We propose a Python toolbox that implements several key optimal transport ideas for the machine learning community. The toolbox contains implementations of a number of founding works of OT for machine learning such as Sinkhorn algorithm and Wasserstein barycenters, but also provides generic solvers that can be used for conducting novel fundamental research. This toolbox, named POT for Python Optimal Transport, is open source with an MIT license.},
+  title   = {{POT: Python Optimal Transport}},
+  note     = {http://jmlr.org/papers/v22/20-451.html},
+  journal = {Journal of Machine Learning Research (JMLR)},
+  year    = {2021},
+  volume  = {22},
+  number  = {78},
+  pages   = {1-8},
+  presort   = {02},
+}
+
+
+
+
+@article{Vayerfgwalgorithms, 
+  title={{Fused Gromov-Wasserstein distance for structured objects}},
+  author={Vayer, Titouan and Chapel, Laetitia and Flamary, R{\'e}mi and Tavenard, Romain and Courty, Nicolas},
+  journal={Algorithms},
+  volume = {13},
+  number={9},
+  pages={212},
+  year={2020},
+  publisher={Multidisciplinary Digital Publishing Institute},
+  ISSN={1999-4893},
+  note={http://dx.doi.org/10.3390/a13090212},
+  DOI={10.3390/a13090212},
+  abstract = {Optimal transport theory has recently found many applications in machine learning thanks to its capacity to meaningfully compare various machine learning objects that are viewed as distributions. The Kantorovitch formulation, leading to the Wasserstein distance, focuses on the features of the elements of the objects, but treats them independently, whereas the Gromov–Wasserstein distance focuses on the relations between the elements, depicting the structure of the object, yet discarding its features. In this paper, we study the Fused Gromov-Wasserstein distance that extends the Wasserstein and Gromov–Wasserstein distances in order to encode simultaneously both the feature and structure information. We provide the mathematical framework for this distance in the continuous setting, prove its metric and interpolation properties, and provide a concentration result for the convergence of finite samples. We also illustrate and interpret its use in various applications, where structured objects are involved.},
+  month={Aug}
+}
+
+%%% Conf
+
+@inproceedings{VayGnn,
+author = { Vincent-Cuaz, Cédric and Flamary, Rémi and Corneli, Marco and Vayer, Titouan and Courty, Nicolas},
+title = {Template based Graph Neural Network with Optimal Transport Distances},
+note = {https://openreview.net/pdf?id=seYcx6CqPe},
+booktitle = {Neural Information Processing Systems (NeurIPS)},
+year = {2022},
+abstract = {Current Graph Neural Networks (GNN) architectures generally rely on two important components: node features embedding through message passing, and aggregation with a specialized form of pooling. The structural (or topological) information is implicitly taken into account in these two steps. We propose in this work a novel point of view, which places distances to some learnable graph templates at the core of the graph representation. This distance embedding is constructed thanks to an optimal transport distance: the Fused Gromov-Wasserstein (FGW) distance, which encodes simultaneously feature and structure dissimilarities by solving a soft graph-matching problem. We postulate that the vector of FGW distances to a set of template graphs has a strong discriminative power, which is then fed to a non-linear classifier for final predictions. Distance embedding can be seen as a new layer, and can leverage on existing message passing techniques to promote sensible feature representations. Interestingly enough, in our work the optimal set of template graphs is also learnt in an end-to-end fashion by differentiating through this layer. After describing the corresponding learning procedure, we empirically validate our claim on several synthetic and real life graph classification datasets, where our method is competitive or surpasses kernel and GNN state-of-the-art approaches. We complete our experiments by an ablation study and a sensitivity analysis to parameters.
+}
+}
+
+
+@inproceedings{Vaysemirelaxed,
+title={{Semi-relaxed Gromov-Wasserstein divergence and applications on graphs}},
+author={C{\'e}dric Vincent-Cuaz and R{\'e}mi Flamary and Marco Corneli and Titouan Vayer and Nicolas Courty},
+booktitle={International Conference on Learning Representations (ICLR)},
+year={2022},
+note = {https://openreview.net/forum?id=RShaMexjc-x},
+abstract = {Comparing structured objects such as graphs is a fundamental operation
+involved in many learning tasks. To this end, the Gromov-Wasserstein (GW)
+distance, based on Optimal Transport (OT), has proven to be successful in
+handling the specific nature of the associated objects. More specifically,
+through the nodes connectivity relations, GW operates on graphs, seen as
+probability measures over specific spaces. At the core of OT is the idea of
+conservation of mass, which imposes a coupling between all the nodes from
+the two considered graphs. We argue in this paper that this property can be
+detrimental for tasks such as graph dictionary or partition learning, and we
+relax it by proposing a new semi-relaxed Gromov-Wasserstein divergence.
+Aside from immediate computational benefits, we discuss its properties, and
+show that it can lead to an efficient graph dictionary learning algorithm.
+We empirically demonstrate its relevance for complex tasks on graphs such as
+partitioning, clustering and completion.},
+ADDRESS = {Online}
+}
+
+@inproceedings{Vaymultiscale,
+      title={{Fast Multiscale Diffusion on Graphs}}, 
+      author={Sibylle Marcotte and Amélie Barbe and Rémi Gribonval and Vayer, Titouan and Marc Sebban and Pierre Borgnat and Paulo Gonçalves},
+      year={2022},
+      booktitle={International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+      note = {https://hal.archives-ouvertes.fr/hal-03212764},
+      ADDRESS = {Singapore, Singapore},
+      abstract = {Diffusing a graph signal at multiple scales requires computing the action of the exponential of several multiples of the Laplacian matrix. We tighten a bound on the approximation error of truncated Chebyshev polynomial approximations of the exponential, hence significantly improving a priori estimates of the polynomial order for a prescribed error. We further exploit properties of these approximations to factorize the computation of the action of the diffusion operator over multiple scales, thus reducing drastically its computational cost.},
+      YEAR = {2022},
+      MONTH = May
+}
+
+
+
+
+
+@inproceedings{Vaydiff,
+  TITLE = {{Optimization of the Diffusion Time in Graph Diffused-Wasserstein Distances: Application to Domain Adaptation}},
+  AUTHOR = {Barbe, Am{\'e}lie and Gon{\c c}alves, Paulo and Sebban, Marc and Borgnat, Pierre and Gribonval, R{\'e}mi and Vayer, Titouan},
+  BOOKTITLE = {{IEEE 33rd International Conference on Tools with Artificial Intelligence (ICTAI)}},
+  note = {https://hal.inria.fr/hal-03353622/document},
+  YEAR = {2021},
+  volume={},
+  number={},
+  pages={786-790},
+  ADDRESS = {Online},
+  abstract = {The use of the heat kernel on graphs has recently given rise to a family of so-called Diffusion-Wasserstein distances which resort to Optimal Transport theory for comparing attributed graphs. In this paper, we address the open problem of optimizing the diffusion time used in these distances. Inspired from the notion of triplet-based constraints, we design a loss function that aims at bringing two graphs closer together while keeping an impostor away. After a thorough analysis of the properties of this function, we show on synthetic data that the resulting Diffusion-Wasserstein distances outperforms the Gromov and Fused-Gromov Wasserstein distances on unsupervised graph domain adaptation tasks.}
+}
+
+@inproceedings{Vaygdl,
+  title =    {{Online Graph Dictionary Learning}},
+  author =       {Vincent-Cuaz, C{\'e}dric and Vayer, Titouan and Flamary, R{\'e}mi and Corneli, Marco and Courty, Nicolas},
+  booktitle =    {International Conference on Machine Learning (ICML)},
+  year =   {2021},
+  pages =    {10564--10574},
+  volume =   {139},
+  ADDRESS = {Online},
+  series =   {Proceedings of Machine Learning Research},
+  month =    {18--24 Jul},
+  publisher =    {PMLR},
+  note =    {https://proceedings.mlr.press/v139/vincent-cuaz21a.html},
+  abstract = {Dictionary learning is a key tool for representation learning, that explains the data as linear combination of few basic elements. Yet, this analysis is not amenable in the context of graph learning, as graphs usually belong to different metric spaces. We fill this gap by proposing a new online Graph Dictionary Learning approach, which uses the Gromov Wasserstein divergence for the data fitting term. In our work, graphs are encoded through their nodes’ pairwise relations and modeled as convex combination of graph atoms, i.e. dictionary elements, estimated thanks to an online stochastic algorithm, which operates on a dataset of unregistered graphs with potentially different number of nodes. Our approach naturally extends to labeled graphs, and is completed by a novel upper bound that can be used as a fast approximation of Gromov Wasserstein in the embedding space. We provide numerical evidences showing the interest of our approach for unsupervised embedding of graph datasets and for online graph subspace estimation and tracking.
+}
+}
+
+
+
+
+@inproceedings{Vaycoot,
+ author = {Titouan Vayer* and Ievgen Redko* and  R\'{e}mi Flamary* and Nicolas Courty*},
+ booktitle = { Neural Information Processing Systems (NeurIPS)},
+ title = {{CO-Optimal Transport}},
+ year = {2020}, 
+ ADDRESS = {Online, Canada},
+ MONTH = {Dec},
+ VOLUME = {33},
+ MONTH = {Dec},
+ note = {https://papers.nips.cc/paper/2020/hash/cc384c68ad503482fb24e6d1e3b512ae-Abstract.html},
+ abstract = {Optimal transport (OT) is a powerful geometric and probabilistic tool for finding correspondences and measuring similarity between two distributions. Yet, its original formulation relies on the existence of a cost function between the samples of the two distributions, which makes it impractical when they are supported on different spaces. To circumvent this limitation, we propose a novel OT problem, named COOT for CO-Optimal Transport, that simultaneously optimizes two transport maps between both samples and features, contrary to other approaches that either discard the individual features by focusing on pairwise distances between samples or need to model explicitly the relations between them. We provide a thorough theoretical analysis of our problem, establish its rich connections with other OT-based distances and demonstrate its versatility with two machine learning applications in heterogeneous domain adaptation and co-clustering/data summarization, where COOT leads to performance improvements over the state-of-the-art methods.
+}
+}
+
+@inproceedings{Vaysgw,
+ author = {Vayer, Titouan and Flamary, R\'{e}mi and Courty, Nicolas and Tavenard, Romain and Chapel, Laetitia},
+ booktitle = {Neural Information Processing Systems (NeurIPS)},
+ title = {{Sliced Gromov-Wasserstein}},
+ year = {2019},
+ ADDRESS = {Vancouver, Canada},
+ VOLUME = {32},
+ note = {https://papers.nips.cc/paper/9615-sliced-gromov-wasserstein},
+ abstract = {Recently used in various machine learning contexts, the Gromov-Wasserstein distance (GW) allows for comparing distributions whose supports do not necessarily lie in the same metric space. However, this Optimal Transport (OT) distance requires solving a complex non convex quadratic program which is most of the time very costly both in time and memory. Contrary to GW, the Wasserstein distance (W) enjoys several properties ({\em e.g.} duality) that permit large scale optimization. Among those, the solution of W on the real line, that only requires sorting discrete samples in 1D, allows defining the Sliced Wasserstein (SW) distance. This paper proposes a new divergence based on GW akin to SW. We first derive a closed form for GW when dealing with 1D distributions, based on a new result for the related quadratic assignment problem. We then define a novel OT discrepancy that can deal with large scale distributions via a slicing approach and we show how it relates to the GW distance while being $O(n\log(n))$ to compute. We illustrate the behavior of this so called Sliced Gromov-Wasserstein (SGW) discrepancy in experiments where we demonstrate its ability to tackle similar problems as GW while being several order of magnitudes faster to compute.
+}
+}
+
+
+
+
+@inproceedings{Vayfgwicml,
+  title =    {{Optimal Transport for structured data with application on graphs}},
+  author =       {Vayer, Titouan and Courty, Nicolas and Tavenard, Romain and Chapel, Laetitia  and Flamary, R{\'e}mi},
+  booktitle =    {International Conference on Machine Learning (ICML)},
+  year =   {2019},
+  pages =    {6275--6284},
+  volume =   {97},
+  series =   {Proceedings of Machine Learning Research},
+  month =    {09--15 Jun},
+  ADDRESS = {Long Beach, USA},
+  note =    {https://proceedings.mlr.press/v97/titouan19a.html},
+  abstract = {This work considers the problem of computing distances between structured objects such as undirected graphs, seen as probability distributions in a specific metric space. We consider a new transportation distance ( i.e. that minimizes a total cost of transporting probability masses) that unveils the geometric nature of the structured objects space. Unlike Wasserstein or Gromov-Wasserstein metrics that focus solely and respectively on features (by considering a metric in the feature space) or structure (by seeing structure as a metric space), our new distance exploits jointly both information, and is consequently called Fused Gromov-Wasserstein (FGW). After discussing its properties and computational aspects, we show results on a graph classification task, where our method outperforms both graph kernels and deep graph convolutional networks. Exploiting further on the metric properties of FGW, interesting geometric objects such as Fr{é}chet means or barycenters of graphs are illustrated and discussed in a clustering context.}
+}
+
+@inproceedings{Hippertgraphical,
+author="Hippert-Ferrer, Alexandre
+and Bouchard, Florent
+and Mian, Ammar
+and Vayer, Titouan
+and Breloy, Arnaud",
+editor="Koutra, Danai
+and Plant, Claudia
+and Gomez Rodriguez, Manuel
+and Baralis, Elena
+and Bonchi, Francesco",
+title="Learning Graphical Factor Models with Riemannian Optimization",
+booktitle="Machine Learning and Knowledge Discovery in Databases: Research Track",
+year="2023",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="349--366",
+abstract="Graphical models and factor analysis are well-established tools in multivariate statistics. While these models can be both linked to structures exhibited by covariance and precision matrices, they are generally not jointly leveraged within graph learning processes. This paper therefore addresses this issue by proposing a flexible algorithmic framework for graph learning under low-rank structural constraints on the covariance matrix. The problem is expressed as penalized maximum likelihood estimation of an elliptical distribution (a generalization of Gaussian graphical models to possibly heavy-tailed distributions), where the covariance matrix is optionally constrained to be structured as low-rank plus diagonal (low-rank factor model). The resolution of this class of problems is then tackled with Riemannian optimization, where we leverage geometries of positive definite matrices and positive semi-definite matrices of fixed rank that are well suited to elliptical models. Numerical experiments on synthetic and real-world data sets illustrate the effectiveness of the proposed approach.",
+isbn="978-3-031-43421-1",
+note = "https://arxiv.org/abs/2210.11950"
+}
+
+@inproceedings{collasentropicwass,
+author = {Collas, Antoine and Vayer, Titouan and Flamary, Rémi and Breloy, Arnaud},
+title = {Entropic Wasserstein component analysis},
+booktitle = { IEEE International Workshop on Machine Learning for Signal Processing (MLSP)},
+year = {2023},
+note = {https://hal.science/hal-04022713/file/otpca.pdf},
+abstract  = {Dimension reduction (DR) methods provide systematic approaches for analyzing high-dimensional data. A key requirement for DR is to incorporate global dependencies among original and embedded samples while preserving clusters in the embedding space. To achieve this, we combine the principles of optimal transport (OT) and principal component analysis (PCA). Our method seeks the best linear subspace that minimizes reconstruction error using entropic OT, which naturally encodes the neighborhood information of the samples. From an algorithmic standpoint, we propose an efficient block-majorization-minimization solver over the Stiefel manifold. Our experimental results demonstrate that our approach can effectively preserve high-dimensional clusters, leading to more interpretable and effective embeddings. Python code of the algorithms and experiments is available online.}
+}
+
+
+@inproceedings{pouliquen,
+  TITLE = {{Implicit Differentiation for Hyperparameter Tuning the Weighted Graphical Lasso}},
+  AUTHOR = {Pouliquen, Can and Gon{\c c}alves, Paulo and Massias, Mathurin and Vayer, Titouan},
+  BOOKTITLE = {{GRETSI 2023 - XXIX{\`e}me Colloque Francophone de Traitement du Signal et des Images}},
+  ADDRESS = {Grenoble (France), France},
+  PAGES = {1-4},
+  YEAR = {2023},
+  MONTH = Aug,
+  KEYWORDS = {Optimization ; Graphical Lasso ; Hyperparameter Selection ; Implicit differentiation},
+  note = {https://hal.science/hal-04151796/file/main.pdf},
+  abstract = {We provide a framework and algorithm for tuning the hyperparameters of the Graphical Lasso via a bilevel optimization problem solved with a first-order method. In particular, we derive the Jacobian of the Graphical Lasso solution with respect to its regularization hyperparameters.},
+  HAL_ID = {hal-04151796},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{vanassel,
+  TITLE = {{SNEkhorn: Dimension Reduction with Symmetric Entropic Affinities}},
+  AUTHOR = {Van Assel, Hugues and Vayer, Titouan and Flamary, R{\'e}mi and Courty, Nicolas},
+  YEAR = {2023},
+  abstract = {Many approaches in machine learning rely on a weighted graph to encode the similarities between samples in a dataset. Entropic affinities (EAs), which are notably used in the popular Dimensionality Reduction (DR) algorithm t-SNE, are particular instances of such graphs. To ensure robustness to heterogeneous sampling densities, EAs assign a kernel bandwidth parameter to every sample in such a way that the entropy of each row in the affinity matrix is kept constant at a specific value, whose exponential is known as perplexity. EAs are inherently asymmetric and row-wise stochastic, but they are used in DR approaches after undergoing heuristic symmetrization methods that violate both the row-wise constant entropy and stochasticity properties. In this work, we uncover a novel characterization of EA as an optimal transport problem, allowing a natural symmetrization that can be computed efficiently using dual ascent. The corresponding novel affinity matrix derives advantages from symmetric doubly stochastic normalization in terms of clustering performance, while also effectively controlling the entropy of each row thus making it particularly robust to varying noise levels. Following, we present a new DR algorithm, SNEkhorn, that leverages this new affinity matrix. We show its clear superiority to state-of-the-art approaches with several indicators on both synthetic and real-world datasets.},
+  booktitle = {Neural Information Processing Systems (NeurIPS)},
+  note = {https://openreview.net/forum?id=y9U0IJ2uFr},
+}
+

@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 var idx = lunr(function () {
   this.field('title')
   this.field('excerpt')
@@ -5,68 +9,49 @@ var idx = lunr(function () {
   this.field('tags')
   this.ref('id')
 
-  
-  
-    
-    
-  
-    
-    
+  {% assign count = 0 %}
+  {% for c in site.collections %}
+    {% assign docs = c.docs | where_exp:'doc','doc.search != false' %}
+    {% for doc in docs %}
       this.add({
-          title: "Analyse de Fourier sur le pouce",
-          excerpt: "Ce post est un rapide aperçu de notions basiques sur les séries de Fourier et sur la transformée de Fourier....",
-          categories: [],
-          tags: [],
-          id: 0
+          title: {{ doc.title | jsonify }},
+          excerpt: {{ doc.content | strip_html | truncatewords: 20 | jsonify }},
+          categories: {{ doc.categories | jsonify }},
+          tags: {{ doc.tags | jsonify }},
+          id: {{ count }}
       })
-      
-    
-      this.add({
-          title: "Analyse de Fourier sur l'index",
-          excerpt: "On va voir rapidement dans cette note comment élargir la transformée de Fourier à des objets plus généraux.\n\n\n\n",
-          categories: [],
-          tags: [],
-          id: 1
-      })
-      
-    
-  
+      {% assign count = count | plus: 1 %}
+    {% endfor %}
+  {% endfor %}
 });
 
 console.log( jQuery.type(idx) );
 
 var store = [
-  
-    
-    
-    
-  
-    
-    
-    
-      
+  {% for c in site.collections %}
+    {% if forloop.last %}
+      {% assign l = true %}
+    {% endif %}
+    {% assign docs = c.docs | where_exp:'doc','doc.search != false' %}
+    {% for doc in docs %}
+      {% if doc.header.teaser %}
+        {% capture teaser %}{{ doc.header.teaser }}{% endcapture %}
+      {% else %}
+        {% assign teaser = site.teaser %}
+      {% endif %}
       {
-        "title": "Analyse de Fourier sur le pouce",
-        "url": "https://tvayer.github.io//fourier/",
-        "excerpt": "Ce post est un rapide aperçu de notions basiques sur les séries de Fourier et sur la transformée de Fourier....",
+        "title": {{ doc.title | jsonify }},
+        "url": {{ doc.url | absolute_url | jsonify }},
+        "excerpt": {{ doc.content | strip_html | truncatewords: 20 | jsonify }},
         "teaser":
-          
-            null
-          
-      },
-    
-      
-      {
-        "title": "Analyse de Fourier sur l'index",
-        "url": "https://tvayer.github.io//fourier2/",
-        "excerpt": "On va voir rapidement dans cette note comment élargir la transformée de Fourier à des objets plus généraux.\n\n\n\n",
-        "teaser":
-          
-            null
-          
-      }
-    
-  ]
+          {% if teaser contains "://" %}
+            {{ teaser | jsonify }}
+          {% else %}
+            {{ teaser | absolute_url | jsonify }}
+          {% endif %}
+      }{% unless forloop.last and l %},{% endunless %}
+    {% endfor %}
+  {% endfor %}]
 
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
@@ -85,7 +70,7 @@ $(document).ready(function() {
         })
       });
     resultdiv.empty();
-    resultdiv.prepend('<p class="results__found">'+result.length+' Résultat(s) trouvé(s)</p>');
+    resultdiv.prepend('<p class="results__found">'+result.length+' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){

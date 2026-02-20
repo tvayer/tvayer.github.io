@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="pandoc" />
+  <title>Machine learning for graphs and with graphs</title>
+  <link rel="stylesheet" href="https://latex.now.sh/style.css">
+  <link rel="stylesheet" href="prism/prism.css">
+  <script src="prism/prism.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style type="text/css">
+    body {
+      counter-reset: fignumber sidenote-counter theorem definition;
+    }
+    div#back2index {text-align: right;}
+    h1#toctitle {text-align: left;}
+    #TOC ul {list-style-type: none;}
+    h1:not(.title) {margin-top: 1.625rem;}
+    img {display: inline;}
+    figure {text-align: center;}
+    figcaption::before {
+      counter-increment: fignumber;
+      content: 'Figure ' counter(fignumber) '. ';
+      font-weight: bold;
+    }
+    .csl-entry {
+      clear: left;
+      margin-bottom: 1em;
+    }
+    .csl-left-margin {
+      float: left;
+      padding-right: .5em;
+      text-align: right;
+      width: 5em;
+    }
+    .csl-right-inline {
+      margin: 0 .4em 0 5.5em;
+      text-align: justify;
+    }
+    .theorem, details {
+        background-color: #eee;
+        border-radius: .5em;
+        padding: .2em 1em;
+    }
+    details > p {
+        margin: 0;
+    }
+    details > summary {
+      font-weight: bold;
+    }
+    details {
+      margin-top: 1rem;
+    }
+  </style>
+  <script type="text/javascript">
+    function change_bib_urls() {
+      var div_element = document.getElementById("refs");
+      var myLinks = div_element.getElementsByTagName('a');
+
+      for (var myItem = 0; myItem < myLinks.length; myItem++) {
+        var myChild = myLinks[myItem]
+        myChild.innerText = "Link";
+        myChild.target = "_blank";
+      }
+    }
+  </script>
+</head>
+<body onload="change_bib_urls();">
+<div id="header">
+<h1 id="machine-learning-for-graphs-and-with-graphs">Machine learning for graphs and with graphs</h2>
+<!-- <center>
+<img src="/courses/graph.png" width="150" />
+</center> -->
+<h3 id="summary">Summary</h3>
+<p>Data organized in graphs have become omnipresent in machine learning and more generally in data science. They allow to represent both <strong>entities</strong> (variables, individuals, etc.) and the <strong>complex interaction relationships between them</strong>. <strong>Combined with machine learning (ML) methods</strong>, this point of view on the data <strong>has allowed spectacular advances</strong> in many fields such as in bioinformatics (e.g. prediction of 3D structure of proteins, see  AlphaFold algorithm), in brain imaging, genomics, or in computational social sciences. <strong>These data raise specific issues:</strong> they do not admit a simple representation in vector form, are often heterogeneous and of high dimension. Dealing with them thus <strong>requires advanced analysis methods</strong>.</p>
+<p>We have therefore witnessed a <strong>recent explosion of scientific works</strong> aiming at modeling/manipulating graphs, leading to various methodologies and approaches (graph learning, graph signal processing, optimal transport on graphs, graph kernels, graph neural networks, etc.). </p>
+<p>The objective of this course is threefold. First, it aims at presenting <strong>the essential tools of graph theory for data science</strong>, second, it introduces the <strong>classical machine learning methods for dealing with graphs</strong> and finally, it presents <strong>some of the most recent ML methods with structured data</strong>. </p>
+<p><strong>Particular emphasis will be placed on the practical implementation of the various algorithms</strong> seen during the course (using Python). </p>
+<h3 id="organization">Organization</h3>
+<ul>
+<li><strong>Lecturers</strong>: Titouan Vayer (Inria, ENS Lyon, LIP), Pierre Borgnat (CNRS, ENS Lyon, Laboratoire de Physique).</li>
+<li><strong>Duration</strong>: total 16 * 2 hours = 11 * 2 hours of lectures + 5 * 2 hours of practical sessions with exercises + Python sessions.</li>
+<li><strong>Evaluation</strong>: an oral presentation on a selected research article <strong>and</strong> the associated code applied on real data.</li>
+</ul>
+<h3 id="outline">Outline</h3>
+<ol>
+<li>Introduction <a href="/courses/GraphMLCourse/intro.pdf">(slides)</a><ul>
+<!-- <li>Introduction<ul> -->
+<li>Graphs in real world problems</li>
+<li>An introduction to machine learning (data, supervised and unsupervised learning, classification, regression)</li>
+</ul>
+</li>
+<!-- <li>A primer on graph theory for ML and data science<ul> -->
+<li>A primer on graph theory for ML and data science <a href="/courses/GraphMLCourse/M2IFcours1IntroGraphsMLSP.pdf">(slides 1/2)</a> <a href="/courses/GraphMLCourse/M2IFcours2ExploitforGstructure.pdf">(slides 2/2)</a><ul>
+<li>Basic definitions, Laplacian/Markov matrix, spectral decomposition of graph matrices.</li>
+<li>An illustration of one of the most used algorithms: the Google PageRank algorithm</li>
+</ul>
+</li>
+<!-- <li>Spectral embedding of graphs and graph clustering<ul> -->
+<li>Spectral embedding of graphs and graph clustering <a href="/courses/GraphMLCourse/M2IFcours3ExploitforGclusters.pdf">(slides 1/2)</a> <a href="/courses/GraphMLCourse/M2IFcours4Embeddings.pdf">(slides 2/2)</a><ul>
+<li>Community detection</li>
+<li>Fiedler vector, graph cuts</li>
+</ul>
+</li>
+<!-- <li>Practical session <a href="/courses/GraphMLCourse/tdnetworksembeddings.pdf">(subject)</a><ul> -->
+<li>Practical session <a href="/courses/GraphMLCourse/tdnetworksembeddings.pdf">(subject)</a><ul>
+<li>Using Networkx [1]</li>
+</ul>
+</li>
+<!-- <li>An introduction to graph signal processing <a href="/courses/GraphMLCourse/M2IFcours5GSPbasics.pdf">(course notes 1/2)</a> <a href="/courses/GraphMLCourse/M2IFcours6GSPmore.pdf">(course notes 2/2)</a><ul> -->
+<li>An introduction to graph signal processing <a href="/courses/GraphMLCourse/M2IFcours5GSPandapplications.pdf">(slides)</a><ul>
+<li>Signals on graph, Fourier transform, smoothness, filters</li>
+</ul>
+</li>
+<!-- <li>Practical session <a href="/courses/GraphMLCourse/tdgsp.pdf">(subject)</a><ul> -->
+<li>Practical session <a href="/courses/GraphMLCourse/tdgsp.pdf">(subject)</a> <a href="/courses/GraphMLCourse/notebooks_solutions_for_M2.zip">(solutions)</a><ul>
+<li>Using PyGSP [2]</li>
+</ul>
+</li>
+<li>An introduction to kernels for machine learning <a href="/courses/GraphMLCourse/graphkernel1.pdf">(slides)</a> <a href="/courses/GraphMLCourse/homework.pdf">(homework)</a><ul>
+<!-- <li>An introduction to kernels for machine learning <ul> -->
+<li>A bit of Reproducing kernel Hilbert space theory</li>
+<li>In practice: classification and regression with kernels</li>
+</ul>
+</li>
+<!-- <li>Kernels for graphs <a href="/courses/GraphMLCourse/graphkernel.pdf">(slides)</a><ul> -->
+<li>Kernels for graphs <a href="/courses/GraphMLCourse/graphkernel2.pdf">(slides)</a> <ul>
+<li>Weisfeiler-Lehman kernel, valid optimal assignment kernels</li>
+<li>Application to graphs classification</li>
+</ul>
+</li>
+<li>Practical session <a href="/courses/GraphMLCourse/td_kernel1.pdf">(practical session kernels)</a> <a href="/courses/GraphMLCourse/code/temperature.py">(code TD1)</a> <a href="/courses/GraphMLCourse/td_kernel2.pdf">(practical session graph)</a> <a href="/courses/GraphMLCourse/code/classif_grakel.py">(code TD2)</a><ul>
+  <!-- <li>Practical session <a href="/courses/GraphMLCourse/td_kernel2.pdf">(subject)</a><ul> -->
+<li>Using GraKeL [3]</li>
+</ul>
+</li>
+<!-- <li>Graph neural networks (part 1) <ul> -->
+  <!-- <li>Graph neural networks (part 1) <a href="/courses/GraphMLCourse/gnn.pdf">(slides)</a><ul> -->
+<li>Recap: neural networks in machine learning <a href="/courses/GraphMLCourse/recap_nn.pdf">(slides)</a> <a href="/courses/GraphMLCourse/td_gnn_1.pdf">(practical session)</a></li>
+</ul>
+</li>
+<li>Graph neural networks <a href="/courses/GraphMLCourse/gnn.pdf">(slides)</a> <a href="/courses/GraphMLCourse/homework2.pdf">(homework 2)</a><ul>
+  <!-- <li>Graph neural networks (part 2) <a href="/courses/GraphMLCourse/gnn.pdf">(slides)</a><ul> -->
+<li>Message-passing neural networks</li>
+<li>Invariant and equivariant layers</li>
+</ul>
+</li>
+<!-- <li>Practical session <a href="/courses/GraphMLCourse/td_gnn.pdf">(subject)</a> <a href="/courses/GraphMLCourse/code/classif_nn.py">(code classif with NN)</a> <a href="https://snap.stanford.edu/class/cs224w-2021/">(Colab number 2: Graph Neural Networks 1: GNN Model)</a><ul> -->
+<li>Practical session <a href="/courses/GraphMLCourse/cora.pdf">(subject)</a> <a href="/courses/GraphMLCourse/code/applied_gnn.py">(code)</a><ul>
+<li>Using PyTorch Geometric [4]</li>
+</ul>
+<!-- </li>
+<li>Comparing graphs: matching and distances<ul>
+<li>The problem of graph matching and graph isomorphism</li>
+<li>Optimization on permutation matrices, Birkhoff polytope</li>
+</ul>
+</li> -->
+<!-- <li>Introduction to optimal transport theory, application to ML for graphs <a href="/courses/GraphMLCourse/some_transport.pdf">(slides)</a><ul> -->
+<li>Introduction to optimal transport theory, application to ML for graphs <a href="/courses/GraphMLCourse/course_transport.pdf">(slides)</a><ul>
+<li>Linear optimal transport:  Wasserstein distance, entropic regularization, Sinkhorn algorithm</li>
+<li>Non linear optimal transport: Gromov-Wasserstein distance</li>
+<li>Graphs applications</li>
+</ul>
+</li>
+<li>Practical session<ul>
+<li>Using Python Optimal Transport [5]</li>
+</ul>
+</li>
+<li>Learning graphs from (unstructured) data<ul>
+<li>Gaussian graphical models</li>
+<li>From LASSO to graphical LASSO</li>
+<li>Learning graphs with Laplacian constraints</li>
+</ul>
+</li>
+</ol>
+<h5 id="refs">Refs:</h5>
+<p>[1] Aric A. Hagberg, Daniel A. Schult and Pieter J. Swart, <em>Exploring network structure, dynamics, and function using NetworkX</em>. <a href="https://networkx.org/">https://networkx.org/</a><br>
+[2] Michaël Defferrard, Lionel Martin, Rodrigo Pena,  and Nathanaël Perraudin. <em>PyGSP: Graph Signal Processing in Python</em>. <a href="https://github.com/epfl-lts2/pygsp/">https://github.com/epfl-lts2/pygsp/</a><br>
+[3] Giannis Siglidis, Giannis Nikolentzos, Stratis Limnios, Christos Giatsidis, Konstantinos Skianis, Michalis Vazirgiannis. <em>GraKeL: A Graph Kernel Library in Python</em>. <a href="https://github.com/ysig/GraKeL">https://github.com/ysig/GraKeL</a><br>
+[4] Fey, Matthias and Lenssen, Jan E. <em>Fast Graph Representation Learning with PyTorch Geometric</em> <a href="https://github.com/pyg-team/pytorch_geometric">https://github.com/pyg-team/pytorch_geometric</a><br>
+[5] Rémi Flamary, Nicolas Courty, Alexandre Gramfort et al. <em>POT: Python Optimal Transport</em>. <a href="https://github.com/PythonOT/POT">https://github.com/PythonOT/POT</a></p>
+<h3 id="required-notions">Required notions</h3>
+<p>Some notions in linear algebra, statistics and Python programming. It's advisable to have some knowledge of machine learning. A short introduction/recap of ML will be given at the beginning of the course.</p>
+<h2>Evaluation and list of articles</h2>
+<p><b> The evaluation consists in a report and an oral presentation (6th November) about an article in the list proposed underneath</b>. It can be done by pairs of students (if you agree, not required). The work has to be sent to the lecturers. </p>
+<p>The report has to be in two parts:</p>
+<p>1) Answer the following questions, so as to provide a general overview and of some technical points of the article (with an indication of the expected length of pages).</p>
+<p>a) What is the main scientific questions raised in this article ? What is the field of the question, and the main field of the authors or their group/laboratory ? </p>
+<p>b) Described the main contribution of the article; what are the novelties (ideas, techniques) ? </p>
+<p>c) Write a stat-of-the-art about the scientific question asked, trying to summarize what are alternative solutions in the scientific literature, and writing what is different between the proposed method and other existing ones. </p>
+<p>d) Write the model or the question put forward in this article. </p>
+<p>e) Explain a technical point that is important in finding the solution (note: the objective is not paraphrasing the article, but finding a point where additional explanations are useful, and develop them). (1 p.)</p>
+<p>f) Describe the significance of the experimental results</p>
+<p>g) Give what you think are some strong points, and some weak points, of the article </p>
+<p>2) Choose an aspect of the article that can be implemented and studied. Then, code a method proposed or described in the article and conduct numerical experiments. A report (with equations, figures, tables,...) about what you did should be given (2 to 4 pages) in addition to a code that can be run in python, preferentially in a notebook. This code should have  an identified main program, the data used should be appended (or clearly identified, with a direct donwnload link), so that we can run it and reproduce the results obtained.</p>
+<h3 id="graph-kernels">Graph kernels</h3>
+<ul>
+<!-- <li><p>On Valid Optimal Assignment Kernels and Applications to Graph Classification, Nils M. Kriege, Pierre-Louis Giscard, Richard C. Wilson, NeurIPS, 2016.</p> -->
+</li>
+<li><p><strike>Wasserstein Weisfeiler-Lehman Graph Kernels,  Matteo Togninalli, Elisabetta Ghisu, Felipe Llinares-López, Bastian Rieck, and Karsten Borgwardt, NeurIPS 2019.</strike></p>
+</li>
+</ul>
+<h3 id="graph-neural-networks">Graph neural networks</h3>
+<h4 id="supervised">Supervised</h4>
+<!-- <p>The following two articles contitute actually one work (because some of them will be presented in the course). If you choose these articles, we ask you to make a  comparison between them from a theoretical point of view (different architectures, purposes, the limitations ...).</p> -->
+<ul>
+<li><p><strike>Inductive Representation Learning on Large Graphs, William L. Hamilton, Rex Ying, Jure Leskovec, NeurIPS 2017.</strike><p></li>
+<li><p>Simplifying Graph Convolutional Networks, Felix Wu, Amauri Souza, Tianyi Zhang, Christopher Fifty, Tao Yu, Kilian Weinberger ICML, 2019.<p></li>
+</ul>
+<ul>
+<li><p>Weisfeiler and Leman Go Neural: Higher-order Graph Neural Networks, Christopher Morris, Martin Ritzert, Matthias Fey, William L. Hamilton, Jan Eric Lenssen, Gaurav Rattan, Martin Grohe, AAAI 2019.</p>
+</li>
+<!-- <li><p>Template based Graph Neural Network with Optimal Transport Distances, Cédric Vincent-Cuaz, Rémi Flamary, Marco Corneli, Titouan Vayer, Nicolas Courty, NeurIPS 2022.</p> -->
+<li>
+<p>Invariant and Equivariant Graph Networks, Haggai Maron, Heli Ben-Hamu, Nadav Shamir, Yaron Lipman, ICLR 2019.</p>
+</li>
+<li><p>Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering, Michaël Defferrard, Xavier Bresson, Pierre Vandergheynst, NeurIPS 2016.</p>
+</li>
+<li><p>Hierarchical Graph Representation Learning with Differentiable Pooling, Rex Ying, Jiaxuan You, Christopher Morris, Xiang Ren, William L. Hamilton, Jure Leskovec, NeurIPS 2019</p>
+</li>
+<li><p>MSGNN: A Spectral Graph Neural Network Based on a Novel Magnetic Signed Laplacian
+Y He, M Perlmutter, G Reinert, M Cucuringu, Learning on Graphs Conference, 2022</p>
+</li>
+<!-- <li><p>Position-aware Graph Neural Networks, Jiaxuan You, Rex Ying, Jure Leskovec, ICML 2019</p> -->
+</li>
+</ul>
+<hr>
+<p>For all GNN in the supervised part, there is a bonus if the experiments are done after taking into account: </p>
+<ul>
+<li><p>A Fair Comparison of Graph Neural Networks for Graph Classification, Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli, ICLR 2020</p>
+</li>
+<li><p>Open Graph Benchmark: Datasets for Machine Learning on Graphs, Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure, 2020.</p>
+</li>
+</ul>
+<hr>
+<h4 id="unsupervised-">Unsupervised</h4>
+<ul>
+<li><strike>Partition and Code: learning how to compress graphs, Giorgos Bouritsas, Andreas Loukas, Nikolaos Karalias, Michael M. Bronstein, NeurIPS 2021</strike></li>
+</ul>
+<ul>
+<li><strike>Deep Graph Infomax, Petar Veličković, William Fedus, William L. Hamilton, Pietro Liò, Yoshua Bengio, R Devon Hjelm, ICLR 2019 </strike></li>
+</ul>
+<ul>
+<li><strike>Graph Clustering with Graph Neural Networks, Anton Tsitsulin, John Palowitch, Bryan Perozzi, Emmanuel Müller, Journal of Machine Learning Research 24 (2023) 1-21</strike></li>
+</ul>
+<h4 id="theory-of-gnn-">Theory of GNN:</h4>
+<ul>
+<li><strike>Not too little, not too much: a theoretical analysis of graph (over) smoothing, Nicolas Keriven, NeurIPS 2022</strike> </li>
+</ul>
+<h3 id="graph-learning-gsp">Graph learning/GSP</h3>
+<ul>
+<li><p>Time-varying graph learning with constraints on graph temporal variation. K Yamada, Y Tanaka, A Ortega. arXiv preprint arXiv:2001.03346, 2020.</p>
+</li>
+<!-- <li><p>Compressive Spectral Clustering, Nicolas Tremblay, Gilles Puy, Remi Gribonval, Pierre Vandergheynst Proceedings of The 33rd International Conference on Machine Learning, PMLR 48:1002-1011, 2016.</p> -->
+</li>
+<li><p>Simultaneous Graph Signal Clustering and Graph Learning, Abdullah Karaaslanli, Selin Aviyente Proceedings of the 39th International Conference on Machine Learning, PMLR 162:10762-10772, 2022.</p>
+</li>
+<!-- <li><p>Learning Structural Node Embeddings via Diffusion Wavelets. Claire Donnat, Marinka Zitnik, David Hallac, and Jure Leskovec. KDD 2018. </p></li> -->
+<h2 id="resources">Resources</h2>
+<h4 id="general-machine-learning-theory">General machine learning theory:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_eed5a107fcdf9c5a8a1a1dce65618d9a.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_f9437bc9877e27da855a7055ef138abb.png" width="150" />
+</p>
+
+<h4 id="graphs-in-datascience">Graphs in datascience:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_baf8b2d239c5c437b693291910c5e9a5.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_d5d690b477bf4801da1a88973ff7ece0.png" width="150" />
+</p>
+
+<h4 id="kernels-for-graphs-and-graph-neural-networks">Kernels for graphs and graph neural networks:</h4>
+<p float="left">
+  <img src="https://notes.inria.fr/uploads/upload_aa1820809b8663766f99b8e7fad7c367.png" width="150" />
+  <img src="https://notes.inria.fr/uploads/upload_e6761107cbf99b7d53e5b72bee95530f.png
+" width="250" /> 
+  <img src="https://notes.inria.fr/uploads/upload_63fa49dda674b5f3d66096f35354a00c.png
+" width="150" /> 
+</p>
+
+<h4 id="optimal-transport">Optimal transport:</h4>
+<p float="left">
+
+  <img src="https://notes.inria.fr/uploads/upload_08e4989df326538a18a6e802254a2538.png" width="150" /> 
+</p>
+</body>
+</html>
+
+
+

@@ -1,0 +1,16 @@
+---
+layout: single 
+permalink: /bio/
+author_profile: true
+title: Degemer mat !
+---
+I am a researcher (Chargé de recherche) in the [COMPACT](https://team.inria.fr/compact/) Inria team Irisa, Rennes, since January 2026. I was previously researcher in the [Ockham](https://team.inria.fr/ockham/fr/) team at ENS Lyon.
+
+My primary research interests include optimal transport theory, graph-based methods, inverse problems, and unsupervised learning approaches such as dimensionality reduction and self-supervised learning.
+
+I obtained my PhD in November 2020, supervised by [Nicolas Courty](http://people.irisa.fr/Nicolas.Courty/), [Laetitia Chapel](http://people.irisa.fr/Laetitia.Chapel/) and [Romain Tavenard](http://rtavenar.github.io/research/bio.html) within the OBELIX team of IRISA in Vannes. You can find the manuscript of my thesis here: [A contribution to Optimal Transport on incomparable spaces](https://arxiv.org/abs/2011.04447). 
+
+
+<a href="/CV13102025.pdf"><button type="button" class="btn" style="outline:none">CV (06/02/2024)</button></a> 
+
+![Alt Text](/mouette.gif)
