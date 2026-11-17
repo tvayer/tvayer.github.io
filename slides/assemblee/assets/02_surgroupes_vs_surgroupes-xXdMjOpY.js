@@ -1,0 +1,1 @@
+var e=`/slides/assemblee/assets/02_surgroupes_vs_surgroupes-VKi87e3e.svg`;export{e as t};
